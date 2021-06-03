@@ -17,4 +17,9 @@ class Event extends Model
         'description',
         'carousel'
     ];
+
+    public function user()
+    {
+        return $this->belongsToMany(User::class);
+    }
 }

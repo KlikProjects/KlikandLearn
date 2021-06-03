@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
             'isAdmin' => true
         ]);
 
-        //User::factory(10)->create();
+        User::factory(10)->create();
 
         Event::factory(10)->create();
     }
