@@ -14,7 +14,8 @@ class EventController extends Controller
      */
     public function index()
     {
-        $events = Event::all();
+        $events = Event::all()
+            ->sortBy('date_time');
         
         return view('home', ['events'=>$events]);
     }
