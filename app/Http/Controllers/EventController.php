@@ -27,7 +27,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        //
+        return view('eventforms.create');
     }
 
     /**
@@ -38,7 +38,17 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request);
+        $event = Event::create([
+            'date_time'=>$request->newdatetime,
+            'title'=> $request->newtitle,
+            'description'=> $request->newdescription,
+            'image'=> $request->newimage,
+            'users_max'=> $request->newusermax,
+            'carousel'=>'0',
+        ]);
+
+        return redirect()->route('home');
     }
 
     /**
