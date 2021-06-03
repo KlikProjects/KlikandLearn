@@ -2,7 +2,25 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 // Variables
-@import 'variables';
+@import 'variables/variables';
+@import 'variables/custom-variables';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+// Components
+@import 'components/allevents';
+
+body {
+    background-color: $dark-color;
+}
+
+.textHeader {
+    color: var(--red-color);
+    font-family: 'Sarina', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
