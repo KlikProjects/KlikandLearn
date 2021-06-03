@@ -21,6 +21,6 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 Route::get('/', [App\Http\Controllers\EventController::class, 'index'])->name('home');
-Route::get('/create', [App\Http\Controllers\EventController::class, 'create'])->name('creatEvent');
-Route::post('/', [App\Http\Controllers\EventController::class, 'store'])->name('store');
+Route::get('/create', [App\Http\Controllers\EventController::class, 'create'])->middleware('isadmin')->name('createEvent');
+Route::post('/', [App\Http\Controllers\EventController::class, 'store'])->middleware('auth')->name('store');
 
