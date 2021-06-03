@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Sarina&display=swap');
 
-.textHeader {
+.header {
     background-color: blue;
     font-family: 'Sarina', cursive;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
 }
