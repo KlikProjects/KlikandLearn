@@ -23,10 +23,10 @@ class EventFactory extends Factory
     {
         return [
             'date_time' => $this->faker->dateTime(),
-            'title' => $this->faker->company(),
+            'title' => $this->faker->catchPhrase(),
             'image' => '',
             'users_max' => $this->faker->randomNumber($nbDigits = 2),
-            'description' => $this->faker->company(),
+            'description' => $this->faker->text($maxNbChars = 200),
             'carousel' => false,
         ];
     }
