@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/header', function () {
-    return view('components.header');
-});
+/* Route::get('/', function () {
+    return view('home');
+}); */
 
 Auth::routes();
 
