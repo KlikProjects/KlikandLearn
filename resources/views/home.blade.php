@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
-@extends('components.layouts')
+{{-- @extends('components.layouts')
 
-@extends('components.header')
+@extends('components.header') --}}
 
 @section('content')
 
