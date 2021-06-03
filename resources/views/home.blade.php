@@ -1,9 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="slider"></div>
+
 <div class="container">
-    <ul>
+    <div class="allevents">
         
-    </ul>
+    </div>
+    <div class="asistiras"></div>
+    <div class="pasados"></div>
 </div>
 @endsection
