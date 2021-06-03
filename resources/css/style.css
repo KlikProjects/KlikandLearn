@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Sarina&display=swap');
+@import url('variables.css');
+@import url('components/allevents.css');
+
+body {
+    background-color: var(--dark-color);
+}
 
 .textHeader {
-    background-color: blue;
+    color: var(--red-color);
     font-family: 'Sarina', cursive;
     display: flex;
     flex-direction: column;
