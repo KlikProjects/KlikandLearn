@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sarina&display=swap');
+@import url('variables.css');
+@import url('components/allevents.css');
+
 
 .textHeader {
     background-color: blue;
