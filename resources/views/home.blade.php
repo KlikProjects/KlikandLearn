@@ -1,8 +1,13 @@
 @extends('layouts.app')
 
+@extends('components.layouts')
+
 @extends('components.header')
 
 @section('content')
+
+
+
 <div class="slider"></div>
 
 <div class="container">
@@ -17,7 +22,7 @@
                 </div>
                 
                 <div>
-                    <h3>{{$event->title}}</h3>
+                    <h3 class="title">{{$event->title}}</h3>
                     <p>{{$event->description}}</p>
                 </div>
             </div>
