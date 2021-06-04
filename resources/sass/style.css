@@ -2,7 +2,11 @@
 @import url('variables.css');
 @import url('components/allevents.css');
 
-.header {
-    background-color: blue;
+body {
+    background-color: var(--dark-color);
+}
+
+.textHeader {
+    color: var(--red-color);
     font-family: 'Sarina', cursive;
 }
