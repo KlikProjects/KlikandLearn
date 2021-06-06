@@ -10002,3 +10002,38 @@ h3 {
     border-color: #dee2e6;
   }
 }
+<<<<<<< HEAD
+=======
+.eventTitle {
+  color: var(--red-color);
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.dateAndUsers {
+  display: flex;
+  justify-content: space-between;
+}
+
+.eventContainer {
+  display: flex;
+}
+
+img {
+  max-width: 100px;
+}
+
+body {
+  background-color: #343F55;
+}
+
+.textHeader {
+  color: var(--red-color);
+  font-family: "Sarina", cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+>>>>>>> df00abad8e6ab9850b818a47ddb13e9dd1a14445

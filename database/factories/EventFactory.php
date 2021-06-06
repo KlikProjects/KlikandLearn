@@ -24,7 +24,7 @@ class EventFactory extends Factory
         return [
             'date_time' => $this->faker->dateTime(),
             'title' => $this->faker->catchPhrase(),
-            'image' => '',
+            'image' => $this->faker->imageUrl($width = 64, $height = 48),
             'users_max' => $this->faker->randomNumber($nbDigits = 2),
             'description' => $this->faker->text($maxNbChars = 200),
             'carousel' => false,
