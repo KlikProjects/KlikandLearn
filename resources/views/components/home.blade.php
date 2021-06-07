@@ -1,8 +1,14 @@
+@extends('layouts.app')
+
+@section('content')
+
 <div class="slider"></div>
 
 <div class="container">
     <section class="allevents">
         
+        dd({{ $slot }})
+
         @foreach ($events as $event)
         <article class="eventContainer">
             <div class="eventInfo">
@@ -31,3 +37,5 @@
     <section class="asistiras"></section>
     <section class="pasados"></section>
 </div>
+
+@endsection
