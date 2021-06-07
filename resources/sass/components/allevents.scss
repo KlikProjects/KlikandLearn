@@ -1,0 +1,19 @@
+.eventTitle {
+    color: var(--red-color);
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.dateAndUsers {
+    display: flex;
+    justify-content: space-between;
+}
+
+.eventContainer {
+    display: flex;
+}
+
+img {
+    max-width: 100px;
+}
+
