@@ -45,7 +45,7 @@ class EventController extends Controller
             'description'=> $request->newdescription,
             'image'=> $request->newimage,
             'users_max'=> $request->newusermax,
-            'carousel'=>'0',
+            'carousel'=> $request->newcarousel,
         ]);
 
         return redirect()->route('home');
