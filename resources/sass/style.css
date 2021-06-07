@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Sarina&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('variables.css');
 @import url('components/allevents.css');
 
@@ -9,4 +10,8 @@ body {
 .textHeader {
     color: var(--red-color);
     font-family: 'Sarina', cursive;
+}
+
+.textFooter {
+    font-family: 'Roboto', sans-serif;
 }
