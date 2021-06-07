@@ -15,10 +15,12 @@
 .eventDescription {
     color: $sand-color;
     font-size: 13px;
+    margin: 0;
 }
 
 .eventContainer {
     display: flex;
+    padding-bottom: 12px;
 }
 
 img {

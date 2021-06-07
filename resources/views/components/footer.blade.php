@@ -1,8 +1,6 @@
-<footer class="containerFooter">
-    <h3 class="textFooter">INICIO</h3>
-    <h3 class="textFooter">LOGIN</h3>
-    <!-- <h3 class="textFooter">LOGOUT</h3>
-    <h3 class="textFooter">REGISTER</h3>
-    <h3 class="textFooter">usuario</h3> -->
-
-</footer>
+<div class="containerFooter">
+    <h1 class="textFooter">INICIO</h1>
+    <h2>LOGIN</h2>
+    <h3>LOGOUT</h2>
+    <h3>REG</h2>
+</div>
