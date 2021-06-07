@@ -14,10 +14,10 @@ class EventController extends Controller
      */
     public function index()
     {
-        $events = Event::all()
-            ->sortBy('date_time');
+        /* $events = Event::all()
+            ->sortBy('date_time'); */
         
-        return view('home', ['events'=>$events]);
+        return view('layouts.app' /* , ['events' => $events] */);
     }
 
     /**

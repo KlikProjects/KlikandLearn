@@ -16,7 +16,7 @@ body {
 }
 
 .textHeader {
-    color: var(--red-color);
+    color: $red-color;
     font-family: 'Sarina', cursive;
     display: flex;
     flex-direction: column;

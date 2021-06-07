@@ -1,0 +1,46 @@
+.eventTitle {
+    color: $red-color;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.dateAndUsers {
+    color: $sand-color;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+}
+
+.eventDescription {
+    color: $sand-color;
+    font-size: 13px;
+}
+
+.eventContainer {
+    display: flex;
+}
+
+img {
+    max-width: 100px;
+}
+
+.imgBtnContainer {
+    margin-left: 10px;
+}
+
+.line {
+    height: 1px;
+    background-color: $sand-color;
+    margin-bottom: 12px;
+}
+
+.enrollBtn {
+    width: 100%; 
+    border-style: none;
+    border-radius: 1000px;
+    background-color: $sand-color;
+    padding: 7px;
+    font-size: 16px;
+    font-weight: 600;
+}
