@@ -25,7 +25,7 @@
 
             <div class="imgBtnContainer">
                 <figure>
-                    <img src="https://i1.wp.com/discordemoji.com/assets/emoji/3853_jerryEh.png{{-- {{$event->image}} --}}" alt="">
+                    <img src="{{$event->image}}" alt="">
                 </figure>
                 <button class="enrollBtn">Inscribirme</button>
 
