@@ -17,7 +17,7 @@ class EventController extends Controller
         $events = Event::all()
             ->sortBy('date_time');
         
-        return view('layouts.app' , ['events' => $events]);
+        return view('home' , ['events' => $events]);
     }
 
     /**
@@ -93,6 +93,6 @@ class EventController extends Controller
      */
     public function destroy($id)
     {
-        //
+        print_r($id);
     }
 }

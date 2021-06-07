@@ -2,12 +2,12 @@
 
 @section('content')
 
-<div class="slider"></div>
+<x-header/>
+
+<main class="slider"></div>
 
 <div class="container">
     <section class="allevents">
-        
-        dd({{ $slot }})
 
         @foreach ($events as $event)
         <article class="eventContainer">
@@ -28,6 +28,11 @@
                     <img src="https://i1.wp.com/discordemoji.com/assets/emoji/3853_jerryEh.png{{-- {{$event->image}} --}}" alt="">
                 </figure>
                 <button class="enrollBtn">Inscribirme</button>
+
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i>Delete</button>
+
             </div>
         </article>
         <div class="line"></div>

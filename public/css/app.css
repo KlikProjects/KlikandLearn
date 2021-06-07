@@ -10020,10 +10020,12 @@ h3 {
 .eventDescription {
   color: #F5E6CC;
   font-size: 13px;
+  margin: 0;
 }
 
 .eventContainer {
   display: flex;
+  padding-bottom: 12px;
 }
 
 img {
@@ -10050,16 +10052,23 @@ img {
   font-weight: 600;
 }
 
-body {
-  background-color: #343F55;
-}
-
 .textHeader {
   color: #ED554D;
   font-family: "Sarina", cursive;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  font-size: 8.5vw;
+}
+
+/* nav.navbar div.container {
+    flex-wrap: nowrap;
+} */
+.containerFooter {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 205px;
+  background-color: #ED554D;
+}
+
+body {
+  background-color: #343F55;
 }

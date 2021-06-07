@@ -1,3 +1,6 @@
-<div>
-    <!-- Happiness is not something readymade. It comes from your own actions. - Dalai Lama -->
+<div class="containerFooter">
+    <h1 class="textFooter">INICIO</h1>
+    <h2>LOGIN</h2>
+    <h3>LOGOUT</h2>
+    <h3>REG</h2>
 </div>

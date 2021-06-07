@@ -11,17 +11,10 @@
 
 // Components
 @import 'components/allevents';
+@import 'components/header';
+@import 'components/footer';
+
 
 body {
     background-color: $dark-color;
-}
-
-.textHeader {
-    color: $red-color;
-    font-family: 'Sarina', cursive;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
 }
