@@ -20,7 +20,7 @@
 
 
 
-                    <p>Aqui se crea un nuevo evento</p>
+                    <h2>Aqui se crea un nuevo evento</h2>
                     
                     <form class="justify-content-center" action="{{route('home')}}" method="post">
                     @csrf
@@ -50,6 +50,12 @@
                             <span class="input-group-text">User Max</span>
                             <input class="form-control" type="int" name="newusermax" required placeholder="Max Users">
                         </div>
+
+                        <div class="form-group">
+                            <span class="input-group-text">Carousel</span>
+                            <input class="form-control" type="int" name="newcarousel" required placeholder="0 - not in carousel / 1- appear in carousel">
+                        </div>
+
                         
                         <input class="btn-lg btn-outline-success go-add-task float" type="submit" value="Create">
                     </form>
