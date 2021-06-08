@@ -20,6 +20,7 @@
 
 .eventContainer {
     display: flex;
+    justify-content: space-between;
     padding-bottom: 12px;
 }
 
@@ -28,6 +29,10 @@ img {
 }
 
 .imgBtnContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     margin-left: 10px;
 }
 
@@ -40,7 +45,7 @@ img {
 .enrollBtn {
     width: 100%; 
     border-style: none;
-    border-radius: 1000px;
+    border-radius: 2px;
     background-color: $sand-color;
     padding: 7px;
     font-size: 16px;

@@ -2,9 +2,9 @@
     <nav class="navbar navbar-expand-md navbar-dark shadow-sm">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-                <div class="containerKlik&Learn">
-                    <h1 class="textHeader">Klik & Learn</h1>{{-- {{ config('app.name', 'Laravel') }} --}}
+                <div class="containerKlikLearn">
                     <img src="img/logo.png" alt="">
+                    <h1 class="textHeader">Klik & Learn</h1>{{-- {{ config('app.name', 'Laravel') }} --}}
                 </div>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
