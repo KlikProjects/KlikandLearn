@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/* Route::get('/', function () {
+    return view('header');
+}); */
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\EventController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\EventController::class, 'index']); // esta linea corrige un fallo cuando se hace el primer login
+Route::get('/create', [App\Http\Controllers\EventController::class, 'create'])->middleware('isadmin')->name('createEvent');
+//Route::get('/delete', [App\Http\Controllers\EventController::class, 'destroy'])->middleware('isadmin')->name('deleteEvent');
+Route::post('/', [App\Http\Controllers\EventController::class, 'store'])->middleware('auth')->name('store');
+
+Route::resource('events', App\Http\Controllers\EventController::class)->middleware('isadmin');
+

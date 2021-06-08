@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Event;
 use Illuminate\Http\Request;
 
 class EventController extends Controller
@@ -13,7 +14,10 @@ class EventController extends Controller
      */
     public function index()
     {
-        //
+        $events = Event::all()
+            ->sortBy('date_time');
+        
+        return view('home' , ['events' => $events]);
     }
 
     /**
@@ -23,7 +27,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        //
+        return view('eventforms.create');
     }
 
     /**
@@ -34,7 +38,17 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request);
+        $event = Event::create([
+            'date_time'=>$request->newdatetime,
+            'title'=> $request->newtitle,
+            'description'=> $request->newdescription,
+            'image'=> $request->newimage,
+            'users_max'=> $request->newusermax,
+            'carousel'=> $request->newcarousel,
+        ]);
+
+        return redirect()->route('home');
     }
 
     /**
@@ -79,6 +93,11 @@ class EventController extends Controller
      */
     public function destroy($id)
     {
-        //
+        
+
+        $event = Event::find($id)->delete();
+
+        return redirect()->route('home')
+            ->with('success', 'Event deleted successfully');
     }
 }
