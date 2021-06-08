@@ -26,5 +26,6 @@ Route::get('/create', [App\Http\Controllers\EventController::class, 'create'])->
 //Route::get('/delete', [App\Http\Controllers\EventController::class, 'destroy'])->middleware('isadmin')->name('deleteEvent');
 Route::post('/', [App\Http\Controllers\EventController::class, 'store'])->middleware('auth')->name('store');
 
+Route::resource('show', App\Http\Controllers\EventController::class);
 Route::resource('events', App\Http\Controllers\EventController::class)->middleware('isadmin');
 

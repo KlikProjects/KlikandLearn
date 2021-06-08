@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Event;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class EventController extends Controller
@@ -16,7 +17,8 @@ class EventController extends Controller
     {
         $events = Event::all()
             ->sortBy('date_time');
-        
+
+               
         return view('home' , ['events' => $events]);
     }
 
@@ -59,7 +61,9 @@ class EventController extends Controller
      */
     public function show($id)
     {
-        //
+        $event = Event::find($id);
+
+        return view('eventforms.show', compact('event'));
     }
 
     /**
