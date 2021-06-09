@@ -56,7 +56,6 @@
                             <input class="form-control" type="int" name="newcarousel" required placeholder="0 - not in carousel / 1- appear in carousel">
                         </div>
 
-                        
                         <input class="btn-lg btn-outline-success go-add-task float" type="submit" value="Create">
                     </form>
                 </div>
