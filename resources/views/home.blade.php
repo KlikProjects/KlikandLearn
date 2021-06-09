@@ -10,6 +10,9 @@
     <section class="allevents">
 
         @foreach ($events as $event)
+        @if ($event->date_time > now())
+            
+        
         <article class="eventContainer">
             <div class="eventInfo">
                 <div class="dateAndUsers">
@@ -41,7 +44,9 @@
 
             </div>
         </article>
+        
         <div class="line"></div>
+        @endif
         @endforeach
 
     </section>
