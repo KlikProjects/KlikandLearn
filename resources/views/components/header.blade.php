@@ -3,7 +3,7 @@
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
                 <div class="containerKlikLearn">
-                    <img src="img/logo.png" alt="">
+                    <img class="logo" src="img/logo.png" alt="">
                     <h1 class="textHeader">Klik & Learn</h1>{{-- {{ config('app.name', 'Laravel') }} --}}
                 </div>
             </a>
