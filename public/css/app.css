@@ -10029,7 +10029,7 @@ h3 {
   padding-bottom: 12px;
 }
 
-img {
+.imgEvents {
   max-width: 100px;
 }
 
@@ -10057,12 +10057,10 @@ img {
   font-weight: 600;
 }
 
-.container {
+.containerHeader {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  flex-wrap: nowrap;
-  flex-direction: row;
 }
 
 .containerKlikLearn {
@@ -10075,8 +10073,13 @@ img {
 
 .textHeader {
   color: #ED554D;
-  font-family: "Sarina", cursive;
-  font-size: 8 vw;
+  font-family: "Sarina";
+  font-size: 6.5vw;
+  margin: 12px;
+}
+
+.logo {
+  width: 12vw;
 }
 
 .containerFooter {
@@ -10085,6 +10088,47 @@ img {
   width: 100%;
   height: 205px;
   background-color: #ED554D;
+}
+
+.card {
+  background-color: #343F55;
+}
+
+.cardTitle {
+  color: #F6972B;
+}
+
+.input-group-text {
+  border-color: #F5E6CC;
+  background-color: #343F55;
+  color: #F6972B;
+  width: 100px;
+}
+
+.form-control {
+  background-color: #343F55;
+  color: gray;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.btn-carousel {
+  color: #F5E6CC;
+}
+
+.btn-lg, .btn-group-lg > .btn {
+  background-color: #F6972B;
+  color: #343F55;
+}
+
+.btnCreate {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sliderCB {
+  display: none;
 }
 
 body {
