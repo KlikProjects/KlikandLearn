@@ -10127,10 +10127,9 @@ h3 {
   justify-content: flex-end;
 }
 
-.sliderCB {
-  display: none;
-}
-
+/* .sliderCB{
+    display: none;
+} */
 body {
   background-color: #343F55;
 }
