@@ -10029,7 +10029,7 @@ h3 {
   padding-bottom: 12px;
 }
 
-img {
+.imgEvents {
   max-width: 100px;
 }
 
@@ -10055,6 +10055,7 @@ img {
   padding: 7px;
   font-size: 16px;
   font-weight: 600;
+  color: #343F55;
 }
 
 .container {
@@ -10076,7 +10077,11 @@ img {
 .textHeader {
   color: #ED554D;
   font-family: "Sarina", cursive;
-  font-size: 8 vw;
+  font-size: 8vw;
+}
+
+.logo {
+  width: 12vw;
 }
 
 .containerFooter {
@@ -10087,6 +10092,61 @@ img {
   background-color: #ED554D;
 }
 
+/* .slider {
+    display: flex;
+    flex-flow: row nowrap;
+    overflow: scroll;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.sliderEvent {
+    min-width: 120px;
+    height: 150px;
+    background-color: $sand-color;
+    margin-right: 9px;
+    margin-left: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.sliderTitleBtnContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sliderEnrollBtn {
+    position: absolute;
+    bottom: 0; 
+    text-decoration: none;
+    color: $dark-color;
+    margin: 0;
+    width: 100%;
+    font-weight: 600;
+    background-color: $red-color;
+    text-align: center;
+}
+
+.sliderTitle {
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $red-color;
+    margin: 5px;
+}
+
+.sliderImgContainer {
+    width: 100%;
+    margin: 0;
+}
+
+.sliderImg {
+    width: 100%;
+} */
 body {
   background-color: #343F55;
 }
