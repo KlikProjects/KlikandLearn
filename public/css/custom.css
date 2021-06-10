@@ -1,0 +1,17 @@
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    color: #efe1c9;
+    background-color: #ED554D;
+    border-color:#F5E6CC;
+}
+
+.nav-link {
+    display: block;
+    padding: .5rem 1rem;
+    color: #f4e6cc;
+    ecoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+
+
+
