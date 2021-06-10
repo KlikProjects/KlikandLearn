@@ -10148,5 +10148,5 @@ h3 {
     width: 100%;
 } */
 body {
-  background-color: #343F55;
+  background-color: #343F55 !important;
 }
