@@ -81,7 +81,7 @@ class EventController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('eventforms.edit');
     }
 
     /**
