@@ -22,9 +22,10 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 12px;
+    
 }
 
-img {
+.imgEvents {
     max-width: 100px;
 }
 
@@ -34,6 +35,7 @@ img {
     justify-content: space-around;
     align-items: center;
     margin-left: 10px;
+    
 }
 
 .line {
