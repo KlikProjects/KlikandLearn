@@ -41,6 +41,13 @@ class EventController extends Controller
     public function store(Request $request)
     {
         //dd($request);
+        if ($request->newcarousel != 'on') {
+            $request->newcarousel = "0";
+        }
+        if ($request->newcarousel == 'on') {
+            $request->newcarousel = "1";
+        }
+        
         $event = Event::create([
             'date_time'=>$request->newdatetime,
             'title'=> $request->newtitle,
