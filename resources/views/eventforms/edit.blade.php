@@ -14,7 +14,7 @@
                     @endif
 
                     <h2 class="cardTitle">Edit an event</h2>
-                    <form class="justify-content-center" action="{{route('events.store')}}" method="post">
+                    <form class="justify-content-center" action="{{route('events.update')}}" method="post">
                     @csrf
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="inputGroup-sizing-default">Title</span>

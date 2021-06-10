@@ -95,7 +95,17 @@ class EventController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $event = Event::find($id);
+        $event->update([
+        'date_time'=>$request->newdatetime,
+        'title'=> $request->newtitle,
+        'description'=> $request->newdescription,
+        'image'=> $request->newimage,
+        'users_max'=> $request->newusermax,
+        'carousel'=> $request->newcarousel,
+       ]);
+
+       return redirect()->route('home');
     }
 
     /**
