@@ -10058,6 +10058,10 @@ h3 {
   color: #343F55;
 }
 
+.navEvents {
+  color: #ED554D;
+}
+
 .containerHeader {
   display: flex;
   justify-content: space-around;
