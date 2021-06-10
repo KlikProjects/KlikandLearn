@@ -1,0 +1,43 @@
+.card{
+    background-color: $dark-color;
+}
+
+.cardTitle {
+    color: $orange-color;
+}
+
+.input-group-text {
+    border-color: $sand-color;
+    background-color: $dark-color;
+    color: $orange-color;
+    width: 100px;
+
+}
+
+.form-control {
+    background-color: $dark-color;
+    color: gray;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn-carousel{
+    color: $sand-color;
+}
+
+.btn-lg{
+    background-color: $orange-color;
+    color: $dark-color;
+}
+
+.btnCreate{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sliderCB{
+    color: #6574cd;
+    margin-left: 20px;
+    border-color: green;
+}

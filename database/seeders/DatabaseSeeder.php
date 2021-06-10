@@ -23,17 +23,17 @@ class DatabaseSeeder extends Seeder
         User::factory()->create([
             'name' => 'user1',
             'email' => 'user1@user1.com',
-            'isAdmin' => true
+            'isAdmin' => false
         ]);
         User::factory()->create([
             'name' => 'user2',
             'email' => 'user2@user2.com',
-            'isAdmin' => true
+            'isAdmin' => false
         ]);
         User::factory()->create([
             'name' => 'user3',
             'email' => 'user3@user3.com',
-            'isAdmin' => true
+            'isAdmin' => false
         ]);
 
         //User::factory(10)->create();

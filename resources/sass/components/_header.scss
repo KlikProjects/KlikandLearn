@@ -1,9 +1,7 @@
-.container {
+.containerHeader {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    flex-wrap: nowrap;
-    flex-direction: row;
 }
 
 .containerKlikLearn {
@@ -16,7 +14,11 @@
 
 .textHeader {
     color: $red-color;
-    font-family: 'Sarina', cursive;
-    font-size: 8
-    vw;
+    font-family: 'Sarina';
+    font-size: 6.5vw;
+    margin: 12px;
+    }
+
+.logo {
+    width: 12vw;
 }
