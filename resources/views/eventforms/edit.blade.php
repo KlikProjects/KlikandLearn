@@ -14,7 +14,8 @@
                     @endif
 
                     <h2 class="cardTitle">Edit an event</h2>
-                    <form class="justify-content-center" action="{{route('events.update')}}" method="post">
+                    <form class="justify-content-center" action="{{route('events.update', $event->id)}}" method="POST">
+                    @method('PATCH')
                     @csrf
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="inputGroup-sizing-default">Title</span>
@@ -42,7 +43,13 @@
                         </div>
 
                         <div class="form-check form-switch sliderCB">
-                            <input class="form-check-input" name="newcarousel" type="checkbox" checked>
+
+                            @if ($event->carousel === 1)
+                                <input class="form-check-input" name="newcarousel" type="checkbox" checked>
+                            @else
+                                <input class="form-check-input" name="newcarousel" type="checkbox">
+                            @endif
+                            
                             <label class="form-check-label" for="flexSwitchCheckChecked">Carousel</label>
                         </div>
 

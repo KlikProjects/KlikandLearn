@@ -18,8 +18,8 @@ class EventController extends Controller
         $events = Event::all()
             ->sortBy('date_time');
 
-               
-        return view('home' , ['events' => $events]);
+
+        return view('home', ['events' => $events]);
     }
 
     /**
@@ -47,14 +47,16 @@ class EventController extends Controller
         if ($request->newcarousel == 'on') {
             $request->newcarousel = "1";
         }
-        
+
+        /* dd($request); */
+
         $event = Event::create([
-            'date_time'=>$request->newdatetime,
-            'title'=> $request->newtitle,
-            'description'=> $request->newdescription,
-            'image'=> $request->newimage,
-            'users_max'=> $request->newusermax,
-            'carousel'=> $request->newcarousel,
+            'date_time' => $request->newdatetime,
+            'title' => $request->newtitle,
+            'description' => $request->newdescription,
+            'image' => $request->newimage,
+            'users_max' => $request->newusermax,
+            'carousel' => $request->newcarousel,
         ]);
 
         return redirect()->route('home');
@@ -95,7 +97,24 @@ class EventController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $event = Event::update
+        if ($request->newcarousel != 'on') {
+            $request->newcarousel = "0";
+        }
+        if ($request->newcarousel == 'on') {
+            $request->newcarousel = "1";
+        }
+
+        $event = Event::whereId($id);
+        $event->update([
+            'date_time' => $request->newdatetime,
+            'title' => $request->newtitle,
+            'description' => $request->newdescription,
+            'image' => $request->newimage,
+            'users_max' => $request->newusermax,
+            'carousel' => $request->newcarousel,
+        ]);
+
+        return redirect()->route('home');
     }
 
     /**
@@ -106,7 +125,7 @@ class EventController extends Controller
      */
     public function destroy($id)
     {
-        
+
 
         $event = Event::find($id)->delete();
 
