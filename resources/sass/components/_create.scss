@@ -1,43 +1,43 @@
-.card{
-    background-color: $dark-color;
+.card {
+    background-color: $dark-color !important;
 }
 
 .cardTitle {
-    color: $orange-color;
+    color: $orange-color !important;
 }
 
 .input-group-text {
-    border-color: $sand-color;
-    background-color: $dark-color;
-    color: $orange-color;
-    width: 100px;
+    border-color: $sand-color !important;
+    background-color: $dark-color !important;
+    color: $orange-color!important ;
+    width: 100px !important;
 
 }
 
 .form-control {
-    background-color: $dark-color;
-    color: gray;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    background-color: $dark-color !important;
+    color: gray !important;
+    display: flex !important;
+    justify-content: space-around !important;
+    align-items: center !important;
 }
 
-.btn-carousel{
-    color: $sand-color;
+.btn-carousel {
+    color: $sand-color !important;
 }
 
-.btn-lg{
-    background-color: $orange-color;
-    color: $dark-color;
+.btn-lg {
+    background-color: $orange-color !important;
+    color: $dark-color !important;
 }
 
-.btnCreate{
-    display: flex;
-    justify-content: flex-end;
+.btnCreate {
+    display: flex !important;
+    justify-content: flex-end !important;
 }
 
-.sliderCB{
-    color: #6574cd;
-    margin-left: 20px;
-    border-color: green;
+.sliderCB {
+    color: #6574cd !important;
+    margin-left: 20px !important;
+    border-color: green !important;
 }
