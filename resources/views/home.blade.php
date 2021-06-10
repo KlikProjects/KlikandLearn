@@ -26,7 +26,7 @@
 
                     <div class="imgBtnContainer">
                         <figure>
-                            <img src="{{$event->image}}" alt="">
+                            <img class="imgEvents" src="{{$event->image}}" alt="">
                         </figure>
                         <button class="enrollBtn">Inscribirme</button>
 
