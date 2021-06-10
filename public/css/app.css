@@ -10055,6 +10055,7 @@ h3 {
   padding: 7px;
   font-size: 16px;
   font-weight: 600;
+  color: #343F55;
 }
 
 .containerHeader {
@@ -10073,9 +10074,8 @@ h3 {
 
 .textHeader {
   color: #ED554D;
-  font-family: "Sarina";
-  font-size: 6.5vw;
-  margin: 12px;
+  font-family: "Sarina", cursive;
+  font-size: 8vw;
 }
 
 .logo {
@@ -10134,5 +10134,5 @@ h3 {
 }
 
 body {
-  background-color: #343F55;
+  background-color: #343F55 !important;
 }
