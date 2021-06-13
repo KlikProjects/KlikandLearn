@@ -50,15 +50,11 @@
     <li class="nav-item">
       <a class="nav-link active" aria-current="page" href="#">Next events</a>
     </li>
-    <li class="nav-item">
+    <li class="nav-item ">
       <a class="nav-link" href="#">My events</a>
     </li>
     <li class="nav-item">
-<<<<<<< HEAD
       <a class="nav-link" href="#">Past events</a>
-=======
-      <a class="nav-link" href="#">Link</a>
->>>>>>> 0f49f3acb08dd14a85e91cb6653c8c83fd1cc515
     </li>
   </ul>
 </div>
