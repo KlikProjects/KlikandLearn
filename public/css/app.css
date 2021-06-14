@@ -10055,6 +10055,11 @@ h3 {
   padding: 7px;
   font-size: 16px;
   font-weight: 600;
+  color: #343F55;
+}
+
+.navEvents {
+  color: #ED554D;
 }
 
 .containerHeader {
@@ -10073,9 +10078,8 @@ h3 {
 
 .textHeader {
   color: #ED554D;
-  font-family: "Sarina";
-  font-size: 6.5vw;
-  margin: 12px;
+  font-family: "Sarina", cursive;
+  font-size: 8vw;
 }
 
 .logo {
@@ -10091,48 +10095,48 @@ h3 {
 }
 
 .card {
-  background-color: #343F55;
+  background-color: #343F55 !important;
 }
 
 .cardTitle {
-  color: #F6972B;
+  color: #F6972B !important;
 }
 
 .input-group-text {
-  border-color: #F5E6CC;
-  background-color: #343F55;
-  color: #F6972B;
-  width: 100px;
+  border-color: #F5E6CC !important;
+  background-color: #343F55 !important;
+  color: #F6972B !important;
+  width: 100px !important;
 }
 
 .form-control {
-  background-color: #343F55;
-  color: gray;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  background-color: #343F55 !important;
+  color: gray !important;
+  display: flex !important;
+  justify-content: space-around !important;
+  align-items: center !important;
 }
 
 .btn-carousel {
-  color: #F5E6CC;
+  color: #F5E6CC !important;
 }
 
 .btn-lg, .btn-group-lg > .btn {
-  background-color: #F6972B;
-  color: #343F55;
+  background-color: #F6972B !important;
+  color: #343F55 !important;
 }
 
 .btnCreate {
-  display: flex;
-  justify-content: flex-end;
+  display: flex !important;
+  justify-content: flex-end !important;
 }
 
 .sliderCB {
-  color: #6574cd;
-  margin-left: 20px;
-  border-color: green;
+  color: #6574cd !important;
+  margin-left: 20px !important;
+  border-color: green !important;
 }
 
 body {
-  background-color: #343F55;
+  background-color: #343F55 !important;
 }
