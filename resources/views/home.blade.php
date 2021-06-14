@@ -46,42 +46,31 @@
 
 </main>
 
-<?php
-
-$show = null;
-
-?>
-
 <div>
     <ul class="nav nav-tabs">
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" wire:click="$set('show', 1)" href="#">Next events</a>
+            <a class="nav-link allEv-link active" aria-current="page" href="#">Next events</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" wire:click="$set('show', 2)" href="#">My events</a>
+            <a class="nav-link myEv-link" href="#">My events</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" wire:click="$set('show', 3)" href="#">Past events</a>
+            <a class="nav-link pastEv-link" href="#">Past eventss</a>
         </li>
     </ul>
 </div>
 
-<div class="container">
-    
-    @if ($show == null || $show === 1)
-        <x-allevents :events="$events"/>
-    @endif
 
-    @if ($show === 2)
+<div class="container">
+    <section class="allEvents">
+        <x-allevents :events="$events"/>
+    </section>
+    <section class="myEvents">
         <x-myevents/>
-    @endif
-    
-    @if ($show === 3)
+    </section>
+    <section class="pastEvents">
         <x-pastevents/>
-    @endif
-    
-    <section class="asistiras"></section>
-    <section class="pasados"></section>
+    </section>
 </div>
 
 @endsection

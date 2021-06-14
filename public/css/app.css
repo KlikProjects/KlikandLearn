@@ -10062,6 +10062,10 @@ h3 {
   background-color: #ED554D !important;
 }
 
+.hide {
+  display: none;
+}
+
 .containerHeader {
   display: flex;
   justify-content: space-around;

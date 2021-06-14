@@ -1,1 +1,1 @@
-past events
+Past Events

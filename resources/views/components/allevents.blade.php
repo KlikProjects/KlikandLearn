@@ -1,7 +1,5 @@
 @props (["events" => $events])
 
-<section class="allevents">
-
     @foreach ($events as $event)
         @if ($event->date_time > now())
             <article class="eventContainer">
@@ -48,5 +46,3 @@
     <div class="line"></div>
     @endif 
     @endforeach
-
-</section>

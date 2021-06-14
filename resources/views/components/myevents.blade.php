@@ -1,1 +1,3 @@
-My events
+<section class="myEvents">
+    My events
+</section>
