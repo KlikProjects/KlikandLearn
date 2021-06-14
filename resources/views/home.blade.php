@@ -68,8 +68,9 @@
                 <article class="eventContainer">
                     <div class="eventInfo">
                         <div class="dateAndUsers">
-                            <p>{{$event->date_time}}  </p>  
-                            <p>{{$event->users_max}} participantes</p>
+                            <p>{{$event->date_time}}</p>
+                            
+                            <p>{{$event->users_max}} max users</p>
                         </div>
                         
                         <div class="titleAndDesc">
