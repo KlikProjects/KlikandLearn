@@ -10059,7 +10059,7 @@ h3 {
 }
 
 .navEvents {
-  color: #ED554D;
+  background-color: #ED554D !important;
 }
 
 .containerHeader {
