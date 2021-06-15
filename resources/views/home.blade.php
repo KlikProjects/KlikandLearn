@@ -25,23 +25,25 @@
             echo '<img class="d-block w-100" src="' . $event["image"] . '"/>';
                 echo '<div class="carousel-caption" >';
                         echo '<h5 class="text-dark" >' . $event["title"] . '</h5>';
-                echo '</div>';//Caption
-            echo '</div>';//ITEM
+                        echo '<a class="btn btn-sm btn-primary" href="' . route('show.show',$event->id) . '"><i class="fa fa-fw fa-eye"></i>🏷️ SHOW 🏷️</a>';
+                echo '</div>';
+            echo '</div>';
             $index++;
             }
+
         } 
 
 
     ?>
     <!-- Controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+{{--         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
-        </button>
+        </button> --}}
 </div>
 
 </main>
@@ -61,6 +63,7 @@
 </div>
 
 
+
 <div class="container">
     <section class="allEvents">
         <x-allevents :events="$events"/>
@@ -69,7 +72,7 @@
         <x-myevents/>
     </section>
     <section class="pastEvents">
-        <x-pastevents/>
+        <x-pastevents :events="$events" />
     </section>
 </div>
 
