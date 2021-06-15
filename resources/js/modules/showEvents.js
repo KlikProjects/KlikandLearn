@@ -1,8 +1,5 @@
-const getShowAll = document.querySelector('.allEv-link');
-getShowAll.onclick = showAllEv;
+const getSection1 = document.querySelector('.myEvents');
+const getSection2 = document.querySelector('.pastEvents');
 
-function showAllEv() {
-    const getSection1 = document.querySelector('.myEvents');
-    const getSection2 = document.querySelector
-    getSection.classList.add = "hide";
-}
+getSection1.classList.add = "hide";
+getSection2.classList.add = "hide";

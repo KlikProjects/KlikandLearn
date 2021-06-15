@@ -10,7 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
     <!-- Fonts -->
@@ -30,17 +30,15 @@
         
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-    <script>
+    {{-- <script>
 
-        /* const getShowAll = document.querySelector('.allEv-link');
-        getShowAll.onclick = showAllEv;
+    const getSection1 = document.querySelector('.myEvents');
+    const getSection2 = document.querySelector('.pastEvents');
 
-        function showAllEv() {
-            const getSection = document.querySelector('.myEvents');
-            getSection.classList.add = "hide";
-        } */
+    getSection1.classList.remove = "myEvents";
+    getSection2.classList.add = "hide";
 
-    </script>
-    <script src="./js/app.js" type="module"></script>
+    </script> --}}
+    <script src="{{ asset('js/app.js') }}" type="module" defer></script>
 </body>
 </html>
