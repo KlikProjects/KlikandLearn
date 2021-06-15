@@ -52,7 +52,9 @@
                             
                             <label class="form-check-label" for="flexSwitchCheckChecked">Carousel</label>
                         </div>
-
+                        <div class="float-right">
+                            <a class="btn btn-primary" href="{{ route('home') }}">↩️</a>
+                        </div>
                         <div class="btnCreate">
                             <button type="submit" class="btn btn-outline-success">Save</button>
                         </div>
