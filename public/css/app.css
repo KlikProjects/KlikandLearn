@@ -10059,7 +10059,7 @@ h3 {
 }
 
 .navEvents {
-  color: #ED554D;
+  background-color: #ED554D !important;
 }
 
 .containerHeader {
@@ -10135,6 +10135,24 @@ h3 {
   color: #6574cd !important;
   margin-left: 20px !important;
   border-color: green !important;
+}
+
+.cardTitle {
+  color: #F6972B !important;
+}
+
+.cardDateText {
+  color: #F5E6CC !important;
+}
+
+.cardDescriptionText {
+  background-color: #343F55 !important;
+  color: #F5E6CC !important;
+}
+
+.cardAttendees {
+  background-color: #343F55 !important;
+  color: #F5E6CC !important;
 }
 
 body {
