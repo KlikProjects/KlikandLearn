@@ -29,12 +29,11 @@
                 echo '</div>';
             echo '</div>';
             $index++;
+        
             }
-
         } 
-
-
     ?>
+
     <!-- Controls -->
 {{--         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -49,15 +48,15 @@
 </main>
 
 <div>
-    <ul class="nav nav-tabs">
+    <ul class="nav nav-tabs" id="eventsNav">
         <li class="nav-item">
-            <a class="nav-link allEv-link active" aria-current="page" href="#">Next events</a>
+            <a class="nav-link allEv-link active" aria-current="page" href="#eventsNav">Next events</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link myEv-link" href="#">My events</a>
+            <a class="nav-link myEv-link hide" href="#eventsNav">My events</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link pastEv-link" href="#">Past eventss</a>
+            <a class="nav-link pastEv-link hide" href="#eventsNav">Past eventss</a>
         </li>
     </ul>
 </div>

@@ -1,2 +1,2 @@
 require('./bootstrap');
-require('./modules/showevents');
+require('./modules/showEvents');
