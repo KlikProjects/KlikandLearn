@@ -14,7 +14,7 @@
             <li class="list-group-item cardAttendees"><p>{{$event->users_max}} participantes</li>
         </ul>
         <div class="card-body">
-            <a href="#" class="card-link">Subscribe</a>
+            <a href="#" class="card-link btn-outline-success">Subscribe</a>
         </div>
         <div class="float-right">
             <a class="btn btn-primary" href="{{ route('home') }}">↩️</a>
