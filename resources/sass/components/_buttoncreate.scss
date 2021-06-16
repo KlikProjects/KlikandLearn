@@ -1,0 +1,21 @@
+.containerNewEvent {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+
+}
+
+.buttonCreate {
+    position: relative;
+    color: $sand-color !important;
+    background-color: $dark-color;
+    border: none !important;
+}
+
+.txtCreateNewEvent {
+    position: relative;
+    color: $red-color !important;
+    display: flex
+    justify-content: ;
+}

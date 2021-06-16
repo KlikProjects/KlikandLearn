@@ -10174,6 +10174,18 @@ h3 {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 
+.buttonCreate {
+  position: relative;
+  color: #F5E6CC !important;
+  background-color: #343F55;
+  border: none !important;
+}
+
+.txtCreateNewEvent {
+  position: relative;
+  color: #ED554D !important;
+}
+
 body {
   background-color: #343F55 !important;
 }
