@@ -2,19 +2,21 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    
+    
 }
 
 .buttonCreate {
-    position: relative;
-    color: $sand-color !important;
     background-color: $dark-color;
     border: none !important;
 }
 
-.txtCreateNewEvent {
-    position: relative;
+.imgButton{
+    width: 6vw !important;
+    height: auto !important;
+}
+
+.txtNewEvent {
     color: $red-color !important;
-    display: flex
-    justify-content: ;
 }

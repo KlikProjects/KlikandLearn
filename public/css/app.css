@@ -10174,15 +10174,24 @@ h3 {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 
+.containerNewEvent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .buttonCreate {
-  position: relative;
-  color: #F5E6CC !important;
   background-color: #343F55;
   border: none !important;
 }
 
-.txtCreateNewEvent {
-  position: relative;
+.imgButton {
+  width: 6vw !important;
+  height: auto !important;
+}
+
+.txtNewEvent {
   color: #ED554D !important;
 }
 
