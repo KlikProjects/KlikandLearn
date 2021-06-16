@@ -25,7 +25,7 @@
             echo '<img class="d-block w-100" src="' . $event["image"] . '"/>';
                 echo '<div class="carousel-caption" >';
                         echo '<h5 class="text-dark" >' . $event["title"] . '</h5>';
-                        echo '<a class="btn btn-sm btn-primary" href="' . route('show.show',$event->id) . '"><i class="fa fa-fw fa-eye"></i>🏷️ SHOW 🏷️</a>';
+                        echo '<a class="btn btn-sm btn-primary" href="' . route('show.show',$event->id) . '"><i class="fa fa-fw fa-eye"></i>🏷️🐸 SHOW 🏷️</a>';
                 echo '</div>';
             echo '</div>';
             $index++;
