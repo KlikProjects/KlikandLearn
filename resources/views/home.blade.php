@@ -61,9 +61,10 @@
     </ul>
 </div>
 
-<x-buttonCreate/>
+
 
 <div class="container">
+    <x-buttonCreate/> 
     <section class="allEvents">
         <x-allevents :events="$events"/>
     </section>
