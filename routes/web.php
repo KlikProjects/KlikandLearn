@@ -29,3 +29,7 @@ Route::post('/', [App\Http\Controllers\EventController::class, 'store'])->middle
 Route::resource('show', App\Http\Controllers\EventController::class);
 Route::resource('events', App\Http\Controllers\EventController::class)->middleware('isadmin');
 
+Route::get('/signup', [App\Http\Controllers\EventController::class, 'viewSignedUp'])->middleware('auth')->name('signup');
+
+
+
