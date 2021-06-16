@@ -1,5 +1,5 @@
 @props (["events" => $events])
-
+Past Events
     @foreach ($events as $event)
         @if ($event->date_time < now())
             <article class="eventContainer">

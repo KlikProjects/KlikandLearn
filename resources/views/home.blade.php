@@ -56,7 +56,7 @@
             <a class="nav-link myEv-link hide" href="#eventsNav">My events</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link pastEv-link hide" href="#eventsNav">Past eventss</a>
+            <a class="nav-link pastEv-link hide" href="#eventsNav">Past events</a>
         </li>
     </ul>
 </div>
