@@ -46,6 +46,20 @@
 
 </main>
 
+<div>
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Next events</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">My events</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Past events</a>
+    </li>
+  </ul>
+</div>
+
 <div class="container">
     <section class="allevents">
 
