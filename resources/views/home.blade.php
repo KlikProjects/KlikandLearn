@@ -53,10 +53,10 @@
             <a class="nav-link allEv-link active" aria-current="page" href="#eventsNav">Next events</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link myEv-link hide" href="#eventsNav">My events</a>
+            <a class="nav-link myEv-link" href="#eventsNav">My events</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link pastEv-link hide" href="#eventsNav">Past events</a>
+            <a class="nav-link pastEv-link" href="#eventsNav">Past events</a>
         </li>
     </ul>
 </div>
@@ -65,10 +65,10 @@
     <section class="allEvents">
         <x-allevents :events="$events"/>
     </section>
-    <section class="myEvents">
+    <section class="myEvents hide">
         <x-myevents/>
     </section>
-    <section class="pastEvents">
+    <section class="pastEvents hide">
         <x-pastevents :events="$events" />
     </section>
 </div>
