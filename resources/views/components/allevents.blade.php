@@ -19,14 +19,15 @@
                     <figure>
                         <img class="imgEvents" src="{{$event->image}}" alt="">
                     </figure>
-                    <button class="enrollBtn">Inscribirme</button>
+                    
+                    <button class="enrollBtn"><a href="{{ url('/inscribe', $event->id) }}">Inscribirme</a></button>
 
                     <td>
                         <form action="{{ route('events.destroy',$event->id) }}" method="POST">
-                            <a class="btn btn-sm btn-primary" href="{{ route('show.show',$event->id) }}"><i class="fa fa-fw fa-eye"></i>🏷️</a>
+                            <a class="btn btn-sm btn-primary" href="{{ route('show.show', $event->id) }}"><i class="fa fa-fw fa-eye"></i>🏷️</a>
                             @if(Auth::check())
                                 @if (Auth::user()->isAdmin)
-                                    <a class="btn btn-sm btn-success" href="{{ route('events.edit',$event->id) }}"><i class="fa fa-fw fa-edit"></i>✏️</a>
+                                    <a class="btn btn-sm btn-success" href="{{ route('events.edit', $event->id) }}"><i class="fa fa-fw fa-edit"></i>✏️</a>
                                 
                                 @csrf
                                 

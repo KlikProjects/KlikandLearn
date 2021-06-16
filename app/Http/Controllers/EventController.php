@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Event;
 use App\Models\User;
+use Attribute;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use League\CommonMark\Extension\Attributes\Node\Attributes;
 
 class EventController extends Controller
 {
@@ -123,13 +126,21 @@ class EventController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function destroy($id)
     {
-
-
         $event = Event::find($id)->delete();
 
         return redirect()->route('home')
             ->with('success', 'Event deleted successfully');
+    }
+
+    public function inscribe($id) {
+        $user = User::find(Auth::id());
+        $event = Event::find($id);
+        
+        $user->event()->attach($event);
+        
+        return redirect()->route('home');
     }
 }
