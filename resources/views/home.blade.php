@@ -53,76 +53,23 @@
             <a class="nav-link allEv-link active" aria-current="page" href="#eventsNav">Next events</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link myEv-link hide" href="#eventsNav">My events</a>
+            <a class="nav-link myEv-link" href="#eventsNav">My events</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link pastEv-link hide" href="#eventsNav">Past events</a>
+            <a class="nav-link pastEv-link" href="#eventsNav">Past events</a>
         </li>
     </ul>
 </div>
 
 <div class="container">
-<<<<<<< HEAD
     <section class="allEvents">
         <x-allevents :events="$events"/>
     </section>
-    <section class="myEvents">
+    <section class="myEvents hide">
         <x-myevents/>
     </section>
-    <section class="pastEvents">
+    <section class="pastEvents hide">
         <x-pastevents :events="$events" />
-=======
-    <section class="allevents">
-
-        @foreach ($events as $event)
-            @if ($event->date_time > now())
-                <article class="eventContainer">
-                    <div class="eventInfo">
-                        <div class="dateAndUsers">
-                            <p>{{$event->date_time}}</p>
-                            
-                            <p>{{$event->users_max}} max users</p>
-                        </div>
-                        
-                        <div class="titleAndDesc">
-                            <h3 class="eventTitle">{{$event->title}}</h3>
-                            <p class="eventDescription">{{$event->description}}</p>
-                        </div>
-                    </div>
-
-                    <div class="imgBtnContainer">
-                        <figure>
-                            <img class="imgEvents" src="{{$event->image}}" alt="">
-                        </figure>
-                        <button class="enrollBtn">Inscribirme</button>
-
-                        <td>
-                            <form action="{{ route('events.destroy',$event->id) }}" method="POST">
-                                <a class="btn btn-sm btn-primary" href="{{ route('show.show',$event->id) }}"><i class="fa fa-fw fa-eye"></i>🏷️</a>
-                                @if(Auth::check())
-                                    @if (Auth::user()->isAdmin)
-                                        <a class="btn btn-sm btn-success" href="{{ route('events.edit',$event->id) }}"><i class="fa fa-fw fa-edit"></i>✏️</a>
-                                    
-                                    @csrf
-                                    
-                                    @method('DELETE')
-                                    
-                                        <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i>❌</button>    
-                                    @endif
-                                @endif
-                                
-                            </form>
-                        </td>
-
-                    </div>
-
-                </article>
-                
-        <div class="line"></div>
-        @endif
-        @endforeach
-
->>>>>>> f1c0c2ff141c2a3f5a1faf0296a287f51db8a6c7
     </section>
 </div>
 
