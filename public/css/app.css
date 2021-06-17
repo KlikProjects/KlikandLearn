@@ -1,6 +1,23 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 @import url(https://fonts.googleapis.com/css2?family=Sarina&display=swap);
 @charset "UTF-8";
+/* @mixin tablet {
+    @media only screen and (min-width: 768px) {
+    @content;
+    }
+}
+
+@mixin desktop {
+    @media only screen and (min-width: 992px) {
+    @content;
+    }
+}
+
+@mixin large {
+    @media only screen and (min-width: 1200px) {
+    @content;
+    }
+} */
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -10174,6 +10191,119 @@ h3 {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 
+<<<<<<< Updated upstream
+=======
+.slide-img {
+  width: 94vw;
+  height: 56vw;
+  display: flexbox;
+  align-items: flex-end;
+  align-content: flex-end;
+}
+
+.div-title {
+  border-radius: 15px;
+  background-color: #343F55;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.title-slide {
+  display: block;
+  align-content: center;
+}
+
+.btn-sm, .btn-group-sm > .btn {
+  font-weight: bold;
+}
+
+.carousel-caption {
+  display: flexbox;
+  justify-items: flex-start;
+}
+
+/* .slider {
+    display: flex;
+    flex-flow: row nowrap;
+    overflow: scroll;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.sliderEvent {
+    min-width: 120px;
+    height: 150px;
+    background-color: $sand-color;
+    margin-right: 9px;
+    margin-left: 9px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.sliderTitleBtnContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sliderEnrollBtn {
+    position: absolute;
+    bottom: 0; 
+    text-decoration: none;
+    color: $dark-color;
+    margin: 0;
+    width: 100%;
+    font-weight: 600;
+    background-color: $red-color;
+    text-align: center;
+}
+
+.sliderTitle {
+    text-align: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $red-color;
+    margin: 5px;
+}
+
+.sliderImgContainer {
+    width: 100%;
+    margin: 0;
+}
+
+.sliderImg {
+    width: 100%;
+} */
+.containerNewEvent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.buttonCreate {
+  background-color: #343F55;
+  border: none !important;
+  padding: 0px;
+}
+
+.imgButton {
+  width: 20vw !important;
+  height: auto !important;
+  max-width: 100px;
+}
+
+.txtNewEvent {
+  color: #ED554D !important;
+  font-weight: bold;
+}
+
+>>>>>>> Stashed changes
 body {
   background-color: #343F55 !important;
 }

@@ -1,0 +1,25 @@
+.containerNewEvent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.buttonCreate {
+    background-color: $dark-color;
+    border: none !important;
+    padding: 0px;
+}
+
+.imgButton{
+    width: 20vw !important;
+    height: auto !important;
+    max-width: 100px;
+}
+
+.txtNewEvent {
+    color: $red-color !important;
+    font-weight: bold;
+}

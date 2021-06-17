@@ -18,22 +18,23 @@
 
             
             if ($index === 1) {
-                echo '<div class="carousel-item active">';
+                echo '<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">';
+                    echo '<div class="carousel-inner">';
+                        echo '<div class="container carousel-item active">';
             } else {
-                echo '<div class="carousel-item">';
+                echo '<div class="container carousel-item">';
             }
-            echo '<img class="d-block w-100" src="' . $event["image"] . '"/>';
+            echo '<img class="slide-img" src="' . $event["image"] . '"/>';
                 echo '<div class="carousel-caption" >';
-                        echo '<h5 class="text-dark" >' . $event["title"] . '</h5>';
-                        echo '<a class="btn btn-sm btn-primary" href="' . route('show.show',$event->id) . '"><i class="fa fa-fw fa-eye"></i>🏷️ SHOW 🏷️</a>';
+                    echo '<h5 class="title-slide"> <span class="div-title">' . $event["title"] . '</span> </h5>';
+                    echo '<a class="btn btn-sm btn-light" href="' . route('show.show',$event->id) . '"><i class="fa fa-fw fa-eye"></i>🏷️CLICK TO SHOW 🏷️</a>';
+                    echo '</div>';
                 echo '</div>';
-            echo '</div>';
             $index++;
         
             }
         } 
     ?>
-
     <!-- Controls -->
 {{--         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
