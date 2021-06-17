@@ -64,15 +64,13 @@
     </ul>
 </div>
 
-
-
 <div class="container">
     <x-buttonCreate/> 
     <section class="allEvents">
         <x-allevents :events="$events"/>
     </section>
     <section class="myEvents hide">
-            <x-myevents :myeventuser="$myeventuser"/>
+        <x-myevents :myeventuser="$myeventuser"/>
     </section>
     <section class="pastEvents hide">
         <x-pastevents :events="$events"/>
