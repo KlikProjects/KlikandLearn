@@ -1,3 +1,31 @@
+.slide-img{
+    width: 94vw;
+    height: 56vw;
+    display: flexbox;
+    align-items: flex-end;
+    align-content: flex-end;
+}
+
+.div-title{
+    border-radius: 15px;
+    background-color: $dark-color;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.title-slide{
+    display: block;
+    align-content: center;
+}
+
+.btn-sm{
+    font-weight: bold;
+}
+
+.carousel-caption{
+    display:flexbox;
+    justify-items: flex-start;
+}
 /* .slider {
     display: flex;
     flex-flow: row nowrap;
