@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Event;
 use App\Models\User;
+use Attribute;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use League\CommonMark\Extension\Attributes\Node\Attributes;
+use Facade\FlareClient\View;
 
 class EventController extends Controller
 {
@@ -13,13 +17,19 @@ class EventController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+
+        public function index()
     {
         $events = Event::all()
             ->sortBy('date_time');
 
-
-        return view('home', ['events' => $events]);
+        $myeventuser = [];    
+            if (Auth::user()){
+                $user=Auth::user();
+                $myeventuser = $user->event;
+            }
+            
+        return view('home', compact('events', 'myeventuser'));
     }
 
     /**
@@ -123,13 +133,33 @@ class EventController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function destroy($id)
     {
-
 
         $event = Event::find($id)->delete();
 
         return redirect()->route('home')
             ->with('success', 'Event deleted successfully');
     }
+
+    public function inscribe($id) {
+        $user = User::find(Auth::id());
+        $event = Event::find($id);
+        
+        $user->event()->attach($event);
+        
+        return redirect()->route('home');
+    }
+
+ /*    public function viewSignedUp()
+    {
+        $user=Auth::user();
+
+        $myeventuser = $user->event;
+
+        return view('home', ['event_user' => $myeventuser]);
+    }
+ */
+
 }

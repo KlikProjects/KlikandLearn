@@ -10191,8 +10191,6 @@ h3 {
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 
-<<<<<<< Updated upstream
-=======
 .slide-img {
   width: 94vw;
   height: 56vw;
@@ -10303,7 +10301,6 @@ h3 {
   font-weight: bold;
 }
 
->>>>>>> Stashed changes
 body {
   background-color: #343F55 !important;
 }
