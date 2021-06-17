@@ -17,7 +17,7 @@
 
                 <div class="imgBtnContainer">
                     <figure>
-                        <img class="imgEvents" src="{{$event->image}}" alt="">
+                        <img class="imgEvents"  src="{{$event->image}}" alt="">
                     </figure>
                     
                     <button class="enrollBtn"><a href="{{ url('/inscribe', $event->id) }}">Inscribirme</a></button>

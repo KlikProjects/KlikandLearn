@@ -1,6 +1,10 @@
-@props (["events" => $events])
-    @foreach ($events as $event)
-        @if ($event->date_time < now())
+@extends('layouts.app')
+
+@section('content')
+<x-header/>
+
+    @foreach ($event_user as $event)
+        {{-- @if ($event->date_time < now()) --}}
             <article class="eventContainer">
                 <div class="eventInfo">
                     <div class="dateAndUsers">
@@ -28,5 +32,5 @@
             </article>
             
             <div class="line"></div>
-        @endif 
+        {{-- @endif  --}}
     @endforeach
