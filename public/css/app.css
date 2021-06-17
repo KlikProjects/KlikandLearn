@@ -10046,6 +10046,10 @@ h3 {
   padding-bottom: 12px;
 }
 
+.eventInfo {
+  width: 100%;
+}
+
 .imgEvents {
   max-width: 100px;
 }
@@ -10056,6 +10060,18 @@ h3 {
   justify-content: space-around;
   align-items: center;
   margin-left: 10px;
+  width: 135px;
+}
+
+.formContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin-top: 4px;
+}
+
+.btn {
+  margin: 4px;
 }
 
 .line {
@@ -10065,7 +10081,7 @@ h3 {
 }
 
 .enrollBtn {
-  width: 100%;
+  width: 129px;
   border-style: none;
   border-radius: 2px;
   background-color: #F5E6CC;
@@ -10073,6 +10089,14 @@ h3 {
   font-size: 16px;
   font-weight: 600;
   color: #343F55;
+}
+
+#eventsNav {
+  display: flex;
+  margin-left: 12px;
+  margin-right: 40px;
+  justify-content: space-between;
+  flex-wrap: nowrap;
 }
 
 .navEvents {
@@ -10087,6 +10111,8 @@ h3 {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
 }
 
 .containerKlikLearn {
@@ -10097,14 +10123,16 @@ h3 {
   flex-direction: row;
 }
 
-.textHeader {
+h1.textHeader {
   color: #ED554D;
   font-family: "Sarina", cursive;
-  font-size: 8vw;
+  font-size: 7vw;
+  margin-bottom: 0px !important;
 }
 
 .logo {
   width: 12vw;
+  margin-right: 10px;
 }
 
 .containerFooter {

@@ -6,7 +6,7 @@
                 <div class="eventInfo">
                     <div class="dateAndUsers">
                         <p>{{$event->date_time}}  </p>  
-                        <p>{{$event->users_max}} participantes</p>
+                        <p>{{$event->users_max}} attendees</p>
                     </div>
                     
                     <div class="titleAndDesc">
@@ -20,10 +20,10 @@
                         <img class="imgEvents"  src="{{$event->image}}" alt="">
                     </figure>
                     
-                    <button class="enrollBtn"><a href="{{ url('/inscribe', $event->id) }}">Inscribirme</a></button>
+                    <button class="enrollBtn"><a href="{{ url('/inscribe', $event->id) }}">Subscribe</a></button>
 
                     <td>
-                        <form action="{{ route('events.destroy',$event->id) }}" method="POST">
+                        <form class="formContainer" action="{{ route('events.destroy',$event->id) }}" method="POST">
                             <a class="btn btn-sm btn-primary" href="{{ route('show.show', $event->id) }}"><i class="fa fa-fw fa-eye"></i>🏷️</a>
                             @if(Auth::check())
                                 @if (Auth::user()->isAdmin)
@@ -35,8 +35,7 @@
                                 
                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i>❌</button>    
                                 @endif
-                            @endif
-                            
+                            @endif                            
                         </form>
                     </td>
 
