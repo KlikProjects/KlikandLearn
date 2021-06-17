@@ -1,4 +1,4 @@
-@extends('layouts.app')
+git fetch@extends('layouts.app')
 
 @section('content')
 <div class="container">

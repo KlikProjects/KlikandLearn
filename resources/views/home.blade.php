@@ -53,9 +53,11 @@
         <li class="nav-item">
             <a class="nav-link allEv-link active" aria-current="page" href="#eventsNav">Next events</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link myEv-link" href="#eventsNav">My events</a>
-        </li>
+        @if (Auth::user())
+            <li class="nav-item">
+                <a class="nav-link myEv-link" href="#eventsNav">My events</a>
+            </li>
+        @endif
         <li class="nav-item">
             <a class="nav-link pastEv-link" href="#eventsNav">Past events</a>
         </li>
@@ -70,10 +72,10 @@
         <x-allevents :events="$events"/>
     </section>
     <section class="myEvents hide">
-        <x-myevents/>
+            <x-myevents :myeventuser="$myeventuser"/>
     </section>
     <section class="pastEvents hide">
-        <x-pastevents :events="$events" />
+        <x-pastevents :events="$events"/>
     </section>
 </div>
 
