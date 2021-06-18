@@ -73,7 +73,7 @@
         <x-myevents :myeventuser="$myeventuser"/>
     </section>
     <section class="pastEvents hide">
-        <x-pastevents :events="$events"/>
+        <x-pastevents :events="$events" :myeventuser="$myeventuser"/>
     </section>
 </div>
 

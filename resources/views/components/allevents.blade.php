@@ -1,20 +1,24 @@
-{{-- @props (["events" => $events]) --}}
-{{-- @props (["myeventuser" => $myeventuser]) --}}
+@props (["events" => $events , "myeventuser" => $myeventuser])
 
-{{-- @dd($myeventuser) --}}  
-
-@foreach ($events as $event)
-    @if ($event->date_time > now())
-        <article class="eventContainer">
-            <div class="eventInfo">
-                <div class="dateAndUsers">
-                    <p>{{$event->date_time}}  </p>  
-                    <p>{{$event->users_max}} participantes</p>
-                </div>
-                
-                <div class="titleAndDesc">
-                    <h3 class="eventTitle">{{$event->title}}</h3>
-                    <p class="eventDescription">{{$event->description}}</p>
+    @foreach ($events as $event)
+        @if ($event->date_time > now())
+            <article class="eventContainer">
+                <div class="eventInfo">
+                    <div class="dateAndUsers">
+                        <p>{{$event->date_time}}  </p> 
+                        {{-- $event->IamSuscripted --}}
+                        @foreach ($myeventuser as $myevent)
+                            @if ($event->id === $myevent->id)
+                                <p>✅</p>
+                            @endif
+                        @endforeach
+                        <p>{{$event->users_max}} participantes</p>
+                    </div>
+                    
+                    <div class="titleAndDesc">
+                        <h3 class="eventTitle">{{$event->title}}</h3>
+                        <p class="eventDescription">{{$event->description}}</p>
+                    </div>
                 </div>
             </div>
 
