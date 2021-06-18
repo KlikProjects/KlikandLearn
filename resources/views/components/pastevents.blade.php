@@ -1,4 +1,4 @@
-@props (["events" => $events , "myeventuser" => $myeventuser])
+{{-- @props (["events" => $events , "myeventuser" => $myeventuser]) --}}
     @foreach ($events as $event)
         @if ($event->date_time < now())
             <article class="eventContainer">

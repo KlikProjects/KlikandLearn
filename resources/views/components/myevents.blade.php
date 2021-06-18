@@ -1,4 +1,4 @@
-@props (["myeventuser" => $myeventuser]) 
+{{-- @props (["myeventuser" => $myeventuser])  --}}
 
 
   @foreach ($myeventuser as $event)
