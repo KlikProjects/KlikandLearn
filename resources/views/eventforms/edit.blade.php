@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('content')
+@section('content') 
 <x-header/>
 <div class="containerCreate">
     <div class="row justify-content-center">
@@ -29,7 +29,7 @@
 
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="inputGroup-sizing-default">Date/time</span>
-                            <input class="form-control" id="newdatetime" type="datetime-local" name="newdatetime" value="{{$event->date_time}}">
+                            <input class="form-control" id="newdatetime" type="datetime-local" name="newdatetime" value="{{$event->plannedTime}}">
                         </div>
 
                         <div class="input-group mb-3">
