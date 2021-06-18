@@ -67,7 +67,7 @@
 <div class="container">
     <x-buttonCreate/> 
     <section class="allEvents">
-        <x-allevents :events="$events"/>
+        <x-allevents :events="$events" :myeventuser="$myeventuser"/>
     </section>
     <section class="myEvents hide">
         <x-myevents :myeventuser="$myeventuser"/>
