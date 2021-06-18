@@ -1,11 +1,17 @@
-@props (["events" => $events])
+@props (["events" => $events , "myeventuser" => $myeventuser])
 
     @foreach ($events as $event)
         @if ($event->date_time > now())
             <article class="eventContainer">
                 <div class="eventInfo">
                     <div class="dateAndUsers">
-                        <p>{{$event->date_time}}  </p>  
+                        <p>{{$event->date_time}}  </p> 
+                        {{-- $event->IamSuscripted --}}
+                        @foreach ($myeventuser as $myevent)
+                            @if ($event->id === $myevent->id)
+                                <p>✅</p>
+                            @endif
+                        @endforeach
                         <p>{{$event->users_max}} participantes</p>
                     </div>
                     
