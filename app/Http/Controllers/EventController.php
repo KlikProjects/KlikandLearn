@@ -146,11 +146,22 @@ class EventController extends Controller
             ->with('success', 'Event deleted successfully');
     }
 
-    public function inscribe($id) {
+    public function inscribe($id)
+    {
         $user = User::find(Auth::id());
         $event = Event::find($id);
         
         $user->event()->attach($event);
+        
+        return redirect()->route('home');
+    }
+
+    public function cancelInscription($id)
+    {
+        $user = User::find(Auth::id());
+        $event = Event::find($id);
+        
+        $user->event()->detach($event);
         
         return redirect()->route('home');
     }

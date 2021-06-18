@@ -44,7 +44,7 @@
     margin-bottom: 12px;
 }
 
-.enrollBtn {
+.enrollBtn, .enrollBtn a {
     width: 100%; 
     border-style: none;
     border-radius: 2px;
@@ -52,7 +52,8 @@
     padding: 7px;
     font-size: 16px;
     font-weight: 600;
-    color: $dark-color
+    color: $dark-color;
+    text-decoration: none;
 }
 
 .navEvents{
