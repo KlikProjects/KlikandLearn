@@ -5,11 +5,9 @@
                 <div class="eventInfo">
                     <div class="dateAndUsers">
                         <p>{{$event->date_time}}  </p> 
-                        @foreach ($myeventuser as $myevent)
-                            @if ($event->id === $myevent->id)
-                                <p>✅</p>
-                            @endif
-                        @endforeach 
+                        @if ($event->ifSubscripted === "1")
+                            <p>✅</p>
+                        @endif
                         <p>{{$event->users_max}} participantes</p>
                     </div>
                     

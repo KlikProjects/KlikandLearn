@@ -29,6 +29,8 @@ class EventController extends Controller
                 $myeventuser = $user->event;
             }
             
+        $events = Event::ifSubscript($events,$myeventuser);
+
         return view('home', compact('events', 'myeventuser'));
     }
 
@@ -58,6 +60,7 @@ class EventController extends Controller
             $request->newcarousel = "1";
         }
 
+        /* $request->ifSubscripted = "0"; */
         /* dd($request); */
 
         $event = Event::create([
@@ -67,6 +70,7 @@ class EventController extends Controller
             'image' => $request->newimage,
             'users_max' => $request->newusermax,
             'carousel' => $request->newcarousel,
+            'ifSubscripted' => $request->ifSubscripted,
         ]);
 
         return redirect()->route('home');
@@ -172,5 +176,6 @@ class EventController extends Controller
         return view('home', ['event_user' => $myeventuser]);
     }
  */
+
 
 }

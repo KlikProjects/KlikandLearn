@@ -21,6 +21,7 @@ class CreateEventsTable extends Migration
             $table->integer('users_max');
             $table->string('description');
             $table->boolean('carousel');
+            $table->boolean('ifSubscripted')->nullable();
             $table->timestamps();
         });
     }
@@ -35,3 +36,4 @@ class CreateEventsTable extends Migration
         Schema::dropIfExists('events');
     }
 }
+
