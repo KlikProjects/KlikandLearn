@@ -2,17 +2,20 @@
 
     @foreach ($events as $event)
         @if ($event->date_time > now())
+            <div class="line"></div>
             <article class="eventContainer">
                 <div class="eventInfo">
                     <div class="dateAndUsers">
-                        <p>{{$event->date_time}}  </p> 
+                        <p class="dateAndTime">{{$event->date_time}}  </p> 
                         {{-- $event->IamSuscripted --}}
+                        <div class="usersAmount">
                         @foreach ($myeventuser as $myevent)
                             @if ($event->id === $myevent->id)
                                 <p>✅</p>
                             @endif
                         @endforeach
-                        <p>{{$event->users_max}} participantes</p>
+                            <p>{{$event->users_max}} participantes</p>
+                        </div>
                     </div>
                     
                     <div class="titleAndDesc">
@@ -45,7 +48,7 @@
                 @endif
 
                 <td>
-                    <form action="{{ route('events.destroy',$event->id) }}" method="POST">
+                    <form class="adminButtons" action="{{ route('events.destroy',$event->id) }}" method="POST">
                         <a class="btn btn-sm btn-primary" href="{{ route('show.show', $event->id) }}"><i class="fa fa-fw fa-eye"></i>🏷️</a>
                         @if(Auth::check())
                             @if (Auth::user()->isAdmin)
@@ -63,7 +66,5 @@
                 </td>
             </div>
         </article>
-        
-<div class="line"></div>
 @endif 
 @endforeach

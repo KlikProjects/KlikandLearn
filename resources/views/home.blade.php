@@ -48,8 +48,8 @@
 
 </main>
 
-<div>
-    <ul class="nav nav-tabs" id="eventsNav">
+<nav>
+    {{-- <ul class="nav nav-tabs" id="eventsNav">
         <li class="nav-item">
             <a class="nav-link allEv-link active" aria-current="page" href="#eventsNav">Next events</a>
         </li>
@@ -61,8 +61,24 @@
         <li class="nav-item">
             <a class="nav-link pastEv-link" href="#eventsNav">Past events</a>
         </li>
+    </ul> --}}
+
+    <ul class="nav nav-pills mb-3 mt-3 eventsNav" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link allEv-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Next events</a>
+        </li>
+        
+        @if (Auth::user()->isAdmin === false)
+        <li class="nav-item" role="presentation">
+            <a class="nav-link myEv-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">My events</a>
+        </li>
+        @endif
+
+        <li class="nav-item" role="presentation">
+            <a class="nav-link pastEv-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Past events</a>
+        </li>
     </ul>
-</div>
+</nav>
 
 <div class="container">
     <x-buttonCreate/> 
