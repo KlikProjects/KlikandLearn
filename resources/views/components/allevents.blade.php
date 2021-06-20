@@ -11,8 +11,14 @@
                         @if ($event->ifSubscripted === "1")
                             <p>✅</p>
                         @endif
+                        
+                        @if ($event->user_count === $event->users_max)
+                            <p .text-danger>COMPLETE</p>
+                        @else
+                            <p>{{$event->users_max-$event->user_count}}/{{$event->users_max}} free</p>
+                        @endif
 
-                        <p>{{$event->users_max}} participantes</p>
+                        
                     </div>
                     
                     <div class="titleAndDesc">
@@ -30,18 +36,12 @@
                     $inscription = false;
                 ?>
 
-                @foreach($myeventuser as $myevent)
-                    @if($event->id === $myevent->id)
-                        <?php 
-                            $inscription = true 
-                        ?>
-                    @endif
-                @endforeach
-
-                @if($inscription === true) 
+                @if ($event->ifSubscripted === "1" )
                     <button class="enrollBtn"><a href="{{ url('/cancelInscription', $event->id) }}">Cancel</a></button>
                 @else
-                    <button class="enrollBtn"><a href="{{ url('/inscribe', $event->id) }}">Inscribe</a></button>
+                    @if($event->user_count != $event->users_max)
+                        <button class="enrollBtn"><a href="{{ url('/inscribe', $event->id) }}">Inscribe</a></button>
+                    @endif
                 @endif
 
                 <td>

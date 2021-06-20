@@ -29,8 +29,10 @@ class EventController extends Controller
                 $myeventuser = $user->event;
             }
             
+        $events = Event::totaluserInscript($events);
         $events = Event::ifSubscript($events,$myeventuser);
-
+        
+        //dd($events);
         return view('home', compact('events', 'myeventuser'));
     }
 
@@ -98,6 +100,7 @@ class EventController extends Controller
     public function edit($id)
     {
         $event = Event::find($id);
+       
 
         return view('eventforms.edit', compact('event'));
     }

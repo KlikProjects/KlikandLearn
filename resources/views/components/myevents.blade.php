@@ -7,10 +7,12 @@
                 <div class="eventInfo">
                     <div class="dateAndUsers">
                         <p>{{$event->date_time}}  </p>  
-                        @if ($event->ifSubscripted === "1")
-                            <p>✅</p>
+                        <p>✅</p>
+                        @if ($event->user_count === $event->users_max)
+                            <p danger>COMPLETE</p>
+                        @else
+                            <p>{{$event->users_max-$event->user_count}}/{{$event->users_max}} free</p>
                         @endif
-                        <p>{{$event->users_max}} participantes</p>
                     </div>
                     
                     <div class="titleAndDesc">
@@ -23,7 +25,7 @@
                     <figure>
                         <img class="imgEvents" src="{{$event->image}}" alt="">
                     </figure>
-                    
+                    <button class="enrollBtn"><a href="{{ url('/cancelInscription', $event->id) }}">Cancel</a></button>
                     <td>
                         <a class="btn btn-sm btn-primary" href="{{ route('show.show',$event->id) }}"><i class="fa fa-fw fa-eye"></i>🏷️</a>
                     </td>

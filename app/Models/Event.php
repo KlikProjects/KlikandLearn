@@ -30,10 +30,16 @@ class Event extends Model
             foreach ($myeventuser as $myevent){
                 if ($event->id === $myevent->id){
                     $event->ifSubscripted="1";
-                    /* <p>✅</p>; */
                 }
             }    
         }
+    return ($events);
+    }
+
+    static function totaluserInscript($events)
+    {
+        $events=Event::withCount('user')->get();
+        
     return ($events);
     }
 

@@ -70,7 +70,7 @@
         <x-allevents :events="$events" :myeventuser="$myeventuser"/>
     </section>
     <section class="myEvents hide">
-        <x-myevents :myeventuser="$myeventuser"/>
+        <x-myevents :events="$events" :myeventuser="$myeventuser"/>
     </section>
     <section class="pastEvents hide">
         <x-pastevents :events="$events" :myeventuser="$myeventuser"/>

@@ -8,7 +8,11 @@
                         @if ($event->ifSubscripted === "1")
                             <p>✅</p>
                         @endif
-                        <p>{{$event->users_max}} participantes</p>
+                        @if ($event->user_count === $event->users_max)
+                            <p danger>COMPLETE</p>
+                        @else
+                            <p>{{$event->users_max-$event->user_count}}/{{$event->users_max}} free</p>
+                        @endif
                     </div>
                     
                     <div class="titleAndDesc">
