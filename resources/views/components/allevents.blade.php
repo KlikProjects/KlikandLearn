@@ -1,4 +1,4 @@
-@props (["events" => $events , "myeventuser" => $myeventuser])
+{{-- @props (["events" => $events , "myeventuser" => $myeventuser]) --}}
 
     @foreach ($events as $event)
         @if ($event->date_time > now())
@@ -20,7 +20,6 @@
                         <p class="eventDescription">{{$event->description}}</p>
                     </div>
                 </div>
-            </div>
 
             <div class="imgBtnContainer">
                 <figure>
