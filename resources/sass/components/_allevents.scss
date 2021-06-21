@@ -74,37 +74,16 @@
     margin-bottom: 12px;
 }
 
-<<<<<<< HEAD
-.enrollBtn {
-    width: 129px; 
-=======
 .enrollBtn, .enrollBtn a {
     width: 100%; 
->>>>>>> 1d6b7cf7615eab0246227dbb749f928715867eb8
     border-style: none;
     border-radius: 2px;
     background-color: $sand-color;
     padding: 7px;
     font-size: 16px;
     font-weight: 600;
-<<<<<<< HEAD
-    color: $dark-color
-}
-
-#eventsNav {
-    display: flex;
-    margin-left: 12px;
-    margin-right: 40px;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-}
-
-.navEvents{
-    background-color: $red-color !important;
-=======
     color: $dark-color;
     text-decoration: none;
->>>>>>> 1d6b7cf7615eab0246227dbb749f928715867eb8
 }
 
 .hide {
