@@ -1,3 +1,8 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
 .eventTitle {
     color: $red-color;
     text-transform: uppercase;
@@ -8,8 +13,17 @@
 .dateAndUsers {
     color: $sand-color;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     font-size: 13px;
+}
+
+.dateAndTime {
+    margin-bottom: 5px;
+}
+
+.usersAmount {
+    display: flex;
+    flex-direction: row;
 }
 
 .eventDescription {
@@ -60,14 +74,20 @@
     margin-bottom: 12px;
 }
 
+<<<<<<< HEAD
 .enrollBtn {
     width: 129px; 
+=======
+.enrollBtn, .enrollBtn a {
+    width: 100%; 
+>>>>>>> 1d6b7cf7615eab0246227dbb749f928715867eb8
     border-style: none;
     border-radius: 2px;
     background-color: $sand-color;
     padding: 7px;
     font-size: 16px;
     font-weight: 600;
+<<<<<<< HEAD
     color: $dark-color
 }
 
@@ -81,8 +101,41 @@
 
 .navEvents{
     background-color: $red-color !important;
+=======
+    color: $dark-color;
+    text-decoration: none;
+>>>>>>> 1d6b7cf7615eab0246227dbb749f928715867eb8
 }
 
 .hide {
     display: none !important;
+}
+
+.adminButtons {
+    display: flex;
+}
+
+@media (min-width: 769px) {
+    .imgBtnContainer {
+        flex-direction: row;
+    }
+
+    .adminButtons {
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-left: 20px;
+    }
+
+    .enrollBtn, .enrollBtn a {
+        width: auto;
+    }
+
+    .imgEvents {
+        max-width: 300px;
+    }
+    
+    .enrollBtn {
+        position: relative;
+        right: 100%;
+    }
 }

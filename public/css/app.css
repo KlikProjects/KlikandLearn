@@ -10020,6 +10020,11 @@ h3 {
     border-color: #dee2e6;
   }
 }
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
 .eventTitle {
   color: #ED554D;
   text-transform: uppercase;
@@ -10030,8 +10035,17 @@ h3 {
 .dateAndUsers {
   color: #F5E6CC;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   font-size: 13px;
+}
+
+.dateAndTime {
+  margin-bottom: 5px;
+}
+
+.usersAmount {
+  display: flex;
+  flex-direction: row;
 }
 
 .eventDescription {
@@ -10080,8 +10094,13 @@ h3 {
   margin-bottom: 12px;
 }
 
+<<<<<<< HEAD
 .enrollBtn {
   width: 129px;
+=======
+.enrollBtn, .enrollBtn a {
+  width: 100%;
+>>>>>>> 1d6b7cf7615eab0246227dbb749f928715867eb8
   border-style: none;
   border-radius: 2px;
   background-color: #F5E6CC;
@@ -10089,6 +10108,7 @@ h3 {
   font-size: 16px;
   font-weight: 600;
   color: #343F55;
+<<<<<<< HEAD
 }
 
 #eventsNav {
@@ -10101,12 +10121,43 @@ h3 {
 
 .navEvents {
   background-color: #ED554D !important;
+=======
+  text-decoration: none;
+>>>>>>> 1d6b7cf7615eab0246227dbb749f928715867eb8
 }
 
 .hide {
   display: none !important;
 }
 
+.adminButtons {
+  display: flex;
+}
+
+@media (min-width: 769px) {
+  .imgBtnContainer {
+    flex-direction: row;
+  }
+
+  .adminButtons {
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 20px;
+  }
+
+  .enrollBtn, .enrollBtn a {
+    width: auto;
+  }
+
+  .imgEvents {
+    max-width: 300px;
+  }
+
+  .enrollBtn {
+    position: relative;
+    right: 100%;
+  }
+}
 .containerHeader {
   display: flex;
   justify-content: space-around;
@@ -10127,7 +10178,10 @@ h1.textHeader {
   color: #ED554D;
   font-family: "Sarina", cursive;
   font-size: 7vw;
+<<<<<<< HEAD
   margin-bottom: 0px !important;
+=======
+>>>>>>> 1d6b7cf7615eab0246227dbb749f928715867eb8
 }
 
 .logo {
@@ -10135,6 +10189,16 @@ h1.textHeader {
   margin-right: 10px;
 }
 
+@media (min-width: 769px) {
+  .textHeader {
+    font-size: 3rem;
+    margin-left: 20px;
+  }
+
+  .logo {
+    width: 6.5rem;
+  }
+}
 .containerFooter {
   position: absolute;
   bottom: 0;
@@ -10205,7 +10269,7 @@ h1.textHeader {
   color: #F5E6CC !important;
 }
 
-.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+.nav-pills .nav-item.show .nav-link, .nav-pills .nav-link.active {
   color: #efe1c9 !important;
   background-color: #ED554D !important;
   border-color: #F5E6CC !important;
@@ -10217,8 +10281,18 @@ h1.textHeader {
   color: #f4e6cc !important;
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  cursor: pointer;
 }
 
+.eventsNav {
+  justify-content: space-evenly;
+}
+
+@media (min-width: 769px) {
+  .eventsNav {
+    justify-content: center;
+  }
+}
 .slide-img {
   width: 94vw;
   height: 56vw;
@@ -10248,68 +10322,21 @@ h1.textHeader {
   justify-items: flex-start;
 }
 
-/* .slider {
-    display: flex;
-    flex-flow: row nowrap;
-    overflow: scroll;
-    margin-top: 10px;
-    margin-bottom: 30px;
-}
-
-.sliderEvent {
-    min-width: 120px;
-    height: 150px;
-    background-color: $sand-color;
-    margin-right: 9px;
-    margin-left: 9px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-}
-
-.sliderTitleBtnContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.sliderEnrollBtn {
-    position: absolute;
-    bottom: 0; 
-    text-decoration: none;
-    color: $dark-color;
-    margin: 0;
-    width: 100%;
-    font-weight: 600;
-    background-color: $red-color;
-    text-align: center;
-}
-
-.sliderTitle {
-    text-align: center;
-    font-size: 12px;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: $red-color;
-    margin: 5px;
-}
-
-.sliderImgContainer {
-    width: 100%;
-    margin: 0;
-}
-
-.sliderImg {
-    width: 100%;
-} */
 .containerNewEvent {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-self: center;
+}
+
+.linkCreate, .linkCreate:hover {
+  text-decoration: none;
 }
 
 .buttonCreate {
@@ -10322,13 +10349,34 @@ h1.textHeader {
   width: 20vw !important;
   height: auto !important;
   max-width: 100px;
+  margin-right: 15px;
 }
 
 .txtNewEvent {
   color: #ED554D !important;
   font-weight: bold;
+  margin-bottom: 0;
+  margin-left: 15px;
 }
 
+@media (min-width: 769px) {
+  .containerNewEvent {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  .txtNewEvent {
+    font-size: 150%;
+  }
+}
 body {
   background-color: #343F55 !important;
 }
+
+/* button.navBtn {
+    width: 2vw;
+}
+
+span.navBtn {
+    width: 6vw;
+} */

@@ -18,10 +18,24 @@ h1.textHeader {
     color: $red-color;
     font-family: 'Sarina', cursive;
     font-size: 7vw;
+<<<<<<< HEAD
     margin-bottom: 0px !important;
+=======
+>>>>>>> 1d6b7cf7615eab0246227dbb749f928715867eb8
 }
 
 .logo {
     width: 12vw;
     margin-right: 10px;
 }
+
+@media (min-width: 769px) {
+    .textHeader {
+        font-size: 3rem;
+        margin-left: 20px;
+    }
+
+    .logo {
+        width: 6.5rem;
+    }
+} 
