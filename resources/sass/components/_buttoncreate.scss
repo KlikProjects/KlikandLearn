@@ -6,11 +6,11 @@
     margin-top: 20px;
     margin-bottom: 20px;
     width: fit-content;
-    
+    align-self: center;
 }
 
-.linkCreate {
-    align-self: center;
+.linkCreate, .linkCreate:hover {
+    text-decoration: none;
 }
 
 .buttonCreate {

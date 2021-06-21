@@ -1,13 +1,16 @@
 {{-- @props (["myeventuser" => $myeventuser])  --}}
 
 
-  @foreach ($myeventuser as $event)
+    @foreach ($myeventuser as $event)
         @if ($event->date_time > now())
+            <div class="line"></div>
             <article class="eventContainer">
                 <div class="eventInfo">
                     <div class="dateAndUsers">
-                        <p>{{$event->date_time}}  </p>  
-                        <p>{{$event->users_max}} participantes</p>
+                        <p class="dateAndTime">{{$event->date_time}}  </p>
+                        <div class="usersAmount">  
+                            <p>{{$event->users_max}} participantes</p>
+                        
                     </div>
                     
                     <div class="titleAndDesc">
@@ -28,7 +31,5 @@
                 </div>
 
             </article>
-            
-            <div class="line"></div>
         @endif 
     @endforeach

@@ -1,12 +1,14 @@
 @if (Auth::check() && Auth::user()->isAdmin)
-<a class="linkCreate" href="{{ route('createEvent') }}">
+
 <div class="containerNewEvent">
     <button class="buttonCreate">
-        {{-- <a href="{{ route('createEvent') }}"> --}}
+        <a class="linkCreate" href="{{ route('createEvent') }}">
             <img src="img/buttonCreate2.png" class="imgButton" alt=""/> 
-        {{-- </a> --}}
+        </a>
     </button>
-    <p class="txtNewEvent">CREATE NEW EVENT</p>
+    <a class="linkCreate" href="{{ route('createEvent') }}">
+        <p class="txtNewEvent">CREATE NEW EVENT</p>
+    </a>
 </div>
 </a>
 @endif

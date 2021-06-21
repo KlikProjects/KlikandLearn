@@ -17,3 +17,9 @@
     justify-content: space-evenly;
 }
 
+@media (min-width: 769px) {
+    .eventsNav {
+        justify-content: center;
+    }
+}
+

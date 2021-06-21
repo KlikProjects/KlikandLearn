@@ -10245,6 +10245,11 @@ h3 {
   justify-content: space-evenly;
 }
 
+@media (min-width: 769px) {
+  .eventsNav {
+    justify-content: center;
+  }
+}
 .slide-img {
   width: 94vw;
   height: 56vw;
@@ -10274,61 +10279,6 @@ h3 {
   justify-items: flex-start;
 }
 
-/* .slider {
-    display: flex;
-    flex-flow: row nowrap;
-    overflow: scroll;
-    margin-top: 10px;
-    margin-bottom: 30px;
-}
-
-.sliderEvent {
-    min-width: 120px;
-    height: 150px;
-    background-color: $sand-color;
-    margin-right: 9px;
-    margin-left: 9px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-}
-
-.sliderTitleBtnContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.sliderEnrollBtn {
-    position: absolute;
-    bottom: 0; 
-    text-decoration: none;
-    color: $dark-color;
-    margin: 0;
-    width: 100%;
-    font-weight: 600;
-    background-color: $red-color;
-    text-align: center;
-}
-
-.sliderTitle {
-    text-align: center;
-    font-size: 12px;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: $red-color;
-    margin: 5px;
-}
-
-.sliderImgContainer {
-    width: 100%;
-    margin: 0;
-}
-
-.sliderImg {
-    width: 100%;
-} */
 .containerNewEvent {
   display: flex;
   flex-direction: row;
@@ -10339,10 +10289,11 @@ h3 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  align-self: center;
 }
 
-.linkCreate {
-  align-self: center;
+.linkCreate, .linkCreate:hover {
+  text-decoration: none;
 }
 
 .buttonCreate {
