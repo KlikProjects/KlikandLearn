@@ -13,7 +13,7 @@
                         @endif
                         
                         @if ($event->user_count === $event->users_max)
-                            <p .text-danger>COMPLETE</p>
+                            <p class="text-danger fw-bold">COMPLETE</p>
                         @else
                             <p>{{$event->users_max-$event->user_count}}/{{$event->users_max}} free</p>
                         @endif
@@ -32,10 +32,6 @@
                     <img class="imgEvents" src="{{$event->image}}" alt="">
                 </figure>
                 
-                <?php
-                    $inscription = false;
-                ?>
-
                 @if ($event->ifSubscripted === "1" )
                     <button class="enrollBtn"><a href="{{ url('/cancelInscription', $event->id) }}">Cancel</a></button>
                 @else
