@@ -1,10 +1,8 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
-@import url('https://fonts.googleapis.com/css2?family=Sarina&display=swap');
 
 // Variables
-@import 'variables/variables';
-@import 'variables/custom-variables';
+@import 'variables';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
@@ -23,11 +21,3 @@
 body {
     background-color: $dark-color !important;
 }
-
-/* button.navBtn {
-    width: 2vw;
-}
-
-span.navBtn {
-    width: 6vw;
-} */
