@@ -15,9 +15,20 @@
 .textHeader {
     color: $red-color;
     font-family: 'Sarina', cursive;
-    font-size: 8vw;
+    font-size: 7vw;
 }
 
 .logo {
     width: 12vw;
 }
+
+@media (min-width: 769px) {
+    .textHeader {
+        font-size: 3rem;
+        margin-left: 20px;
+    }
+
+    .logo {
+        width: 6.5rem;
+    }
+} 

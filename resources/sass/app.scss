@@ -6,3 +6,18 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+// Components
+@import 'components/allevents';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/create';
+@import 'components/show';
+@import 'components/navevents';
+@import 'components/slider';
+@import 'components/buttoncreate';
+
+
+body {
+    background-color: $dark-color !important;
+}
