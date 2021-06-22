@@ -64,7 +64,7 @@ class EventController extends Controller
 
         /* $request->ifSubscripted = "0"; */
         /* dd($request); */
-
+    
         $event = Event::create([
             'date_time' => $request->newdatetime,
             'title' => $request->newtitle,
@@ -139,6 +139,9 @@ class EventController extends Controller
             'users_max' => $request->newusermax,
             'carousel' => $request->newcarousel,
         ]);
+
+        $input = Input::all();
+        $input['plannedTime'] = date('Y-m-d H:i:s', strtotime(Input::get('plannedTime')));
 
         return redirect()->route('home');
     }

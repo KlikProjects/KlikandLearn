@@ -2,6 +2,7 @@
 
     @foreach ($events as $event)
         @if ($event->date_time > now())
+            <div class="line"></div>
             <article class="eventContainer">
                 <div class="eventInfo">
                     <div class="dateAndUsers">
@@ -41,8 +42,13 @@
                 @endif
 
                 <td>
+<<<<<<< HEAD
                     <form action="{{ route('events.destroy',$event->id) }}" method="POST">
                         <a class="btn btn-sm btn-primary" href="{{ route('show.show', $event->id) }}"><i class="fa fa-fw fa-eye"></i>🔍</a>
+=======
+                    <form class="adminButtons" action="{{ route('events.destroy',$event->id) }}" method="POST">
+                        <a class="btn btn-sm btn-primary" href="{{ route('show.show', $event->id) }}"><i class="fa fa-fw fa-eye"></i>🏷️</a>
+>>>>>>> dev
                         @if(Auth::check())
                             @if (Auth::user()->isAdmin)
                                 <a class="btn btn-sm btn-success" href="{{ route('events.edit', $event->id) }}"><i class="fa fa-fw fa-edit"></i>✏️</a>
@@ -59,7 +65,5 @@
                 </td>
             </div>
         </article>
-        
-<div class="line"></div>
 @endif 
 @endforeach

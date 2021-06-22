@@ -25,7 +25,6 @@ class EventsSubscriptionTest extends TestCase
         $response->assertStatus(302)
                 ->assertRedirect("/login");
                 
-    }
 
 
     public function test_UserAuthCanInscription()
@@ -41,5 +40,11 @@ class EventsSubscriptionTest extends TestCase
 
         
                 
+    public function test_NotLoggedUserCantInscribe()
+    {
+        $event = Event::factory()->create();
+        $response = $this->get('/');
+
+        $response->assertStatus(200);
     }
 }
