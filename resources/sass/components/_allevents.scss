@@ -39,6 +39,10 @@
     
 }
 
+.eventInfo {
+    width: 100%;
+}
+
 .imgEvents {
     max-width: 100px;
 }
@@ -49,7 +53,19 @@
     justify-content: space-around;
     align-items: center;
     margin-left: 10px;
-    
+    width: 135px;
+}
+
+.formContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+
+    margin-top: 4px;
+}
+
+.btn {
+    margin: 4px;
 }
 
 .line {

@@ -3,6 +3,10 @@
 use App\Http\Controllers\EventController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
+use Illuminate\Http\Request;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +23,7 @@ use Illuminate\Support\Facades\Route;
     return view('header');
 }); */
 
-Auth::routes();
+Auth::routes([]);
 
 Route::get('/', [App\Http\Controllers\EventController::class, 'index'])->name('home');
 //Route::get('/home', [App\Http\Controllers\EventController::class, 'index']); // esta linea corrige un fallo cuando se hace el primer login
@@ -34,5 +38,34 @@ Route::resource('events', App\Http\Controllers\EventController::class)->middlewa
 
 /* Route::get('/signup', [App\Http\Controllers\EventController::class, 'viewSignedUp'])->middleware('auth')->name('signup'); */
 
+/*  return a view instructing the user to click the email verification link that was emailed to them by Laravel after registration.  */
+
+Route::get('/email/verify', function () {
+    return view('auth.verify-email');
+})->middleware('auth')->name('verification.notice');
+
+
+/* handle requests generated when the user clicks the email verification link that was emailed to them
+ */
+
+Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+    $request->fulfill();
+
+    return redirect('/home');
+})->middleware(['auth', 'signed'])->name('verification.verify');
+
+/* route to allow the user to request that the verification email be resent
+ */
+
+Route::post('/email/verification-notification', function (Request $request) {
+    $request->user()->sendEmailVerificationNotification();
+
+    return back()->with('message', 'Verification link sent!');
+})->middleware(['auth', 'throttle:6,1'])->name('verification.send');
+
+
+Route::get('/profile', function () {
+    // Only verified users may access this route...
+})->middleware('verified');
 
 

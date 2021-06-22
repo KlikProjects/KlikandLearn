@@ -1,7 +1,9 @@
-.containerHeader {
+.headerContainer {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
 }
 
 .containerKlikLearn {
@@ -12,7 +14,7 @@
     flex-direction: row;
 }
 
-.textHeader {
+h1.textHeader {
     color: $red-color;
     font-family: 'Sarina', cursive;
     font-size: 7vw;
@@ -20,11 +22,12 @@
 
 .logo {
     width: 12vw;
+    margin-right: 10px;
 }
 
 @media (min-width: 769px) {
     .textHeader {
-        font-size: 3rem;
+        font-size: 3rem !important;
         margin-left: 20px;
     }
 
