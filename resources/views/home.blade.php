@@ -27,7 +27,7 @@
             echo '<img class="slide-img" src="' . $event["image"] . '"/>';
                 echo '<div class="carousel-caption" >';
                     echo '<h5 class="title-slide"> <span class="div-title">' . $event["title"] . '</span> </h5>';
-                    echo '<a class="btn btn-sm btn-light" href="' . route('show.show',$event->id) . '"><i class="fa fa-fw fa-eye"></i>🏷️CLICK TO SHOW 🏷️</a>';
+                    echo '<a class="btn btn-sm btn-light" href="' . route('events.show',$event->id) . '"><i class="fa fa-fw fa-eye"></i>🏷️CLICK TO SHOW 🏷️</a>';
                     echo '</div>';
                 echo '</div>';
             $index++;
