@@ -29,6 +29,10 @@ class EventController extends Controller
                 $myeventuser = $user->event;
             }
             
+        $events = Event::totaluserInscript($events);
+        $events = Event::ifSubscript($events,$myeventuser);
+        
+        //dd($events);
         return view('home', compact('events', 'myeventuser'));
     }
 
@@ -58,6 +62,7 @@ class EventController extends Controller
             $request->newcarousel = "1";
         }
 
+        /* $request->ifSubscripted = "0"; */
         /* dd($request); */
     
         $event = Event::create([
@@ -67,6 +72,7 @@ class EventController extends Controller
             'image' => $request->newimage,
             'users_max' => $request->newusermax,
             'carousel' => $request->newcarousel,
+            'ifSubscripted' => $request->ifSubscripted,
         ]);
 
         return redirect()->route('home');
@@ -82,6 +88,15 @@ class EventController extends Controller
     {
         $event = Event::find($id);
 
+             $myeventuser = [];    
+            if (Auth::user()){
+                $user=Auth::user();
+                $myeventuser = $user->event;
+            }
+     
+        /* $event = Event::totaluserInscript($event); */
+        /* $event = Event::ifSubscript($event,$myeventuser); */
+        /* dd($event); */
         return view('eventforms.show', compact('event'));
     }
 
@@ -94,6 +109,7 @@ class EventController extends Controller
     public function edit($id)
     {
         $event = Event::find($id);
+       
 
         return view('eventforms.edit', compact('event'));
     }
@@ -124,8 +140,8 @@ class EventController extends Controller
             'carousel' => $request->newcarousel,
         ]);
 
-        $input = Input::all();
-        $input['plannedTime'] = date('Y-m-d H:i:s', strtotime(Input::get('plannedTime')));
+/*         $input = Input::all();
+        $input['plannedTime'] = date('Y-m-d H:i:s', strtotime(Input::get('plannedTime'))); */
 
         return redirect()->route('home');
     }
@@ -175,5 +191,6 @@ class EventController extends Controller
         return view('home', ['event_user' => $myeventuser]);
     }
  */
+
 
 }

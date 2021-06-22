@@ -10035,7 +10035,8 @@ h3 {
 .dateAndUsers {
   color: #F5E6CC;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   font-size: 13px;
 }
 
@@ -10284,6 +10285,7 @@ h1.textHeader {
   background-color: #343F55;
   padding: 10px;
   margin-bottom: 5px;
+  font-size: 13px !important;
 }
 
 .title-slide {
