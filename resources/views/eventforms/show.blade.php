@@ -2,6 +2,7 @@
 
 @section('content')
 <x-header/>
+
 <div class="card-body">
     <div class="card" >
         <img class="card-img-top w-100"  src="{{$event->image}}" alt="Card image cap">

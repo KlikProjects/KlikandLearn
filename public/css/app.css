@@ -10162,6 +10162,7 @@ h1.textHeader {
 
 .logo {
   width: 12vw;
+  height: 12vw;
   margin-right: 10px;
 }
 
@@ -10173,6 +10174,7 @@ h1.textHeader {
 
   .logo {
     width: 6.5rem;
+    height: 6.5rem;
   }
 }
 .containerFooter {
