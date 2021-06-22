@@ -5,12 +5,14 @@
                 <div class="eventInfo">
                     <div class="dateAndUsers">
                         <p>{{$event->date_time}}  </p> 
-                        @foreach ($myeventuser as $myevent)
-                            @if ($event->id === $myevent->id)
-                                <p>✅</p>
-                            @endif
-                        @endforeach 
-                        <p>{{$event->users_max}} participantes</p>
+                        @if ($event->ifSubscripted === "1")
+                            <p>✅</p>
+                        @endif
+                        @if ($event->user_count === $event->users_max)
+                            <p class="text-danger fw-bold">COMPLETE</p>
+                        @else
+                            <p>{{$event->users_max-$event->user_count}}/{{$event->users_max}} free</p>
+                        @endif
                     </div>
                     
                     <div class="titleAndDesc">
