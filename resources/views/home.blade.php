@@ -1,3 +1,4 @@
+use Illuminate\Support\Facades\Auth;
 @extends('layouts.app')
 
 @section('content')
@@ -5,39 +6,29 @@
 <x-header />
 
 <main class="slider">
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-
+    <div id="carousel-exampleSlidesOnly" class="carousel slide" data-ride="carousel">
     <?php
     echo '<div class="carousel-inner" role="listbox">';
     $index = 1;
     foreach ($events as $event) {
     if ($event->carousel === 1 && $event->date_time > now()) {
     if ($index === 1) {
-    echo '<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">';
-        echo '<div class="carousel-inner">';
             echo '<div class="carousel-item active">';
                 } else {
                 echo '<div class="carousel-item">';
                     }
                     echo '<img class="slide-img" src="' . $event['image'] . '" />';
-                    echo '<div class="carousel-caption d-flex">';
-                        echo '<h5 class="title-slide"> <span class="div-title">' . $event['title'] . '</span> </h5>';
-                        echo '<a class="btn btn-sm" href="' . route('show.show', $event->id) . '"><span class="more-info">More info</span></a>';
+                    echo '<div class="carousel-caption">';
+                        echo '<h5 class="title-slide">' . $event['title'] . '</h5>';
+                        echo '<a class="btn btn-sm more" role="button" href="' . route('show.show', $event->id) . '">More info</a>';        
                         echo '</div>';
                     echo '</div>';
                     $index++;
     }
     }
-?>
+    ?>
     </div>
-{{--     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button> --}}
+
 </main>
 <div>
     <ul class="nav nav-tabs" id="eventsNav">
