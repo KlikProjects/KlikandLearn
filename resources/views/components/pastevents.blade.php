@@ -9,7 +9,7 @@
                             <p>✅</p>
                         @endif
                         @if ($event->user_count === $event->users_max)
-                            <p danger>COMPLETE</p>
+                            <p class="text-danger fw-bold">COMPLETE</p>
                         @else
                             <p>{{$event->users_max-$event->user_count}}/{{$event->users_max}} free</p>
                         @endif
@@ -27,7 +27,7 @@
                     </figure>
                     
                     <td>
-                        <a class="btn btn-sm btn-primary" href="{{ route('show.show',$event->id) }}"><i class="fa fa-fw fa-eye"></i>🏷️</a>
+                        <a class="btn btn-sm btn-primary" href="{{ route('show.show',$event->id) }}"><i class="fa fa-fw fa-eye"></i>🔍</a>
                     </td>
 
                 </div>
