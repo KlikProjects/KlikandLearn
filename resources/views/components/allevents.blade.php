@@ -8,16 +8,17 @@
                     <div class="dateAndUsers">
                         <p>{{$event->date_time}}  </p> 
                         
-
-                        @if ($event->ifSubscripted === "1")
-                            <p>✅</p>
-                        @endif
-                        
-                        @if ($event->user_count === $event->users_max)
-                            <p class="text-danger fw-bold">COMPLETE</p>
-                        @else
-                            <p>{{$event->users_max-$event->user_count}}/{{$event->users_max}} free</p>
-                        @endif
+                        <div class="usersAmount">
+                            @if ($event->ifSubscripted === "1")
+                                <p>✅</p>
+                            @endif
+                            
+                            @if ($event->user_count === $event->users_max)
+                                <p class="text-danger fw-bold">EVENT FULL</p>
+                            @else
+                                <p>{{$event->users_max-$event->user_count}}/{{$event->users_max}} free</p>
+                            @endif
+                        </div>
 
                         
                     </div>
@@ -42,13 +43,8 @@
                 @endif
 
                 <td>
-<<<<<<< HEAD
-                    <form action="{{ route('events.destroy',$event->id) }}" method="POST">
-                        <a class="btn btn-sm btn-primary" href="{{ route('show.show', $event->id) }}"><i class="fa fa-fw fa-eye"></i>🔍</a>
-=======
                     <form class="adminButtons" action="{{ route('events.destroy',$event->id) }}" method="POST">
-                        <a class="btn btn-sm btn-primary" href="{{ route('show.show', $event->id) }}"><i class="fa fa-fw fa-eye"></i>🏷️</a>
->>>>>>> dev
+                        <a class="btn btn-sm btn-primary" href="{{ route('show.show', $event->id) }}"><i class="fa fa-fw fa-eye"></i>🔍</a>
                         @if(Auth::check())
                             @if (Auth::user()->isAdmin)
                                 <a class="btn btn-sm btn-success" href="{{ route('events.edit', $event->id) }}"><i class="fa fa-fw fa-edit"></i>✏️</a>

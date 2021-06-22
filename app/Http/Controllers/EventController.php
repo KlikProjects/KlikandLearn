@@ -140,8 +140,8 @@ class EventController extends Controller
             'carousel' => $request->newcarousel,
         ]);
 
-        $input = Input::all();
-        $input['plannedTime'] = date('Y-m-d H:i:s', strtotime(Input::get('plannedTime')));
+/*         $input = Input::all();
+        $input['plannedTime'] = date('Y-m-d H:i:s', strtotime(Input::get('plannedTime'))); */
 
         return redirect()->route('home');
     }
