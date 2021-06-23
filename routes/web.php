@@ -26,19 +26,13 @@ use Illuminate\Http\Request;
 Auth::routes([]);
 
 Route::get('/', [App\Http\Controllers\EventController::class, 'index'])->name('home');
-//Route::get('/home', [App\Http\Controllers\EventController::class, 'index']); // esta linea corrige un fallo cuando se hace el primer login
 Route::get('/create', [App\Http\Controllers\EventController::class, 'create'])->middleware('isadmin')->name('createEvent');
-//Route::get('/delete', [App\Http\Controllers\EventController::class, 'destroy'])->middleware('isadmin')->name('deleteEvent');
 Route::post('/', [App\Http\Controllers\EventController::class, 'store'])->middleware('auth')->name('store');
 Route::get('/inscribe/{id}', [App\Http\Controllers\EventController::class, 'inscribe'])->middleware('auth')->name('inscribe');
 Route::get('/cancelInscription/{id}', [App\Http\Controllers\EventController::class, 'cancelInscription'])->middleware('auth')->name('cancelInscription');
 
-//Route::get('/show/{id}', App\Http\Controllers\EventController::class, 'show');
 Route::resource('shows', App\Http\Controllers\EventController::class);
-//Route::resource('show', App\Http\Controllers\EventController::class);
-
-
-Route::resource('events', App\Http\Controllers\EventController::class)->middleware('isAdmin');
+Route::resource('events', App\Http\Controllers\EventController::class)->middleware('isadmin');
 
 /* Route::get('/signup', [App\Http\Controllers\EventController::class, 'viewSignedUp'])->middleware('auth')->name('signup'); */
 
