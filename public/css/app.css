@@ -10274,12 +10274,26 @@ h1.textHeader {
 }
 .slider {
   display: flex;
+  width: 100vw;
+  height: 20vh;
   margin-bottom: 6px;
 }
 
-.slide-img {
+.carousel-inner.innerNewSize {
+  display: flex;
   width: 100vw;
-  height: 56vw;
+  height: 20vh !important;
+  justify-items: center;
+  align-items: center;
+}
+
+.slide-img {
+  height: 50%;
+  width: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  justify-content: center;
+  align-items: center;
 }
 
 .carousel-caption {

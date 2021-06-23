@@ -1,15 +1,25 @@
 .slider{
     display: flex;
+    width: 100vw;
+    height: 20vh;
     margin-bottom: 6px;
 }
 
 .carousel-inner.innerNewSize {
+    display: flex;
     width: 100vw;
-    height: 20vw !important;
+    height: 20vh !important;
+    justify-items: center;
+    align-items: center;
+
 }
 
 .slide-img{
-
+    height: 50%;
+    width: auto;
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
 }
 
 .carousel-caption{
