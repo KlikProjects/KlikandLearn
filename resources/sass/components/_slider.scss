@@ -1,55 +1,42 @@
-/* .slider {
+.slider{
     display: flex;
-    flex-flow: row nowrap;
-    overflow: scroll;
-    margin-top: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 6px;
 }
 
-.sliderEvent {
-    min-width: 120px;
-    height: 150px;
-    background-color: $sand-color;
-    margin-right: 9px;
-    margin-left: 9px;
+.slide-img{
+    width: 100vw;
+    height: 56vw;
+}
+
+.carousel-caption{
+    background-color: rgba(52, 63, 85, 0.70);
+    height: 50px;
+    width: 100%;
+    left: 0 !important;
+    padding: 5px !important;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    position: relative;
 }
 
-.sliderTitleBtnContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.title-slide{
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: normal;
+    font-size: 15px;
+    color: $sand-color;
 }
 
-.sliderEnrollBtn {
-    position: absolute;
-    bottom: 0; 
-    text-decoration: none;
-    color: $dark-color;
-    margin: 0;
-    width: 100%;
-    font-weight: 600;
-    background-color: $red-color;
-    text-align: center;
+.btn.btn-sm.more{
+    width: 80px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgba(101, 116, 205, 0.60);
+    color: $sand-color;
+    margin-top: 3px !important;
 }
 
-.sliderTitle {
-    text-align: center;
-    font-size: 12px;
-    text-transform: uppercase;
-    font-weight: 600;
-    color: $red-color;
-    margin: 5px;
+.carousel-indicators{
+    margin-top: 4px;
 }
 
-.sliderImgContainer {
-    width: 100%;
-    margin: 0;
-}
-
-.sliderImg {
-    width: 100%;
-} */

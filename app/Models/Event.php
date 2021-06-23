@@ -15,11 +15,33 @@ class Event extends Model
         'image',
         'users_max',
         'description',
-        'carousel'
+        'carousel',
+        'ifSubscripted'
     ];
 
     public function user()
     {
         return $this->belongsToMany(User::class);
     }
+
+    static function ifSubscript($events,$myeventuser)
+    {
+        foreach ($events as $event) {
+            foreach ($myeventuser as $myevent){
+                if ($event->id === $myevent->id){
+                    $event->ifSubscripted="1";
+                }
+            }    
+        }
+    return ($events);
+    }
+
+    static function totaluserInscript($events)
+    {
+        $events=Event::withCount('user')->get();
+        
+    return ($events);
+    }
+
+
 }

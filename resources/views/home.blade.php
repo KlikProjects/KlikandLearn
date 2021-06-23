@@ -2,74 +2,64 @@
 
 @section('content')
 
-<x-header/>
+<x-header />
 
 <main class="slider">
-
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-
-    <?php
-        echo '<div class="carousel-inner" role="listbox">';
-
-        $index=1;
-        foreach ($events as $event){
-            if ($event->carousel === 1 && $event->date_time > now()){
-
-            
-            if ($index === 1) {
-                echo '<div class="carousel-item active">';
-            } else {
-                echo '<div class="carousel-item">';
+    <div id="carousel-exampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <?php
+            echo '<div class="carousel-inner" role="listbox">';
+            $index = 1;
+            foreach ($events as $event) {
+                if ($event->carousel === 1 && $event->date_time > now()) {
+                    if ($index === 1) {
+                        echo '<div class="carousel-item active">';
+                    } 
+                    else 
+                    {
+                        echo '<div class="carousel-item">';
+                    }
+                    echo '<img class="slide-img" src="' . $event['image'] . '" />';
+                    echo '<div class="carousel-caption">';
+                    echo '<h5 class="title-slide">' . $event['title'] . '</h5>';
+                    echo '<a class="btn btn-sm more" role="button" href="' . route('shows.show', $event->id) . '">More info</a>';        
+                    echo '</div>';
+                    echo '</div>';
+                    $index++;
+                }
             }
-            echo '<img class="d-block w-100" src="' . $event["image"] . '"/>';
-                echo '<div class="carousel-caption" >';
-                        echo '<h5 class="text-dark" >' . $event["title"] . '</h5>';
-                        echo '<a class="btn btn-sm btn-primary" href="' . route('show.show',$event->id) . '"><i class="fa fa-fw fa-eye"></i>🏷️ SHOW 🏷️</a>';
-                echo '</div>';
-            echo '</div>';
-            $index++;
-        
-            }
-        } 
-    ?>
-
-    <!-- Controls -->
-{{--         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button> --}}
-</div>
+        ?>
+    </div>
 
 </main>
-
 <div>
-    <ul class="nav nav-tabs" id="eventsNav">
-        <li class="nav-item">
-            <a class="nav-link allEv-link active" aria-current="page" href="#eventsNav">Next events</a>
+
+    <ul class="nav nav-pills mb-3 mt-3 eventsNav" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link allEv-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Next Events</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link myEv-link" href="#eventsNav">My events</a>
+        
+        <li class="nav-item myEv-link" role="presentation">
+            @if (Auth::user())
+                <a class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">My Events</a>
+            @endif
         </li>
-        <li class="nav-item">
-            <a class="nav-link pastEv-link" href="#eventsNav">Past events</a>
+        
+        <li class="nav-item" role="presentation">
+            <a class="nav-link pastEv-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Past Events</a>
         </li>
     </ul>
-</div>
+</nav>
 
 <div class="container">
+    <x-buttonCreate />
     <section class="allEvents">
-        <x-allevents :events="$events"/>
+        <x-allevents :events="$events" :myeventuser="$myeventuser"/>
     </section>
     <section class="myEvents hide">
-        <x-myevents/>
+        <x-myevents :events="$events" :myeventuser="$myeventuser"/>
     </section>
     <section class="pastEvents hide">
-        <x-pastevents :events="$events" />
+        <x-pastevents :events="$events" :myeventuser="$myeventuser"/>
     </section>
 </div>
 
