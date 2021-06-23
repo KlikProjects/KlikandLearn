@@ -6,26 +6,28 @@
 
 <main class="slider">
     <div id="carousel-exampleSlidesOnly" class="carousel slide" data-ride="carousel">
-    <?php
-    echo '<div class="carousel-inner" role="listbox">';
-    $index = 1;
-    foreach ($events as $event) {
-    if ($event->carousel === 1 && $event->date_time > now()) {
-    if ($index === 1) {
-            echo '<div class="carousel-item active">';
-                } else {
-                echo '<div class="carousel-item">';
+        <?php
+            echo '<div class="carousel-inner" role="listbox">';
+            $index = 1;
+            foreach ($events as $event) {
+                if ($event->carousel === 1 && $event->date_time > now()) {
+                    if ($index === 1) {
+                        echo '<div class="carousel-item active">';
+                    } 
+                    else 
+                    {
+                        echo '<div class="carousel-item">';
                     }
                     echo '<img class="slide-img" src="' . $event['image'] . '" />';
                     echo '<div class="carousel-caption">';
-                        echo '<h5 class="title-slide">' . $event['title'] . '</h5>';
-                        echo '<a class="btn btn-sm more" role="button" href="' . route('events.show', $event->id) . '">More info</a>';        
-                        echo '</div>';
+                    echo '<h5 class="title-slide">' . $event['title'] . '</h5>';
+                    echo '<a class="btn btn-sm more" role="button" href="' . route('shows.show', $event->id) . '">More info</a>';        
+                    echo '</div>';
                     echo '</div>';
                     $index++;
-    }
-    }
-    ?>
+                }
+            }
+        ?>
     </div>
 
 </main>

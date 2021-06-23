@@ -16,7 +16,7 @@ class Event extends Model
         'users_max',
         'description',
         'carousel',
-        'ifSubscrited'
+        'ifSubscripted'
     ];
 
     public function user()
