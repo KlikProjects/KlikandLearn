@@ -54,11 +54,7 @@
         <x-allevents :events="$events" :myeventuser="$myeventuser"/>
     </section>
     <section class="myEvents hide">
-<<<<<<< HEAD
-        <x-myevents :myeventuser="$myeventuser" />
-=======
         <x-myevents :events="$events" :myeventuser="$myeventuser"/>
->>>>>>> 9ec672cad7949f580b560a7b76afc9a1623dc6a2
     </section>
     <section class="pastEvents hide">
         <x-pastevents :events="$events" :myeventuser="$myeventuser"/>
