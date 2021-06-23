@@ -166,8 +166,10 @@ class EventController extends Controller
     {
         $user = User::find(Auth::id());
         $event = Event::find($id);
-        
-        $user->event()->attach($event);
+        dd($event->checkInscription());
+        if($event->checkInscription() !== "1") {
+            $user->event()->attach($event);
+        }
         
         return redirect()->route('home');
     }

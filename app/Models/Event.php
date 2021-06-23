@@ -16,7 +16,7 @@ class Event extends Model
         'users_max',
         'description',
         'carousel',
-        'ifSubscrited'
+        'ifSubscripted'
     ];
 
     public function user()
@@ -24,16 +24,16 @@ class Event extends Model
         return $this->belongsToMany(User::class);
     }
 
-    static function ifSubscript($events,$myeventuser)
+    static function ifSubscript($events, $myeventuser)
     {
         foreach ($events as $event) {
             foreach ($myeventuser as $myevent){
                 if ($event->id === $myevent->id){
-                    $event->ifSubscripted="1";
+                    $event->ifSubscripted = "1";
                 }
             }    
         }
-    return ($events);
+        return ($events);
     }
 
     static function totaluserInscript($events)
@@ -42,6 +42,8 @@ class Event extends Model
         
     return ($events);
     }
-
-
+    
+    public function checkInscription() {
+        return $this->ifSubscript;
+    }
 }
