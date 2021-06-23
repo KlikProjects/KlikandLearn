@@ -18,7 +18,7 @@ class EventController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-        public function index()
+    public function index()
     {
         $events = Event::all()
             ->sortBy('date_time');
@@ -166,8 +166,18 @@ class EventController extends Controller
     {
         $user = User::find(Auth::id());
         $event = Event::find($id);
+        $inscribed = false;
+
+        foreach ($user->event as $inscribedEvent) {
+            if ($event->id === $inscribedEvent->id) {
+                $inscribed = true;
+                break;
+            }
+        }
         
-        $user->event()->attach($event);
+        if ($inscribed === false) {
+            $user->event()->attach($event);
+        }
         
         return redirect()->route('home');
     }

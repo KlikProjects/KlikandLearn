@@ -42,8 +42,4 @@ class Event extends Model
         
         return ($events);
     }
-    
-    /* public function checkInscription() {
-        return $this->ifSubscript;
-    } */
 }
