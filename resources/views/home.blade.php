@@ -30,19 +30,6 @@
 
 </main>
 <div>
-    <ul class="nav nav-tabs" id="eventsNav">
-        <li class="nav-item">
-            <a class="nav-link allEv-link active" aria-current="page" href="#eventsNav">Next events</a>
-        </li>
-        @if (Auth::user())
-            <li class="nav-item">
-                <a class="nav-link myEv-link" href="#eventsNav">My events</a>
-            </li>
-        @endif
-        <li class="nav-item">
-            <a class="nav-link pastEv-link" href="#eventsNav">Past events</a>
-        </li>
-    </ul> --}}
 
     <ul class="nav nav-pills mb-3 mt-3 eventsNav" id="pills-tab" role="tablist">
         <li class="nav-item" role="presentation">
@@ -64,21 +51,13 @@
 <div class="container">
     <x-buttonCreate />
     <section class="allEvents">
-<<<<<<< HEAD
         <x-allevents :events="$events" :myeventuser="$myeventuser"/>
-=======
-        <x-allevents :events="$events" />
->>>>>>> carousel
     </section>
     <section class="myEvents hide">
         <x-myevents :myeventuser="$myeventuser" />
     </section>
     <section class="pastEvents hide">
-<<<<<<< HEAD
         <x-pastevents :events="$events" :myeventuser="$myeventuser"/>
-=======
-        <x-pastevents :events="$events" />
->>>>>>> carousel
     </section>
 </div>
 
