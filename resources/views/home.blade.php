@@ -13,7 +13,7 @@
                 if ($event->carousel === 1 && $event->date_time > now()) {
                     if ($index === 1) {
                         echo '<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">';
-                            echo '<div class="carousel-inner">';
+                            echo '<div class="carousel-inner innerNewSize">';
                             echo '<div class="carousel-item active">';
                     } 
                     else 

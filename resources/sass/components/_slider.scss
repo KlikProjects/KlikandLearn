@@ -3,9 +3,13 @@
     margin-bottom: 6px;
 }
 
-.slide-img{
+.carousel-inner.innerNewSize {
     width: 100vw;
-    height: 56vw;
+    height: 20vw !important;
+}
+
+.slide-img{
+
 }
 
 .carousel-caption{
