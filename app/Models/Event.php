@@ -16,7 +16,7 @@ class Event extends Model
         'users_max',
         'description',
         'carousel',
-        'ifSubscrited'
+        'ifSubscripted'
     ];
 
     public function user()
@@ -40,8 +40,6 @@ class Event extends Model
     {
         $events=Event::withCount('user')->get();
         
-    return ($events);
+        return ($events);
     }
-
-
 }
