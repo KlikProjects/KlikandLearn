@@ -10245,38 +10245,46 @@ h3 {
   justify-content: space-evenly;
 }
 
-@media (min-width: 769px) {
-  .eventsNav {
-    justify-content: center;
-  }
+.slider {
+  display: flex;
+  margin-bottom: 6px;
 }
+
 .slide-img {
-  width: 94vw;
+  width: 100vw;
   height: 56vw;
-  display: flexbox;
-  align-items: flex-end;
-  align-content: flex-end;
-}
-
-.div-title {
-  border-radius: 15px;
-  background-color: #343F55;
-  padding: 10px;
-  margin-bottom: 5px;
-}
-
-.title-slide {
-  display: block;
-  align-content: center;
-}
-
-.btn-sm, .btn-group-sm > .btn {
-  font-weight: bold;
 }
 
 .carousel-caption {
-  display: flexbox;
-  justify-items: flex-start;
+  background-color: rgba(52, 63, 85, 0.7);
+  height: 50px;
+  width: 100%;
+  left: 0 !important;
+  padding: 5px !important;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-slide {
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: normal;
+  font-size: 15px;
+  color: #F5E6CC;
+}
+
+.btn.btn-sm.more, .btn-group-sm > .btn.more {
+  width: 80px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: rgba(101, 116, 205, 0.6);
+  color: #F5E6CC;
+  margin-top: 3px !important;
+}
+
+.carousel-indicators {
+  margin-top: 4px;
 }
 
 .containerNewEvent {
