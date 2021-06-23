@@ -1,8 +1,11 @@
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css2?family=Sarina&display=swap');
+
 
 // Variables
-@import 'variables';
+@import 'variables/variables';
+@import 'variables/custom-variables';
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';

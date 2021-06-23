@@ -1,16 +1,19 @@
 {{-- @props (["events" => $events , "myeventuser" => $myeventuser]) --}}
+
     @foreach ($events as $event)
         @if ($event->date_time < now())
             <article class="eventContainer">
                 <div class="eventInfo">
                     <div class="dateAndUsers">
                         <p>{{$event->date_time}}  </p> 
-                        @foreach ($myeventuser as $myevent)
-                            @if ($event->id === $myevent->id)
-                                <p>✅</p>
-                            @endif
-                        @endforeach 
-                        <p>{{$event->users_max}} participantes</p>
+                        @if ($event->ifSubscripted === "1")
+                            <p>✅</p>
+                        @endif
+                        @if ($event->user_count === $event->users_max)
+                            <p class="text-danger fw-bold">EVENT FULL</p>
+                        @else
+                            <p>{{$event->users_max-$event->user_count}}/{{$event->users_max}} free</p>
+                        @endif
                     </div>
                     
                     <div class="titleAndDesc">
@@ -25,7 +28,7 @@
                     </figure>
                     
                     <td>
-                        <a class="btn btn-sm btn-primary" href="{{ route('show.show',$event->id) }}"><i class="fa fa-fw fa-eye"></i>🏷️</a>
+                        <a class="btn btn-sm btn-primary" href="{{ route('shows.show',$event->id) }}"><i class="fa fa-fw fa-eye"></i>🏷️</a>
                     </td>
 
                 </div>
