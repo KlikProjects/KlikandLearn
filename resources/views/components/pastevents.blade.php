@@ -1,4 +1,5 @@
 {{-- @props (["events" => $events , "myeventuser" => $myeventuser]) --}}
+
     @foreach ($events as $event)
         @if ($event->date_time < now())
             <article class="eventContainer">
@@ -9,7 +10,7 @@
                             <p>✅</p>
                         @endif
                         @if ($event->user_count === $event->users_max)
-                            <p class="text-danger fw-bold">COMPLETE</p>
+                            <p class="text-danger fw-bold">EVENT FULL</p>
                         @else
                             <p>{{$event->users_max-$event->user_count}}/{{$event->users_max}} free</p>
                         @endif
@@ -27,7 +28,7 @@
                     </figure>
                     
                     <td>
-                        <a class="btn btn-sm btn-primary" href="{{ route('events.show',$event->id) }}"><i class="fa fa-fw fa-eye"></i>🏷️</a>
+                        <a class="btn btn-sm btn-primary" href="{{ route('shows.show',$event->id) }}"><i class="fa fa-fw fa-eye"></i>🏷️</a>
                     </td>
 
                 </div>

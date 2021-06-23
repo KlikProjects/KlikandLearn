@@ -33,7 +33,12 @@ Route::post('/', [App\Http\Controllers\EventController::class, 'store'])->middle
 Route::get('/inscribe/{id}', [App\Http\Controllers\EventController::class, 'inscribe'])->middleware('auth')->name('inscribe');
 Route::get('/cancelInscription/{id}', [App\Http\Controllers\EventController::class, 'cancelInscription'])->middleware('auth')->name('cancelInscription');
 
-Route::resource('events', App\Http\Controllers\EventController::class)->middleware('isadmin');
+//Route::get('/show/{id}', App\Http\Controllers\EventController::class, 'show');
+Route::resource('shows', App\Http\Controllers\EventController::class);
+//Route::resource('show', App\Http\Controllers\EventController::class);
+
+
+Route::resource('events', App\Http\Controllers\EventController::class)->middleware('isAdmin');
 
 /* Route::get('/signup', [App\Http\Controllers\EventController::class, 'viewSignedUp'])->middleware('auth')->name('signup'); */
 
