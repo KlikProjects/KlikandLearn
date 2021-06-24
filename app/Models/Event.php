@@ -28,6 +28,7 @@ class Event extends Model
     {
         foreach ($events as $event) {
             foreach ($myeventuser as $myevent){
+                
                 if ($event->id === $myevent->id){
                     $event->ifSubscripted = "1";
                 }
@@ -41,5 +42,29 @@ class Event extends Model
         $events=Event::withCount('user')->get();
         
         return ($events);
+    }
+
+    static function checkEventVacancy($event) {
+        
+        $usercount = Event::totaluserInscript($event);
+
+        foreach ($usercount as $item) {
+
+            if ($item->id === $event->id) {                
+                $usercount = $item->user_count;
+                return $usercount;
+            }
+        }
+    }
+
+    static function checkInscription($user, $event) {
+
+        foreach ($user->event as $inscribedEvent) {
+
+            if ($event->id === $inscribedEvent->id) {
+                $inscribed = true;
+                return $inscribed;
+            }
+        }
     }
 }
