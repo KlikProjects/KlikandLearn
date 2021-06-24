@@ -84,11 +84,14 @@ class EventController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($event)
+    public function show($id, $user_count, $ifSubscripted=null)
     {
-        dd($event); 
+        /* dd($id, $user_count, $ifSubscripted);  */
         /* dd($user_count); */
-        /* $event = Event::find($id); */
+        $event = Event::find($id);
+        $event->user_count = $user_count;
+        $event->ifSubscripted = $ifSubscripted;
+        /* dd($event); */
 
             /* $myeventuser = [];    
             if (Auth::user()){

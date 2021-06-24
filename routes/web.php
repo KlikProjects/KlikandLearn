@@ -33,7 +33,9 @@ Route::get('/cancelInscription/{id}', [App\Http\Controllers\EventController::cla
 
 
 //Route::get('/card/{id}', [App\Http\Controllers\EventController::class, 'card']);
-Route::resource('shows', App\Http\Controllers\EventController::class);
+//Route::resource('shows', App\Http\Controllers\EventController::class);
+Route::get('/show/{id}/{user_count}/{ifSubscripted?}',[App\Http\Controllers\EventController::class,'show'])->name('show');
+
 
 Route::resource('events', App\Http\Controllers\EventController::class)->middleware('isadmin');
 

@@ -14,7 +14,7 @@
             <li class="list-group-item cardDescriptionText">{{$event->description}}</li>
             <li class="list-group-item cardAttendees"><p>
             
-                        @if ($event->user_count === $event->users_max)
+                        @if ($event->user_count == $event->users_max)
                             <p class="text-danger fw-bold">EVENT FULL</p>
                         @else
                             <p>{{$event->users_max-$event->user_count}}/{{$event->users_max}} free</p>
