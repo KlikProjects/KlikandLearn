@@ -5,8 +5,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
-
-
+use App\Mail\ContactMailable;
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -73,3 +73,12 @@ Route::get('/profile', function () {
 })->middleware('verified');
 
 
+//Ruta para mandar mail de confirmación de subscripción a evento
+
+Route::get('contact', function () {
+    $correo = new ContactMailable;
+
+    Mail::to('berta.liphoto@gmail.com')->send($correo);
+
+    return "Mensaje Enviado";
+});
