@@ -84,21 +84,33 @@ class EventController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($event)
     {
-        $event = Event::find($id);
+        dd($event); 
+        /* dd($user_count); */
+        /* $event = Event::find($id); */
 
-             $myeventuser = [];    
+            /* $myeventuser = [];    
             if (Auth::user()){
                 $user=Auth::user();
                 $myeventuser = $user->event;
-            }
-     
+            } */
+
+  /*       $event->user_count=$user_count;
+        $event->ifSubscripted=$ifSubscripted; */
+             
         /* $event = Event::totaluserInscript($event); */
         /* $event = Event::ifSubscript($event,$myeventuser); */
-        /* dd($event); */
+
+        
         return view('eventforms.show', compact('event'));
     }
+
+/*     public function Card($event)
+    {
+        dd($event); 
+        return view('eventforms.show', compact('event'));
+    } */
 
     /**
      * Show the form for editing the specified resource.

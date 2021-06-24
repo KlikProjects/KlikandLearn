@@ -1,6 +1,7 @@
 {{-- @props (["events" => $events , "myeventuser" => $myeventuser]) --}}
 
     @foreach ($events as $event)
+    {{-- @dd($event) --}}
         @if ($event->date_time > now())
             <div class="line"></div>
             <article class="eventContainer">
@@ -41,10 +42,12 @@
                         <button class="enrollBtn"><a href="{{ url('/inscribe', $event->id) }}">Inscribe</a></button>
                     @endif
                 @endif
-
+            
+{{-- @dd($event) --}}
                 <td>
                     <form class="adminButtons" action="{{ route('events.destroy',$event->id) }}" method="POST">
-                        <a class="btn btn-sm btn-primary" href="{{ route('shows.show', $event->id) }}"><i class="fa fa-fw fa-eye"></i>🏷️</a>
+                   
+                        <a class="btn btn-sm btn-primary" {{-- href="{{ url('/card', $event) }}" --}}href="{{ route('shows.show', $event->title) }}"><i class="fa fa-fw fa-eye"></i>🏷️</a>
                         @if(Auth::check())
                             @if (Auth::user()->isAdmin)
                                 <a class="btn btn-sm btn-success" href="{{ route('events.edit', $event->id) }}"><i class="fa fa-fw fa-edit"></i>✏️</a>
