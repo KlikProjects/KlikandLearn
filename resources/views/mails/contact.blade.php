@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1>Welcome to Klik And Learn courses!</h1>
-    <p>Congratulations!</p>
     
+    <p>Congratulations!</p>
 </body>
 </html>

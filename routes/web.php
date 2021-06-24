@@ -75,10 +75,10 @@ Route::get('/profile', function () {
 
 //Ruta para mandar mail de confirmación de subscripción a evento
 
-Route::get('contact', function () {
+/* Route::get('contact', function () {
     $correo = new ContactMailable;
 
     Mail::to('berta.liphoto@gmail.com')->send($correo);
 
     return "Mensaje Enviado";
-});
+}); */

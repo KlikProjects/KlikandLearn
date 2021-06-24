@@ -7,11 +7,11 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class ContactMailable extends Mailable
+class ContactMailable extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
-    public $subject = "información de contacto";
+    public $subject = "Confirmation event subscription";
 
     /**
      * Create a new message instance.

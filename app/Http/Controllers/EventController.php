@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Event;
+use App\Models\Mailing;
 use App\Models\User;
 use Attribute;
 use Illuminate\Http\Request;
@@ -178,7 +179,9 @@ class EventController extends Controller
         if ($inscribed === false) {
             $user->event()->attach($event);
         }
-        
+
+            $sendemail = Mailing::sendMail();
+
         return redirect()->route('home');
     }
 
