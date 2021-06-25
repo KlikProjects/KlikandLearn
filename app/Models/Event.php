@@ -28,7 +28,7 @@ class Event extends Model
     {
         foreach ($events as $event) {
             foreach ($myeventuser as $myevent){
-                
+
                 if ($event->id === $myevent->id){
                     $event->ifSubscripted = "1";
                 }

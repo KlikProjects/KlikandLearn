@@ -24,22 +24,19 @@ class EventsSubscriptionTest extends TestCase
 
         $response->assertStatus(302)
                 ->assertRedirect("/login");
-                
-
+    }         
 
     public function test_UserAuthCanInscription()
     {
-        $event=Event::factory()->create();
-        $user=User::factory()->create();
+        $event = Event::factory()->create();
+        $user = User::factory()->create();
         
         $this->actingAs($user);
-
         $response = $this->get(route('inscribe',$event->id));
 
         $this->assertEquals($user->id,$event->user[0]->id);
+    }   
 
-        
-                
     public function test_NotLoggedUserCantInscribe()
     {
         $event = Event::factory()->create();
@@ -47,4 +44,31 @@ class EventsSubscriptionTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    public function test_userCantInscribeMoreThanOnce()
+    {
+        $event = Event::factory()->create(['users_max' => 10]);
+        $user = User::factory()->create();
+
+        $this->actingAs($user);
+        $this->get(route('inscribe', $event->id));
+        $this->get(route('inscribe', $event->id));
+
+        $usercount = Event::checkEventVacancy($event);
+
+        $this->assertEquals(1, $usercount);
+    }
+
+    public function test_userCantInscribeOnFullEvent()
+    {
+        $event = Event::factory()->create(['users_max' => 0]);
+        $user = User::factory()->create();
+
+        $this->actingAs($user);
+        $this->get(route('inscribe', $event->id));
+
+        $usercount = Event::checkEventVacancy($event);
+
+        $this->assertEquals(0, $usercount);
+    }   
 }
