@@ -7,19 +7,18 @@
 
 .carousel-inner.innerNewSize {
     display: flex;
-    width: 100vw;
+    width: 100vw !important;
     height: 20vh !important;
-    justify-items: center;
-    align-items: center;
+    justify-items: center !important;
+    align-items: center !important;
 
 }
 
 .slide-img{
-    height: 50%;
-    width: auto;
-    object-fit: cover;
-    justify-content: center;
-    align-items: center;
+    height: auto !important;
+    width: 100vw !important;
+    object-fit: cover !important;
+    object-position: 50% 50% !important;
 }
 
 .carousel-caption{

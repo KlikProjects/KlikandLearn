@@ -38,7 +38,7 @@ Route::resource('shows', App\Http\Controllers\EventController::class);
 //Route::resource('show', App\Http\Controllers\EventController::class);
 
 
-Route::resource('events', App\Http\Controllers\EventController::class)->middleware('isAdmin');
+Route::resource('events', App\Http\Controllers\EventController::class)->middleware('isadmin');
 
 /* Route::get('/signup', [App\Http\Controllers\EventController::class, 'viewSignedUp'])->middleware('auth')->name('signup'); */
 
