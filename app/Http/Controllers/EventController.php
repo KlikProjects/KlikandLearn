@@ -170,7 +170,7 @@ class EventController extends Controller
         $inscribed = Event::checkInscription($user, $event);
         $usercount = Event::checkEventVacancy($event);
         
-        if ($usercount < $event->users_max && $inscribed === false) {
+        if ($usercount < $event->users_max && !$inscribed) {
             $user->event()->attach($event);
         }
 
