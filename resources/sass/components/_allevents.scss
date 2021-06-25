@@ -95,6 +95,11 @@
     display: flex;
 }
 
+.showOnClick, .showOnClick:hover {
+    text-decoration: none;
+    color: $red-color;
+}
+
 @media (min-width: 769px) {
     .imgBtnContainer {
         flex-direction: row;

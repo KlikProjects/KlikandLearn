@@ -24,14 +24,14 @@
                     </div>
                     
                     <div class="titleAndDesc">
-                        <h3 class="eventTitle">{{$event->title}}</h3>
+                        <h3 class="eventTitle"><a class="showOnClick" href="{{ route('shows.show', $event->id) }}">{{$event->title}}</a></h3>
                         <p class="eventDescription">{{$event->description}}</p>
                     </div>
                 </div>
 
             <div class="imgBtnContainer">
                 <figure>
-                    <img class="imgEvents" src="{{$event->image}}" alt="">
+                    <a class="showOnClick" href="{{ route('shows.show', $event->id) }}"><img class="imgEvents" src="{{$event->image}}" alt=""></a>
                 </figure>
                 
                 @if ($event->ifSubscripted === "1" )
