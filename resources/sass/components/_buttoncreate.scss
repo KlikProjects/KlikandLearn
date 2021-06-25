@@ -20,9 +20,9 @@
 }
 
 .imgButton{
-    width: 20vw !important;
+    width: 15vw !important;
     height: auto !important;
-    max-width: 100px;
+    max-width: 90px;
     margin-right: 15px;
 }
 
@@ -34,13 +34,18 @@
 }
 
 @media (min-width: 769px) {
+    
     .containerNewEvent {
-        margin-top: 60px;
-        margin-bottom: 60px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .imgButton{
+        width: 60px !important;
     }
 
     .txtNewEvent {
-        font-size: 150%;
+        font-size: 20px;
     }
 }
 

@@ -1,9 +1,7 @@
-{{-- @props (["events" => $events , "myeventuser" => $myeventuser]) --}}
-
-    @foreach ($events as $event)
-        @if ($event->date_time > now())
-            <div class="line"></div>
-            <article class="eventContainer">
+@foreach ($events as $event)
+    @if ($event->date_time > now())
+        <div class="line"></div>
+        <article class="eventContainer">
                 <div class="eventInfo">
                     <div class="dateAndUsers">
                         <p>{{$event->date_time}}  </p> 

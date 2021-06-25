@@ -41,3 +41,16 @@
     margin-left: 20px !important;
     border-color: green !important;
 }
+
+@media (min-width: 769px) {
+    
+    .cardTitle{
+        margin-bottom: 30px;
+    }
+    
+    .subirFoto{
+        display: flex !important;
+        justify-content: space-between;
+        margin-right: 30px;
+    }
+}
