@@ -31,6 +31,7 @@ class ContactMailable extends Mailable implements ShouldQueue
      */
     public function build()
     {
-        return $this->view('mails.contact');
+        return $this->from('klikandlearn@gmail.com')
+                    ->view('mails.contact');
     }
 }
