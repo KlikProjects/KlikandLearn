@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactMailable;
 use App\Models\Event;
 use App\Models\Mailing;
 use App\Models\User;
@@ -10,6 +12,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use League\CommonMark\Extension\Attributes\Node\Attributes;
 use Facade\FlareClient\View;
+use Symfony\Component\HttpKernel\Controller\ContainerControllerResolver;
 
 class EventController extends Controller
 {
@@ -174,7 +177,10 @@ class EventController extends Controller
             $user->event()->attach($event);
         }
 
-            $sendemail = Mailing::sendMail();
+            $correo = new ContactMailable;
+
+            Mail::to($user->email)->send($correo);
+
 
         return redirect()->route('home');
     }
