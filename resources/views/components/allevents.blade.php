@@ -47,7 +47,7 @@
                 <td>
                     <form class="adminButtons" action="{{ route('events.destroy',$event->id) }}" method="POST">
                   {{--  @dd($event) --}}
-                        <a class="btn btn-sm btn-primary" href="{{ route('show', ['id'=>$event->id, 'user_count'=>$event->user_count, 'ifSubscripted'=>$event->ifSubscripted]) }}"{{-- href="{{ route('shows.show', $event->all())}}" --}}><i class="fa fa-fw fa-eye"></i>🔍</a>
+                        <a class="btn btn-sm btn-primary" href="{{ route('show', ['id'=>$event->id, 'user_count'=>$event->user_count, 'ifSubscripted'=>$event->ifSubscripted]) }}"><i class="fa fa-fw fa-eye"></i>🔍</a>
                         @if(Auth::check())
                             @if (Auth::user()->isAdmin)
                                 <a class="btn btn-sm btn-success" href="{{ route('events.edit', $event->id) }}"><i class="fa fa-fw fa-edit"></i>✏️</a>

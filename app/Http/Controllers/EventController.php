@@ -86,25 +86,10 @@ class EventController extends Controller
      */
     public function show($id, $user_count, $ifSubscripted=null)
     {
-        /* dd($id, $user_count, $ifSubscripted);  */
-        /* dd($user_count); */
+     
         $event = Event::find($id);
         $event->user_count = $user_count;
         $event->ifSubscripted = $ifSubscripted;
-        /* dd($event); */
-
-            /* $myeventuser = [];    
-            if (Auth::user()){
-                $user=Auth::user();
-                $myeventuser = $user->event;
-            } */
-
-  /*       $event->user_count=$user_count;
-        $event->ifSubscripted=$ifSubscripted; */
-             
-        /* $event = Event::totaluserInscript($event); */
-        /* $event = Event::ifSubscript($event,$myeventuser); */
-
         
         return view('eventforms.show', compact('event'));
     }
@@ -184,7 +169,8 @@ class EventController extends Controller
         
         $user->event()->attach($event);
         
-        return redirect()->route('home');
+        /* return redirect()->route('home'); */
+        return back();
     }
 
     public function cancelInscription($id)
@@ -194,18 +180,10 @@ class EventController extends Controller
         
         $user->event()->detach($event);
         
-        return redirect()->route('home');
+        /* return redirect()->route('home'); */
+        return back();
     }
 
- /*    public function viewSignedUp()
-    {
-        $user=Auth::user();
-
-        $myeventuser = $user->event;
-
-        return view('home', ['event_user' => $myeventuser]);
-    }
- */
 
 
 }

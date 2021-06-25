@@ -19,8 +19,11 @@
                         <img class="imgEvents" src="{{$event->image}}" alt="">
                     </figure>
                     <button class="enrollBtn"><a href="{{ url('/cancelInscription', $event->id) }}">Cancel</a></button>
+                    <?php $event->user_count = 0 ?>
+                    
                     <td>
-                        <a class="btn btn-sm btn-primary" href="{{ route('shows.show',$event->id) }}"><i class="fa fa-fw fa-eye"></i>🏷️</a>
+                        <?php $event->ifSubscripted = 1 ?>
+                        <a class="btn btn-sm btn-primary" href="{{ route('show', ['id'=>$event->id, 'user_count'=>$event->user_count, 'ifSubscripted'=>$event->ifSubscripted]) }}"><i class="fa fa-fw fa-eye"></i>🔍</a>
                     </td>
                 </div>
             </article>

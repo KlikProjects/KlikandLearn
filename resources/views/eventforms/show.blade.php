@@ -13,7 +13,9 @@
         <ul class="list-group list-group-flush">
             <li class="list-group-item cardDescriptionText">{{$event->description}}</li>
             <li class="list-group-item cardAttendees"><p>
-            
+                        @if ($event->ifSubscripted === "1")
+                            <p>✅ Subscripted</p>
+                        @endif
                         @if ($event->user_count == $event->users_max)
                             <p class="text-danger fw-bold">EVENT FULL</p>
                         @else
@@ -23,10 +25,12 @@
         </ul>
         <div class="card-body">
             {{-- <a href="#" class="card-link btn-outline-success">Subscribe</a> --}}
-            @if ($event->ifSubscripted === "1")
-                <button class="enrollBtn"><a href="{{ url('/cancelInscription', $event->id) }}">Cancel</a></button>
-            @else
-                <button class="enrollBtn"><a href="{{ url('/inscribe', $event->id) }}">Inscribe</a></button>
+            @if ($event->date_time > now())
+                @if ($event->ifSubscripted === "1")
+                    <button class="enrollBtn"><a href="{{ url('/cancelInscription', $event->id) }}">Cancel</a></button>
+                @else
+                    <button class="enrollBtn"><a href="{{ url('/inscribe', $event->id) }}">Inscribe</a></button>
+                @endif
             @endif
         </div>
         <div class="float-right">
