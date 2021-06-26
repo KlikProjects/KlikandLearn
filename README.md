@@ -37,15 +37,20 @@ Los usuarios podrán ver la descripción de un evento, apuntarse y desapuntarse.
 <li>Para el frontend se deben usar componentes de blade.</li>
 </ul>
 
-## Páginas:
+## Entrega:
 
-### Lista: Las citas beben aparecer por orden de creación con:
 <ul>
-<li>El nombre del coder o del equipo.</li>
-<li>El tema de consulta.</li>
-<li>La fecha la y hora de la creación de la cita.</li>
-<li>Las citas se podrán eliminar.</li>
-<li>Podremos acceder a la edición de cada cita, y a la página de creación de una cita nueva.</li>
+<li>Un link a un repositorio de github</li>
+<li>Readme del repositorio con:</li>
+    <ul>
+<li>Briefing y explicación del proyecto</li>
+<li>Diagramas</li>
+<li>Sketch - mockup</li>
+        </ul>
+<li>Url en ‘deploy’.</li>
+<li>Presentación en diapositivas</li>
+<li>Demo y code review</li>
+
 </ul>
 
 ### Crear nueva cita:
