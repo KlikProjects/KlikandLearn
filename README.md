@@ -204,6 +204,6 @@ Mockup de cómo pensábamos que deberían ser las pantallas y sus funcionalidade
   <li>Jose Miguel</li>
 </ul>
 
-También pueden mirar la lista de todos los [contribuyentes](https://github.com/DiversosFactoria5/elConsultorioDelCodersMVC/graphs/contributors) quienes han participado en este proyecto.  
+También pueden mirar la lista de todos los [contribuyentes](https://github.com/KlikProjects/KlikandLearn/graphs/contributors) quienes han participado en este proyecto.  
 
 
