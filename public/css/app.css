@@ -1,23 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 @import url(https://fonts.googleapis.com/css2?family=Sarina&display=swap);
 @charset "UTF-8";
-/* @mixin tablet {
-    @media only screen and (min-width: 768px) {
-    @content;
-    }
-}
-
-@mixin desktop {
-    @media only screen and (min-width: 992px) {
-    @content;
-    }
-}
-
-@mixin large {
-    @media only screen and (min-width: 1200px) {
-    @content;
-    }
-} */
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -10121,27 +10104,70 @@ h3 {
 }
 
 @media (min-width: 769px) {
-  .imgBtnContainer {
+  .eventContainer {
+    width: 700px;
+    margin-left: 40px;
+    display: flex;
     flex-direction: row;
+    justify-content: start;
   }
 
-  .adminButtons {
+  .eventInfo {
+    width: 50%;
+    position: relative;
+    left: auto;
+  }
+
+  .dateAndUsers {
+    font-size: 16px;
+    display: flex;
+    align-content: flex-start;
+  }
+
+  .titleAndDesc {
+    display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    margin-left: 20px;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  .eventTitle {
+    font-size: 22px;
+  }
+
+  .eventDescription {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+
+  .imgBtnContainer {
+    width: 50px;
+    position: relative;
+    left: 300px;
+    margin-top: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .imgEvents {
+    max-width: 370px;
+    align-self: flex-end;
+    margin: 10px;
   }
 
   .enrollBtn, .enrollBtn a {
     width: auto;
   }
 
-  .imgEvents {
-    max-width: 300px;
+  .enrollBtn {
+    margin-bottom: 10px;
+    flex-direction: column-reverse;
+    justify-self: flex-end;
   }
 
-  .enrollBtn {
-    position: relative;
-    right: 100%;
+  .adminButtons {
+    flex-direction: row;
+    justify-content: flex-end;
   }
 }
 .headerContainer {
@@ -10183,14 +10209,66 @@ h1.textHeader {
     height: 6.5rem;
   }
 }
-.containerFooter {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 205px;
-  background-color: #ED554D;
+.footer {
+  background-color: rgba(237, 85, 77, 0.8) !important;
+  height: auto;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
+.textFooter {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 9px !important;
+}
+
+.container.redes {
+  width: 100%;
+  height: 50%;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.fotoRedes {
+  width: 20px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.mailPhone {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.mailPhone, .mailPhone a {
+  margin-right: 10px;
+  text-decoration: none !important;
+  color: #343F55 !important;
+}
+
+.copy {
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+}
+
+.right {
+  margin-bottom: 0px;
+}
+
+@media (min-width: 769px) {
+  .footer {
+    font-size: 15px;
+  }
+}
 .card {
   background-color: #343F55 !important;
 }
@@ -10234,6 +10312,17 @@ h1.textHeader {
   border-color: green !important;
 }
 
+@media (min-width: 769px) {
+  .cardTitle {
+    margin-bottom: 30px;
+  }
+
+  .subirFoto {
+    display: flex !important;
+    justify-content: space-between;
+    margin-right: 30px;
+  }
+}
 .card-title {
   color: #F6972B !important;
   font-size: 30px;
@@ -10253,6 +10342,19 @@ h1.textHeader {
   color: #F5E6CC !important;
 }
 
+@media (min-width: 769px) {
+  .card-img-top.imgShow {
+    width: 60% !important;
+    position: relative;
+    display: flex !important;
+    align-self: center !important;
+    margin-bottom: 30px;
+  }
+
+  .card-title.titulo {
+    margin-bottom: 20px;
+  }
+}
 .nav-pills .nav-item.show .nav-link, .nav-pills .nav-link.active {
   color: #efe1c9 !important;
   background-color: #ED554D !important;
@@ -10275,6 +10377,14 @@ h1.textHeader {
 @media (min-width: 769px) {
   .eventsNav {
     justify-content: center;
+    margin-left: 105px;
+  }
+
+  .botonNav {
+    margin-right: 100px;
+    width: 200px;
+    font-size: 20px;
+    text-align: center;
   }
 }
 .slider {
@@ -10319,6 +10429,24 @@ h1.textHeader {
   margin-top: 4px;
 }
 
+@media (min-width: 769px) {
+  .slider {
+    width: 800px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .slide-img {
+    width: 800px;
+    height: 400px;
+  }
+
+  .carousel-caption {
+    width: 100% !important;
+    display: flex;
+  }
+}
 .containerNewEvent {
   display: flex;
   flex-direction: row;
@@ -10343,9 +10471,9 @@ h1.textHeader {
 }
 
 .imgButton {
-  width: 20vw !important;
+  width: 15vw !important;
   height: auto !important;
-  max-width: 100px;
+  max-width: 90px;
   margin-right: 15px;
 }
 
@@ -10358,12 +10486,76 @@ h1.textHeader {
 
 @media (min-width: 769px) {
   .containerNewEvent {
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+  .imgButton {
+    width: 60px !important;
   }
 
   .txtNewEvent {
-    font-size: 150%;
+    font-size: 20px;
+  }
+}
+.footer {
+  background-color: rgba(237, 85, 77, 0.8) !important;
+  height: auto;
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.textFooter {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 9px !important;
+}
+
+.container.redes {
+  width: 100%;
+  height: 50%;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.fotoRedes {
+  width: 20px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.mailPhone {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.mailPhone, .mailPhone a {
+  margin-right: 10px;
+  text-decoration: none !important;
+  color: #343F55 !important;
+}
+
+.copy {
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+}
+
+.right {
+  margin-bottom: 0px;
+}
+
+@media (min-width: 769px) {
+  .footer {
+    font-size: 15px;
   }
 }
 body {

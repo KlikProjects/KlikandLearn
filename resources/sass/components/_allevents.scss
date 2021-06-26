@@ -37,7 +37,6 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 12px;
-    
 }
 
 .eventInfo {
@@ -61,7 +60,6 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-
     margin-top: 4px;
 }
 
@@ -101,26 +99,68 @@
 }
 
 @media (min-width: 769px) {
-    .imgBtnContainer {
+
+    .eventContainer{
+        width:700px;
+        margin-left: 40px;
+        display: flex;
         flex-direction: row;
+        justify-content: start;
     }
 
-    .adminButtons {
+    .eventInfo{
+        width: 50%;
+        position: relative;
+        left: auto;
+    }
+
+    .dateAndUsers{
+        font-size: 16px;
+        display: flex;
+        align-content: flex-start;
+    }
+    
+    .titleAndDesc{
+        display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
-        margin-left: 20px;
+        align-items: center;
+        margin-top: 15px;
+    }
+    .eventTitle{
+        font-size: 22px;
+    }
+    .eventDescription {
+        font-size: 18px;
+        margin-top: 15px;
+    }
+
+    .imgBtnContainer {
+        width: 50px;
+        position: relative;
+        left: 300px;
+        margin-top: 30px;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .imgEvents {
+        max-width: 370px;
+        align-self:flex-end;
+        margin: 10px;
     }
 
     .enrollBtn, .enrollBtn a {
         width: auto;
     }
 
-    .imgEvents {
-        max-width: 300px;
-    }
-    
     .enrollBtn {
-        position: relative;
-        right: 100%;
+        margin-bottom: 10px;
+        flex-direction: column-reverse;
+        justify-self: flex-end;
+    }
+
+    .adminButtons {
+        flex-direction: row;
+        justify-content: flex-end;
     }
 }
