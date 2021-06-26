@@ -1,25 +1,11 @@
 .slider{
     display: flex;
-    width: 100vw;
-    height: 20vh;
     margin-bottom: 6px;
 }
 
-.carousel-inner.innerNewSize {
-    display: flex;
-    width: 100vw;
-    height: 20vh !important;
-    justify-items: center;
-    align-items: center;
-
-}
-
 .slide-img{
-    height: 50%;
-    width: auto;
-    object-fit: cover;
-    justify-content: center;
-    align-items: center;
+    width: 100vw;
+    height: 56vw;
 }
 
 .carousel-caption{
@@ -54,3 +40,21 @@
     margin-top: 4px;
 }
 
+@media (min-width: 769px){
+    .slider{
+        width: 800px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .slide-img{
+        width: 800px;
+        height: 400px;
+    }
+
+    .carousel-caption{
+        width: 100% !important;
+        display: flex;
+    }
+}
