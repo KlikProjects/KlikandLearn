@@ -43,84 +43,15 @@ Los usuarios podrán ver la descripción de un evento, apuntarse y desapuntarse.
 <li>Un link a un repositorio de github</li>
 <li>Readme del repositorio con:</li>
     <ul>
-<li>Briefing y explicación del proyecto</li>
-<li>Diagramas</li>
-<li>Sketch - mockup</li>
-        </ul>
+        <li>Briefing y explicación del proyecto</li>
+        <li>Diagramas</li>
+        <li>Sketch - mockup</li>
+    </ul>
 <li>Url en ‘deploy’.</li>
 <li>Presentación en diapositivas</li>
 <li>Demo y code review</li>
 
 </ul>
-
-### Crear nueva cita:
-<ul>
-<li>Formulario con los campos necesarios obligatorios.</li>
-<li>Botón para borrar los campos.</li>
-<li>Botón para cancelar y volver a la lista principal.</li>
-<li>Botón para enviar la información.</li>
-</ul>
-
-
-### Editar cita:
-<ul>
-<li>Formulario con los campos necesarios obligatorios.</li>
-<li>Los campos deben contener la información de la cita a editar.</li>
-<li>Boton para cancelar, botón para enviar.</li>
-</ul>
-
-
-La aplicación deberá ser responsiva.
-
-
-## Requisitos técnicos:
-<ul>
-<li>Aplicación de tipo CRUD (Create, Read, Update, Delete).</li>
-<li>Deberá ser orientada a objetos con el patrón MVC.</li>
-<li>Deberá alojarse en un servidor gratuito en producción.</li>
-<li>Se debe usar Git con buenas prácticas en los commits.</li>
-<li>El repositorio debe contener un Readme con explicación del proyecto, y una explicación de cómo instalar o ejecutar la aplicación.</li>
-</ul>
-
-
-## Extras:
-<ul>
-<li>Añadir tests unitarios con PhpUnit.</li>
-<li>Añadir Tests End2End con Selenium.</li>
-</ul>
-
-
-## Tecnologías:
-<ul>
-<li>Frontend: HTML, CSS, SCSS - Opcional: Framework de CSS.</li>
-<li>Backend: PHP.</li>
-<li>Bases de datos: MySQL.</li>
-<li>No se pueden usar otras librerías o frameworks más allá de los espicificados.</li>
-</ul>
-
-
-## Entrega:
-<ul>
-<li> Un link a un repositorio de github.</li>
-<li>Un link a la URL del proyecto en producción.</li>
-<li>Presentación en diapositivas + link.</li>
-<li>Demo y code review.</li>
-</ul>
-
-
-## Core skills:
-<ul>
-  <li>Semántica HTML.</li>
-  <li>Buenas prácticas en CSS, SCSS.</li>
-  <li>Capacidad de abstración en clases y objetos.</li>
-  <li>Buenas prácticas OOP - Encapsulación, herencia.</li>
-  <li>Patrones de diseño - Modelo-Vista-Controlador (MVC).</li>
-  <li>Implementar la aplicación en un servidor en producción.</li>
-  <li>Uso de Git.</li>
-  <li>Desarrollo basado en historias de usuario y tareas (Kanban).</li>
-  <li>Comunicación y autoevaluación.</li>
-</ul>
-
 
 ***
 ***
