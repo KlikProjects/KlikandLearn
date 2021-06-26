@@ -1,47 +1,209 @@
-## About KLIK&LEARN
+Klik & Learn
+============
 
-KLIK&LEARN is an app to manage online events such as workshops, masteclasses and webinars. online. 
+***
 
-Registered users can view the list of events as well as sign up and unsubscribe. They can see the list of the events they are pointing to.
+## Contexto del proyecto
 
-Only administrators have access to manage events (CRUD).
 
-## Learning Laravel
+## El Consultorio
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Nos encontramos en una empresa de desarrollo y necesitamos una aplicación que permita pedir cita al CTO para resolver problemas técnicos de los equipos de desarrollo.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+De momento vamos a desarrollar un producto mínimo viable (MVP) en PHP, e intentaremos llegar a una aplicación orientada a objetos usando el patrón MVC (Modelo-Vista-Controlador).
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Requisitos funcionales
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
+La aplicación constará de al menos 3 páginas:
+<ul>
+<li>Una página para la lista con todas las citas previstas.</li>
+<li>Una página con un formulario para crear una nueva cita.</li>
+<li>Una página para editar una cita concreta.</li>
+</ul>
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Páginas:
 
-## Code of Conduct
+### Lista: Las citas beben aparecer por orden de creación con:
+<ul>
+<li>El nombre del coder o del equipo.</li>
+<li>El tema de consulta.</li>
+<li>La fecha la y hora de la creación de la cita.</li>
+<li>Las citas se podrán eliminar.</li>
+<li>Podremos acceder a la edición de cada cita, y a la página de creación de una cita nueva.</li>
+</ul>
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### Crear nueva cita:
+<ul>
+<li>Formulario con los campos necesarios obligatorios.</li>
+<li>Botón para borrar los campos.</li>
+<li>Botón para cancelar y volver a la lista principal.</li>
+<li>Botón para enviar la información.</li>
+</ul>
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Editar cita:
+<ul>
+<li>Formulario con los campos necesarios obligatorios.</li>
+<li>Los campos deben contener la información de la cita a editar.</li>
+<li>Boton para cancelar, botón para enviar.</li>
+</ul>
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+La aplicación deberá ser responsiva.
+
+
+## Requisitos técnicos:
+<ul>
+<li>Aplicación de tipo CRUD (Create, Read, Update, Delete).</li>
+<li>Deberá ser orientada a objetos con el patrón MVC.</li>
+<li>Deberá alojarse en un servidor gratuito en producción.</li>
+<li>Se debe usar Git con buenas prácticas en los commits.</li>
+<li>El repositorio debe contener un Readme con explicación del proyecto, y una explicación de cómo instalar o ejecutar la aplicación.</li>
+</ul>
+
+
+## Extras:
+<ul>
+<li>Añadir tests unitarios con PhpUnit.</li>
+<li>Añadir Tests End2End con Selenium.</li>
+</ul>
+
+
+## Tecnologías:
+<ul>
+<li>Frontend: HTML, CSS, SCSS - Opcional: Framework de CSS.</li>
+<li>Backend: PHP.</li>
+<li>Bases de datos: MySQL.</li>
+<li>No se pueden usar otras librerías o frameworks más allá de los espicificados.</li>
+</ul>
+
+
+## Entrega:
+<ul>
+<li> Un link a un repositorio de github.</li>
+<li>Un link a la URL del proyecto en producción.</li>
+<li>Presentación en diapositivas + link.</li>
+<li>Demo y code review.</li>
+</ul>
+
+
+## Core skills:
+<ul>
+  <li>Semántica HTML.</li>
+  <li>Buenas prácticas en CSS, SCSS.</li>
+  <li>Capacidad de abstración en clases y objetos.</li>
+  <li>Buenas prácticas OOP - Encapsulación, herencia.</li>
+  <li>Patrones de diseño - Modelo-Vista-Controlador (MVC).</li>
+  <li>Implementar la aplicación en un servidor en producción.</li>
+  <li>Uso de Git.</li>
+  <li>Desarrollo basado en historias de usuario y tareas (Kanban).</li>
+  <li>Comunicación y autoevaluación.</li>
+</ul>
+
+
+***
+***
+
+
+## Required
+
+- PHP 7.4 min
+- Composer installed
+
+
+## Install Project
+
+1. Clone git https://github.com/DiversosFactoria5/elConsultorioDelCodersMVC.git
+2. Crear una base de datos en phpMyAdmin en local, con los credenciales - user : root, password : ""
+3. Nombre de base de datos : consultant
+4. Importar la tabla siguiente : https://github.com/DiversosFactoria5/elConsultorioDelCodersMVC/blob/main/src/ReadMe.md/Database/consultant.sql
+
+
+## Install
+
+- composer install and/or composer update
+
+## Run tests
+
+- vendor/bin/phpunit 
+- (1 test, 2 assertions)
+
+
+***
+***
+
+
+# Klik & Learn
+
+## 🚀 Comenzando
+
+Dónde encontrar el proyecto en producción:
+
+https://el-consultorio-del-coder.herokuapp.com/
+
+El hoster Heroku nos genera un error de conexiones simultáneas a nuestra base de datos SQL, que no hemos podido solucionar en Heroku.
+
+
+## 🛠️ Mockup de este proyecto
+
+Mockup de cómo pensábamos que deberían ser las pantallas y sus funcionalidades:
+
+<p align="center"> 
+  <img src="./src/ReadMe.md/mockup/mockupMobil.PNG?raw=true" width=50%>
+  <img src="./src/ReadMe.md/mockup/mockupTablet.PNG?raw=true" width=50%>
+  <img src="./src/ReadMe.md/mockup/mockupDesktop.PNG?raw=true" width=50%>
+</p>
+
+
+## ⚙️ Capturas pantalla formato móvil 
+
+<p align="center"> 
+<img src="./src/ReadMe.md/screenshotMobil/read.PNG?raw=true" width=25%>
+<img src="./src/ReadMe.md/screenshotMobil/creat.PNG?raw=true" width=25%>
+<img src="./src/ReadMe.md/screenshotMobil/edit.PNG?raw=true" width=25%>
+</p>
+
+
+## ⚙️ Capturas pantalla formato desktop
+
+<p align="center"> 
+<img src="./src/ReadMe.md/screenshotDesktop/read.PNG?raw=true" width=50%>
+<img src="./src/ReadMe.md/screenshotDesktop/creat.PNG?raw=true" width=50%>
+<img src="./src/ReadMe.md/screenshotDesktop/edit.PNG?raw=true" width=50%>
+</p>
+
+
+## 🛠️ Herramientas usadas en este proyecto
+<ul>
+  <li>Visual Studio Code</li>
+  <li>Trello</li>
+  <li>Figma</li>
+  <li>Metodologías Ágiles</li>
+  <li>Balsamiq</li>
+  <li>Planning Poker</li>
+  <li>GoogleDocs</li>
+  <li>GoogleFonts</li>
+  <li>Zoom</li>
+  <li>Bootstrap</li>
+  <li>PDO</li>
+  <li>Heroku</li>
+  <li>SQL</li>
+  <li>PHPMyAdmin</li>
+</ul>
+
+
+## ✒️ Autores 
+<ul>
+  <li>Berta</li>
+  <li>David (Product Owner)</li>
+  <li>Gabriela</li>
+  <li>Joan (Scrum Master)</li>
+  <li>Jose Miguel</li>
+</ul>
+
+También pueden mirar la lista de todos los [contribuyentes](https://github.com/DiversosFactoria5/elConsultorioDelCodersMVC/graphs/contributors) quienes han participado en este proyecto.  
+
+
