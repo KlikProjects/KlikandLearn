@@ -177,12 +177,12 @@ class EventController extends Controller
             $user->event()->attach($event);
         }
 
-            $correo = new ContactMailable;
-
+            $date = $event->date_time;
+            $userName = $user->user;
+            $eventSubscribed = $event->events;
+            $correo = new ContactMailable ($date, $userName, $eventSubscribed);
             Mail::to($user->email)->send($correo);
-
-
-        return redirect()->route('home');
+            return redirect()->route('home');
     }
 
     public function cancelInscription($id)
