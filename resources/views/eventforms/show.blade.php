@@ -25,10 +25,11 @@
         <div class="card-body">
             @if ($event->date_time > now())
                 @if ($event->ifSubscripted === "1")
-                    <button class="enrollBtn"><a href="{{ url('/cancelInscription', $event->id) }}">Cancel</a></button>
+                    <button class="enrollBtn"><a href="{{ url('/cancelInscription', $event->id) }}">Unsubscribe</a></button>
                 @else
                     <button class="enrollBtn"><a href="{{ url('/inscribe', $event->id) }}">Inscribe</a></button>
                 @endif
+
             @endif
         </div>
         <div class="float-right">

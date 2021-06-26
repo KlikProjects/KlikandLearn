@@ -33,7 +33,7 @@
                 </figure>
                 
                 @if ($event->ifSubscripted === "1" )
-                    <button class="enrollBtn"><a href="{{ url('/cancelInscription', $event->id) }}">Cancel</a></button>
+                    <button class="enrollBtn"><a href="{{ url('/cancelInscription', $event->id) }}">Unsubscribe</a></button>
                 @else
                     @if($event->user_count != $event->users_max)
                         <button class="enrollBtn"><a href="{{ url('/inscribe', $event->id) }}">Inscribe</a></button>

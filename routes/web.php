@@ -19,10 +19,6 @@ use Illuminate\Http\Request;
 |
 */
 
-/* Route::get('/', function () {
-    return view('header');
-}); */
-
 Auth::routes([]);
 
 Route::get('/', [App\Http\Controllers\EventController::class, 'index'])->name('home');
@@ -32,10 +28,7 @@ Route::get('/inscribe/{id}', [App\Http\Controllers\EventController::class, 'insc
 Route::get('/cancelInscription/{id}', [App\Http\Controllers\EventController::class, 'cancelInscription'])->middleware('auth')->name('cancelInscription');
 
 
-//Route::get('/card/{id}', [App\Http\Controllers\EventController::class, 'card']);
-//Route::resource('shows', App\Http\Controllers\EventController::class);
 Route::get('/show/{id}/{user_count}/{ifSubscripted?}',[App\Http\Controllers\EventController::class,'show'])->name('show');
-
 
 Route::resource('events', App\Http\Controllers\EventController::class)->middleware('isadmin');
 
