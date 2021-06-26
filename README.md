@@ -13,7 +13,6 @@ Los usuarios podrán ver la descripción de un evento, apuntarse y desapuntarse.
 ## Requisitos funcionales
 
 
-La aplicación constará de al menos 3 páginas:
 <ul>
 <li>En portada la aplicación tendrá un slider con las masterclasses destacadas. éstas serán seleccionables por el administrador.</li>
 <li>En portada habrá una lista paginada con todos los eventos ordenados del más cercano al más lejano.</li>
