@@ -26,6 +26,17 @@ Los usuarios podrán ver la descripción de un evento, apuntarse y desapuntarse.
 </ul>
 
 
+## Requisitos no funcionales:
+
+
+<ul>
+<li>La web deberá estar ‘deployed’ aunque esté en desarrollo.</li>
+<li>Todos los requisitos y casos de usuario deberán estar testeados (tests de aceptación)</li>
+<li>Se deberá usar Laravel.</li>
+<li>El envío de el email se deberá hacer usando un sistema de colas.</li>
+<li>Para el frontend se deben usar componentes de blade.</li>
+</ul>
+
 ## Páginas:
 
 ### Lista: Las citas beben aparecer por orden de creación con:
