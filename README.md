@@ -5,12 +5,9 @@ Klik & Learn
 
 ## Contexto del proyecto
 
+Un colectivo de desarrollo de software quiere crear una aplicación web para gestionar sus eventos online como talleres, masterclass o webinars.
 
-## El Consultorio
-
-Nos encontramos en una empresa de desarrollo y necesitamos una aplicación que permita pedir cita al CTO para resolver problemas técnicos de los equipos de desarrollo.
-
-De momento vamos a desarrollar un producto mínimo viable (MVP) en PHP, e intentaremos llegar a una aplicación orientada a objetos usando el patrón MVC (Modelo-Vista-Controlador).
+Los usuarios podrán ver la descripción de un evento, apuntarse y desapuntarse. Podrán ver la lista de los eventos a los que se han apuntado. El administrador debe tener las herramientas para la gestión (CRUD) de los eventos.
 
 
 ## Requisitos funcionales
@@ -18,9 +15,15 @@ De momento vamos a desarrollar un producto mínimo viable (MVP) en PHP, e intent
 
 La aplicación constará de al menos 3 páginas:
 <ul>
-<li>Una página para la lista con todas las citas previstas.</li>
-<li>Una página con un formulario para crear una nueva cita.</li>
-<li>Una página para editar una cita concreta.</li>
+<li>En portada la aplicación tendrá un slider con las masterclasses destacadas. éstas serán seleccionables por el administrador.</li>
+<li>En portada habrá una lista paginada con todos los eventos ordenados del más cercano al más lejano.</li>
+<li>Los eventos incluirán como mínimo: título, fecha/hora, número máximo de participantes, descripción y una imagen.</li>
+<li>Los eventos pasados se deben mantener en la lista pero identificables como no disponibles.</li>
+<li>Los usuarios deberán registrarse para apuntarse a un evento. Una vez apuntados no podran volver a hacerlo.</li>
+<li>Al apuntarse a un evento recibirán un email (empresarial - html ) con el link (zoom, meets, etc..) en donde se va a realizar, así como recordando el título del evento, la hora y el día.</li>
+<li>Los usuarios podrán ver en una página la lista de los eventos a los que están registrados.</li>
+<li>El administrador podrá hacer CRUD de los eventos.</li>
+<li>Cuando un evento esté lleno (máximo número de participantes) nadie podrá registrarse.</li>
 </ul>
 
 
