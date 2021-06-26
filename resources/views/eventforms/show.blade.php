@@ -2,7 +2,6 @@
 
 @section('content')
 <x-header/>
-{{-- @dd($event) --}}
 <div class="card-body">
     <div class="card" >
         <img class="card-img-top w-100"  src="{{$event->image}}" alt="Card image cap">
@@ -24,7 +23,6 @@
                         </li>
         </ul>
         <div class="card-body">
-            {{-- <a href="#" class="card-link btn-outline-success">Subscribe</a> --}}
             @if ($event->date_time > now())
                 @if ($event->ifSubscripted === "1")
                     <button class="enrollBtn"><a href="{{ url('/cancelInscription', $event->id) }}">Cancel</a></button>

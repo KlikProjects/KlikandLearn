@@ -32,7 +32,6 @@ class EventController extends Controller
         $events = Event::totaluserInscript($events);
         $events = Event::ifSubscript($events,$myeventuser);
         
-        //dd($events);
         return view('home', compact('events', 'myeventuser'));
     }
 
@@ -54,7 +53,6 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request);
         if ($request->newcarousel != 'on') {
             $request->newcarousel = "0";
         }
@@ -62,9 +60,6 @@ class EventController extends Controller
             $request->newcarousel = "1";
         }
 
-        /* $request->ifSubscripted = "0"; */
-        /* dd($request); */
-    
         $event = Event::create([
             'date_time' => $request->newdatetime,
             'title' => $request->newtitle,
@@ -94,18 +89,6 @@ class EventController extends Controller
         return view('eventforms.show', compact('event'));
     }
 
-/*     public function Card($event)
-    {
-        dd($event); 
-        return view('eventforms.show', compact('event'));
-    } */
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         $event = Event::find($id);
@@ -169,8 +152,8 @@ class EventController extends Controller
         
         $user->event()->attach($event);
         
-        /* return redirect()->route('home'); */
-        return back();
+        return redirect()->route('home');
+        
     }
 
     public function cancelInscription($id)
@@ -180,8 +163,8 @@ class EventController extends Controller
         
         $user->event()->detach($event);
         
-        /* return redirect()->route('home'); */
-        return back();
+        return redirect()->route('home');
+        
     }
 
 
