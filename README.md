@@ -116,7 +116,7 @@ La aplicación deberá ser responsiva.
 
 ## Install Project
 
-1. Clone git https://github.com/DiversosFactoria5/elConsultorioDelCodersMVC.git
+1. Clone git https://github.com/KlikProjects/KlikandLearn.git
 2. Crear una base de datos en phpMyAdmin en local, con los credenciales - user : root, password : ""
 3. Nombre de base de datos : consultant
 4. Importar la tabla siguiente : https://github.com/DiversosFactoria5/elConsultorioDelCodersMVC/blob/main/src/ReadMe.md/Database/consultant.sql
