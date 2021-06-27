@@ -107,9 +107,9 @@ https://klikandlearn.herokuapp.com/
 Mockup de cómo pensábamos que deberían ser las pantallas y sus funcionalidades:
 
 <p align="center"> 
-  <img src="./src/ReadMe.md/mockup/mockupMobil.PNG?raw=true" width=50%>
-  <img src="./src/ReadMe.md/mockup/mockupTablet.PNG?raw=true" width=50%>
-  <img src="./src/ReadMe.md/mockup/mockupDesktop.PNG?raw=true" width=50%>
+<img src="./public/img/Readme.MD/screenshootFigma/figma1.PNG?raw=true" width=25%>
+<img src="./public/img/Readme.MD/screenshootFigma/figma2.PNG?raw=true" width=25%>
+<img src="./public/img/Readme.MD/screenshootFigma/figma3.PNG?raw=true" width=25%>
 </p>
 
 
