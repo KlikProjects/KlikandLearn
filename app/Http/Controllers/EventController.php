@@ -166,16 +166,10 @@ class EventController extends Controller
     {
         $user = User::find(Auth::id());
         $event = Event::find($id);
-        $inscribed = false;
-
-        foreach ($user->event as $inscribedEvent) {
-            if ($event->id === $inscribedEvent->id) {
-                $inscribed = true;
-                break;
-            }
-        }
+        $usercount = Event::checkEventVacancy($event);
+        $inscribed = Event::checkInscription($user, $event);
         
-        if ($inscribed === false) {
+        if ($usercount < $event->users_max && !$inscribed) {
             $user->event()->attach($event);
         }
         

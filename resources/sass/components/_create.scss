@@ -11,7 +11,6 @@
     background-color: $dark-color !important;
     color: $orange-color!important ;
     width: 100px !important;
-
 }
 
 .form-control {
@@ -40,4 +39,21 @@
     color: #6574cd !important;
     margin-left: 20px !important;
     border-color: green !important;
+}
+
+.subirFoto2{
+    margin-top: 15px;
+}
+
+@media (min-width: 769px) {
+    
+    .cardTitle{
+        margin-bottom: 30px;
+    }
+    
+    .subirFoto{
+        display: flex !important;
+        justify-content: space-between;
+        margin-right: 30px;
+    }
 }
