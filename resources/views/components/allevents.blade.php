@@ -6,6 +6,7 @@
         <article class="eventContainer">
             <div class="eventInfo">
                 <div class="dateAndUsers">
+                
                     <p>{{$event->date_time}}  </p> 
                     
                     <div class="usersAmount">
