@@ -67,16 +67,24 @@ Los usuarios podrán ver la descripción de un evento, apuntarse y desapuntarse.
 
 1. Clone git https://github.com/KlikProjects/KlikandLearn.git
 2. Crear una base de datos en phpMyAdmin en local, con los credenciales - user : root, password : ""
-3. Nombre de base de datos : consultant
-4. Importar la tabla siguiente : https://github.com/DiversosFactoria5/elConsultorioDelCodersMVC/blob/main/src/ReadMe.md/Database/consultant.sql
+3. Nombre de base de datos : klikandlearn
+4. Ejecutar Migracion "php artisant migration:fresh --seed"
+5. La migracion creara 1 root como admin y 3 users.
 
 
 ## Install
 
 - composer install and/or composer update
+- npm run watch
 
 ## Run tests
 
+Para ejecutar los tests hay que descomentar 2 lineas en el "phpunit.xml"
+```php
+    <server name="DB_CONNECTION" value="sqlite"/>
+    <server name="DB_DATABASE" value=":memory:"/>
+```
+        
 - vendor/bin/phpunit 
 - (1 test, 2 assertions)
 
@@ -91,9 +99,7 @@ Los usuarios podrán ver la descripción de un evento, apuntarse y desapuntarse.
 
 Dónde encontrar el proyecto en producción:
 
-https://el-consultorio-del-coder.herokuapp.com/
-
-El hoster Heroku nos genera un error de conexiones simultáneas a nuestra base de datos SQL, que no hemos podido solucionar en Heroku.
+https://klikandlearn.herokuapp.com/
 
 
 ## 🛠️ Mockup de este proyecto
@@ -101,27 +107,27 @@ El hoster Heroku nos genera un error de conexiones simultáneas a nuestra base d
 Mockup de cómo pensábamos que deberían ser las pantallas y sus funcionalidades:
 
 <p align="center"> 
-  <img src="./src/ReadMe.md/mockup/mockupMobil.PNG?raw=true" width=50%>
-  <img src="./src/ReadMe.md/mockup/mockupTablet.PNG?raw=true" width=50%>
-  <img src="./src/ReadMe.md/mockup/mockupDesktop.PNG?raw=true" width=50%>
+<img src="./public/img/Readme.MD/screenshootFigma/figma1.PNG?raw=true" width=30%>
+<img src="./public/img/Readme.MD/screenshootFigma/figma2.PNG?raw=true" width=30%>
+<img src="./public/img/Readme.MD/screenshootFigma/figma3.PNG?raw=true" width=25%>
 </p>
 
 
 ## ⚙️ Capturas pantalla formato móvil 
 
 <p align="center"> 
-<img src="./src/ReadMe.md/screenshotMobil/read.PNG?raw=true" width=25%>
-<img src="./src/ReadMe.md/screenshotMobil/creat.PNG?raw=true" width=25%>
-<img src="./src/ReadMe.md/screenshotMobil/edit.PNG?raw=true" width=25%>
+<img src="./public/img/Readme.MD/screenshootMobil/mobileHome.PNG?raw=true" width=25%>
+<img src="./public/img/Readme.MD/screenshootMobil/mobileMyEvents.PNG?raw=true" width=25%>
+<img src="./public/img/Readme.MD/screenshootMobil/mobileShow.PNG?raw=true" width=25%>
 </p>
 
 
-## ⚙️ Capturas pantalla formato desktop
+## ⚙️ Capturas pantalla formato tablet
 
 <p align="center"> 
-<img src="./src/ReadMe.md/screenshotDesktop/read.PNG?raw=true" width=50%>
-<img src="./src/ReadMe.md/screenshotDesktop/creat.PNG?raw=true" width=50%>
-<img src="./src/ReadMe.md/screenshotDesktop/edit.PNG?raw=true" width=50%>
+<img src="./public/img/Readme.MD/screenshootTablet/tabletHome.PNG?raw=true" width=30%>
+<img src="./public/img/Readme.MD/screenshootTablet/tabletMyEvents.PNG?raw=true" width=30%>
+<img src="./public/img/Readme.MD/screenshootTablet/tabletShow.PNG?raw=true" width=30%>
 </p>
 
 
@@ -131,14 +137,13 @@ Mockup de cómo pensábamos que deberían ser las pantallas y sus funcionalidade
   <li>Trello</li>
   <li>Figma</li>
   <li>Metodologías Ágiles</li>
-  <li>Balsamiq</li>
   <li>Planning Poker</li>
   <li>GoogleDocs</li>
   <li>GoogleFonts</li>
   <li>Zoom</li>
   <li>Bootstrap</li>
-  <li>PDO</li>
   <li>Heroku</li>
+  <li>Laravel</li>
   <li>SQL</li>
   <li>PHPMyAdmin</li>
 </ul>
