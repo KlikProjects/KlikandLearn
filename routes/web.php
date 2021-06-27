@@ -5,8 +5,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Auth\EmailVerificationRequest;
 use Illuminate\Http\Request;
-
-
+use App\Mail\ContactMailable;
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,10 +19,6 @@ use Illuminate\Http\Request;
 |
 */
 
-/* Route::get('/', function () {
-    return view('header');
-}); */
-
 Auth::routes([]);
 
 Route::get('/', [App\Http\Controllers\EventController::class, 'index'])->name('home');
@@ -31,7 +27,9 @@ Route::post('/', [App\Http\Controllers\EventController::class, 'store'])->middle
 Route::get('/inscribe/{id}', [App\Http\Controllers\EventController::class, 'inscribe'])->middleware('auth')->name('inscribe');
 Route::get('/cancelInscription/{id}', [App\Http\Controllers\EventController::class, 'cancelInscription'])->middleware('auth')->name('cancelInscription');
 
-Route::resource('shows', App\Http\Controllers\EventController::class);
+
+Route::get('/show/{id}/{user_count}/{ifSubscripted?}',[App\Http\Controllers\EventController::class,'show'])->name('show');
+
 Route::resource('events', App\Http\Controllers\EventController::class)->middleware('isadmin');
 
 /* Route::get('/signup', [App\Http\Controllers\EventController::class, 'viewSignedUp'])->middleware('auth')->name('signup'); */
@@ -67,3 +65,12 @@ Route::get('/profile', function () {
 })->middleware('verified');
 
 
+//Ruta para mandar mail de confirmación de subscripción a evento
+
+/* Route::get('contact', function () {
+    $correo = new ContactMailable;
+
+    Mail::to('berta.liphoto@gmail.com')->send($correo);
+
+    return "Mensaje Enviado";
+}); */

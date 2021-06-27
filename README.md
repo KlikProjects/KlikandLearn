@@ -1,47 +1,158 @@
-## About KLIK&LEARN
+Klik & Learn
+============
 
-KLIK&LEARN is an app to manage online events such as workshops, masteclasses and webinars. online. 
+***
 
-Registered users can view the list of events as well as sign up and unsubscribe. They can see the list of the events they are pointing to.
+## Contexto del proyecto
 
-Only administrators have access to manage events (CRUD).
+Un colectivo de desarrollo de software quiere crear una aplicación web para gestionar sus eventos online como talleres, masterclass o webinars.
 
-## Learning Laravel
+Los usuarios podrán ver la descripción de un evento, apuntarse y desapuntarse. Podrán ver la lista de los eventos a los que se han apuntado. El administrador debe tener las herramientas para la gestión (CRUD) de los eventos.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Requisitos funcionales
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+<ul>
+<li>En portada la aplicación tendrá un slider con las masterclasses destacadas. éstas serán seleccionables por el administrador.</li>
+<li>En portada habrá una lista paginada con todos los eventos ordenados del más cercano al más lejano.</li>
+<li>Los eventos incluirán como mínimo: título, fecha/hora, número máximo de participantes, descripción y una imagen.</li>
+<li>Los eventos pasados se deben mantener en la lista pero identificables como no disponibles.</li>
+<li>Los usuarios deberán registrarse para apuntarse a un evento. Una vez apuntados no podran volver a hacerlo.</li>
+<li>Al apuntarse a un evento recibirán un email (empresarial - html ) con el link (zoom, meets, etc..) en donde se va a realizar, así como recordando el título del evento, la hora y el día.</li>
+<li>Los usuarios podrán ver en una página la lista de los eventos a los que están registrados.</li>
+<li>El administrador podrá hacer CRUD de los eventos.</li>
+<li>Cuando un evento esté lleno (máximo número de participantes) nadie podrá registrarse.</li>
+</ul>
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
+## Requisitos no funcionales:
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+<ul>
+<li>La web deberá estar ‘deployed’ aunque esté en desarrollo.</li>
+<li>Todos los requisitos y casos de usuario deberán estar testeados (tests de aceptación)</li>
+<li>Se deberá usar Laravel.</li>
+<li>El envío de el email se deberá hacer usando un sistema de colas.</li>
+<li>Para el frontend se deben usar componentes de blade.</li>
+</ul>
 
-## Code of Conduct
+## Entrega:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+<ul>
+<li>Un link a un repositorio de github</li>
+<li>Readme del repositorio con:</li>
+    <ul>
+        <li>Briefing y explicación del proyecto</li>
+        <li>Diagramas</li>
+        <li>Sketch - mockup</li>
+    </ul>
+<li>Url en ‘deploy’.</li>
+<li>Presentación en diapositivas</li>
+<li>Demo y code review</li>
 
-## Security Vulnerabilities
+</ul>
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+***
+***
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Required
+
+- PHP 7.4 min
+- Composer installed
+
+
+## Install Project
+
+1. Clone git https://github.com/KlikProjects/KlikandLearn.git
+2. Crear una base de datos en phpMyAdmin en local, con los credenciales - user : root, password : ""
+3. Nombre de base de datos : consultant
+4. Importar la tabla siguiente : https://github.com/DiversosFactoria5/elConsultorioDelCodersMVC/blob/main/src/ReadMe.md/Database/consultant.sql
+
+
+## Install
+
+- composer install and/or composer update
+
+## Run tests
+
+- vendor/bin/phpunit 
+- (1 test, 2 assertions)
+
+
+***
+***
+
+
+# Klik & Learn
+
+## 🚀 Comenzando
+
+Dónde encontrar el proyecto en producción:
+
+https://el-consultorio-del-coder.herokuapp.com/
+
+El hoster Heroku nos genera un error de conexiones simultáneas a nuestra base de datos SQL, que no hemos podido solucionar en Heroku.
+
+
+## 🛠️ Mockup de este proyecto
+
+Mockup de cómo pensábamos que deberían ser las pantallas y sus funcionalidades:
+
+<p align="center"> 
+  <img src="./src/ReadMe.md/mockup/mockupMobil.PNG?raw=true" width=50%>
+  <img src="./src/ReadMe.md/mockup/mockupTablet.PNG?raw=true" width=50%>
+  <img src="./src/ReadMe.md/mockup/mockupDesktop.PNG?raw=true" width=50%>
+</p>
+
+
+## ⚙️ Capturas pantalla formato móvil 
+
+<p align="center"> 
+<img src="./src/ReadMe.md/screenshotMobil/read.PNG?raw=true" width=25%>
+<img src="./src/ReadMe.md/screenshotMobil/creat.PNG?raw=true" width=25%>
+<img src="./src/ReadMe.md/screenshotMobil/edit.PNG?raw=true" width=25%>
+</p>
+
+
+## ⚙️ Capturas pantalla formato desktop
+
+<p align="center"> 
+<img src="./src/ReadMe.md/screenshotDesktop/read.PNG?raw=true" width=50%>
+<img src="./src/ReadMe.md/screenshotDesktop/creat.PNG?raw=true" width=50%>
+<img src="./src/ReadMe.md/screenshotDesktop/edit.PNG?raw=true" width=50%>
+</p>
+
+
+## 🛠️ Herramientas usadas en este proyecto
+<ul>
+  <li>Visual Studio Code</li>
+  <li>Trello</li>
+  <li>Figma</li>
+  <li>Metodologías Ágiles</li>
+  <li>Balsamiq</li>
+  <li>Planning Poker</li>
+  <li>GoogleDocs</li>
+  <li>GoogleFonts</li>
+  <li>Zoom</li>
+  <li>Bootstrap</li>
+  <li>PDO</li>
+  <li>Heroku</li>
+  <li>SQL</li>
+  <li>PHPMyAdmin</li>
+</ul>
+
+
+## ✒️ Autores 
+<ul>
+  <li>Berta</li>
+  <li>David (Product Owner)</li>
+  <li>Gabriela</li>
+  <li>Joan (Scrum Master)</li>
+  <li>Jose Miguel</li>
+</ul>
+
+También pueden mirar la lista de todos los [contribuyentes](https://github.com/KlikProjects/KlikandLearn/graphs/contributors) quienes han participado en este proyecto.  
+
+

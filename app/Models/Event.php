@@ -24,24 +24,47 @@ class Event extends Model
         return $this->belongsToMany(User::class);
     }
 
-    static function ifSubscript($events,$myeventuser)
+    static function ifSubscript($events, $myeventuser)
     {
         foreach ($events as $event) {
             foreach ($myeventuser as $myevent){
+
                 if ($event->id === $myevent->id){
-                    $event->ifSubscripted="1";
+                    $event->ifSubscripted = "1";
                 }
             }    
         }
-    return ($events);
+        return ($events);
     }
 
     static function totaluserInscript($events)
     {
         $events=Event::withCount('user')->get();
         
-    return ($events);
+        return ($events);
     }
 
+    static function checkEventVacancy($event) {
+        
+        $usercount = Event::totaluserInscript($event);
 
+        foreach ($usercount as $item) {
+
+            if ($item->id === $event->id) {                
+                $usercount = $item->user_count;
+                return $usercount;
+            }
+        }
+    }
+
+    static function checkInscription($user, $event) {
+
+        foreach ($user->event as $inscribedEvent) {
+
+            if ($event->id === $inscribedEvent->id) {
+                $inscribed = true;
+                return $inscribed;
+            }
+        }
+    }
 }
