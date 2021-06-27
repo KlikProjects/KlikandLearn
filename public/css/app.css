@@ -10049,7 +10049,7 @@ h3 {
 }
 
 .imgEvents {
-  max-width: 100px;
+  max-width: 140px;
 }
 
 .imgBtnContainer {
@@ -10106,7 +10106,7 @@ h3 {
 @media (min-width: 769px) {
   .eventContainer {
     width: 700px;
-    margin-left: 40px;
+    margin-left: 0px;
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -10152,7 +10152,7 @@ h3 {
   .imgEvents {
     max-width: 370px;
     align-self: flex-end;
-    margin: 10px;
+    margin: 0px;
   }
 
   .enrollBtn, .enrollBtn a {
@@ -10168,6 +10168,18 @@ h3 {
   .adminButtons {
     flex-direction: row;
     justify-content: flex-end;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .eventContainer {
+    width: 800px;
+    display: flex;
+    justify-content: center;
   }
 }
 .headerContainer {
