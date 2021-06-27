@@ -79,8 +79,10 @@ Los usuarios podrán ver la descripción de un evento, apuntarse y desapuntarse.
 ## Run tests
 
 Para ejecutar los tests hay que descomentar 2 lineas en el "phpunit.xml"
+```php
     <server name="DB_CONNECTION" value="sqlite"/>
     <server name="DB_DATABASE" value=":memory:"/>
+```
         
 - vendor/bin/phpunit 
 - (1 test, 2 assertions)
