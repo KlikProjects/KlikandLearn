@@ -10049,7 +10049,7 @@ h3 {
 }
 
 .imgEvents {
-  max-width: 100px;
+  max-width: 140px;
 }
 
 .imgBtnContainer {
@@ -10106,7 +10106,7 @@ h3 {
 @media (min-width: 769px) {
   .eventContainer {
     width: 700px;
-    margin-left: 40px;
+    margin-left: 0px;
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -10152,7 +10152,7 @@ h3 {
   .imgEvents {
     max-width: 370px;
     align-self: flex-end;
-    margin: 10px;
+    margin: 0px;
   }
 
   .enrollBtn, .enrollBtn a {
@@ -10168,6 +10168,18 @@ h3 {
   .adminButtons {
     flex-direction: row;
     justify-content: flex-end;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .eventContainer {
+    width: 800px;
+    display: flex;
+    justify-content: center;
   }
 }
 .headerContainer {
@@ -10326,7 +10338,19 @@ h1.textHeader {
   .subirFoto {
     display: flex !important;
     justify-content: space-between;
-    margin-right: 30px;
+  }
+}
+.card-img-top.imgShow {
+  width: 100%;
+  height: 200px;
+}
+
+@supports ((-o-object-fit: cover) or (object-fit: cover)) {
+  .card-img-top.imgShow {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center center;
+       object-position: center center;
   }
 }
 .card-title {
@@ -10351,14 +10375,48 @@ h1.textHeader {
 @media (min-width: 769px) {
   .card-img-top.imgShow {
     width: 60% !important;
+    max-height: 300px;
     position: relative;
     display: flex !important;
     align-self: center !important;
     margin-bottom: 30px;
   }
 
+  @supports ((-o-object-fit: cover) or (object-fit: cover)) {
+    .card-img-top.imgShow {
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover;
+      -o-object-position: center center;
+         object-position: center center;
+    }
+  }
   .card-title.titulo {
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .card-text.date {
+    font-weight: bold;
+    text-align: center;
+  }
+
+  .list-group.list-group-flush {
+    text-align: center;
+  }
+
+  .list-group-item.cardDescriptionText {
+    font-size: 18px;
+  }
+
+  .cardAttendees {
+    font-weight: bold;
+  }
+
+  .buttonShow {
+    display: flex;
+    justify-content: center;
   }
 }
 .nav-pills .nav-item.show .nav-link, .nav-pills .nav-link.active {
@@ -10400,9 +10458,17 @@ h1.textHeader {
 
 .slide-img {
   width: 100vw;
-  height: 56vw;
+  height: 50vw;
 }
 
+@supports ((-o-object-fit: cover) or (object-fit: cover)) {
+  .slide-img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center center;
+       object-position: center center;
+  }
+}
 .carousel-caption {
   background-color: rgba(52, 63, 85, 0.7);
   height: 50px;

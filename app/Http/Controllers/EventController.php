@@ -36,7 +36,6 @@ class EventController extends Controller
         $events = Event::totaluserInscript($events);
         $events = Event::ifSubscript($events,$myeventuser);
         
-        //dd($events);
         return view('home', compact('events', 'myeventuser'));
     }
 
@@ -58,7 +57,6 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request);
         if ($request->newcarousel != 'on') {
             $request->newcarousel = "0";
         }
@@ -66,9 +64,6 @@ class EventController extends Controller
             $request->newcarousel = "1";
         }
 
-        /* $request->ifSubscripted = "0"; */
-        /* dd($request); */
-    
         $event = Event::create([
             'date_time' => $request->newdatetime,
             'title' => $request->newtitle,
@@ -88,28 +83,16 @@ class EventController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id, $user_count, $ifSubscripted=null)
     {
-        $event = Event::find($id);
-
-             $myeventuser = [];    
-            if (Auth::user()){
-                $user=Auth::user();
-                $myeventuser = $user->event;
-            }
      
-        /* $event = Event::totaluserInscript($event); */
-        /* $event = Event::ifSubscript($event,$myeventuser); */
-        /* dd($event); */
+        $event = Event::find($id);
+        $event->user_count = $user_count;
+        $event->ifSubscripted = $ifSubscripted;
+        
         return view('eventforms.show', compact('event'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         $event = Event::find($id);
@@ -144,9 +127,6 @@ class EventController extends Controller
             'carousel' => $request->newcarousel,
         ]);
 
-/*         $input = Input::all();
-        $input['plannedTime'] = date('Y-m-d H:i:s', strtotime(Input::get('plannedTime'))); */
-
         return redirect()->route('home');
     }
 
@@ -159,7 +139,6 @@ class EventController extends Controller
 
     public function destroy($id)
     {
-
         $event = Event::find($id)->delete();
 
         return redirect()->route('home')
@@ -173,17 +152,15 @@ class EventController extends Controller
         $usercount = Event::checkEventVacancy($event);
         $inscribed = Event::checkInscription($user, $event);
         
-
         if ($usercount < $event->users_max && !$inscribed) {
             $user->event()->attach($event);
 
             $username = $user->name;
             $correo = new ContactMailable ($username, $event);
             Mail::to($user->email)->send($correo);
-
         }
-            
-            return redirect()->route('home');
+
+        return redirect()->route('home');
     }
 
     public function cancelInscription($id)
@@ -194,17 +171,9 @@ class EventController extends Controller
         $user->event()->detach($event);
         
         return redirect()->route('home');
+        
     }
 
- /*    public function viewSignedUp()
-    {
-        $user=Auth::user();
-
-        $myeventuser = $user->event;
-
-        return view('home', ['event_user' => $myeventuser]);
-    }
- */
 
 
 }
