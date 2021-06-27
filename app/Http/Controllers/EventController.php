@@ -2,13 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactMailable;
 use App\Models\Event;
+use App\Models\Mailing;
 use App\Models\User;
 use Attribute;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use League\CommonMark\Extension\Attributes\Node\Attributes;
 use Facade\FlareClient\View;
+use Symfony\Component\HttpKernel\Controller\ContainerControllerResolver;
 
 class EventController extends Controller
 {
@@ -169,11 +173,17 @@ class EventController extends Controller
         $usercount = Event::checkEventVacancy($event);
         $inscribed = Event::checkInscription($user, $event);
         
+
         if ($usercount < $event->users_max && !$inscribed) {
             $user->event()->attach($event);
+
+            $username = $user->name;
+            $correo = new ContactMailable ($username, $event);
+            Mail::to($user->email)->send($correo);
+
         }
-        
-        return redirect()->route('home');
+            
+            return redirect()->route('home');
     }
 
     public function cancelInscription($id)
