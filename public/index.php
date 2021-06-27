@@ -55,7 +55,7 @@ $response = tap($kernel->handle(
 $kernel->terminate($request, $response);
 
 
-//Get Heroku ClearDB connection information
+/* //Get Heroku ClearDB connection information
 $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 $cleardb_server = $cleardb_url["host"];
 $cleardb_username = $cleardb_url["user"];
@@ -67,5 +67,5 @@ $query_builder = TRUE;
 $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
 echo 'Hola';
-
+ */
 
