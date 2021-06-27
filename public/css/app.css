@@ -10222,6 +10222,7 @@ h1.textHeader {
   display: flex;
   justify-content: center;
   font-weight: bold;
+  color: #343F55 !important;
   margin-bottom: 9px !important;
 }
 
@@ -10258,6 +10259,7 @@ h1.textHeader {
   flex-direction: row;
   display: flex;
   justify-content: center;
+  color: #343F55 !important;
 }
 
 .right {
@@ -10515,6 +10517,7 @@ h1.textHeader {
   display: flex;
   justify-content: center;
   font-weight: bold;
+  color: #343F55 !important;
   margin-bottom: 9px !important;
 }
 
@@ -10551,6 +10554,7 @@ h1.textHeader {
   flex-direction: row;
   display: flex;
   justify-content: center;
+  color: #343F55 !important;
 }
 
 .right {
