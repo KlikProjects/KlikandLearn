@@ -16,18 +16,21 @@ class ContactMailable extends Mailable
     use Queueable, SerializesModels;
 
     public $subject = "Confirmation event subscription";
-
+    public $username;
+    public $title;
+    public $date;
+    
     /**
      * Create a new message instance.
      *
      * @return void
      */
 
-    public function __construct($username)
+    public function __construct($username, $event)
     {
-     /*   $this->date = $event->date_time; */
-       $this->username = $username;
-       /* $this->title = $event->title; */
+        $this->date = $event->date_time; 
+        $this->username = $username;
+        $this->title = $event->title; 
     }
 
     /**

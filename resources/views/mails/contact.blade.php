@@ -13,8 +13,9 @@
 <p>Congratulations, you have been subscribed to !</p>
 
 
-<p>Congratulations, you have been subscribed to {{ $username }}! 
-Remember, this is gona be celebrated on the next  </p> 
+<p>Congratulations {{ $username }}, you have been subscribed to {{ $title }}! 
+
+Remember, this is gona be celebrated on the next {{ $date }} </p> 
 
 </body>
 </html>
