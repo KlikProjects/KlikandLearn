@@ -88,12 +88,12 @@ class EventController extends Controller
     {
         $event = Event::find($id);
 
-             $myeventuser = [];    
+            $myeventuser = [];    
             if (Auth::user()){
                 $user=Auth::user();
                 $myeventuser = $user->event;
             }
-     
+
         /* $event = Event::totaluserInscript($event); */
         /* $event = Event::ifSubscript($event,$myeventuser); */
         /* dd($event); */
