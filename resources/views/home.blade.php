@@ -23,7 +23,8 @@
                     echo '<img class="slide-img" src="' . $event['image'] . '" />';
                     echo '<div class="carousel-caption">';
                     echo '<h5 class="title-slide">' . $event['title'] . '</h5>';
-                    echo '<a class="btn btn-sm more" role="button" href="' . route('shows.show', $event->id) . '">More info</a>';        
+                    echo '<a class="btn btn-sm more" role="button" href="' . route('show', ['id'=>$event->id, 'user_count'=>$event->user_count, 'ifSubscripted'=>$event->ifSubscripted]) . '">More info</a>';
+                    
                     echo '</div>';
                     echo '</div>';
                     $index++;
