@@ -20,7 +20,7 @@
                     {
                         echo '<div class="carousel-item">';
                     }
-                    echo '<img class="slide-img" src="' . $event['image'] . '" />';
+                    echo '<a class="showOnClick" href="' . route('show', ['id'=>$event->id, 'user_count'=>$event->user_count, 'ifSubscripted'=>$event->ifSubscripted]) . '"><img class="slide-img" src="' . $event['image'] . '" /></a>';
                     echo '<div class="carousel-caption">';
                     echo '<h5 class="title-slide">' . $event['title'] . '</h5>';
                     echo '<a class="btn btn-sm more" role="button" href="' . route('show', ['id'=>$event->id, 'user_count'=>$event->user_count, 'ifSubscripted'=>$event->ifSubscripted]) . '">More info</a>';
