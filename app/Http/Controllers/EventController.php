@@ -127,9 +127,6 @@ class EventController extends Controller
             'carousel' => $request->newcarousel,
         ]);
 
-/*         $input = Input::all();
-        $input['plannedTime'] = date('Y-m-d H:i:s', strtotime(Input::get('plannedTime'))); */
-
         return redirect()->route('home');
     }
 
@@ -142,7 +139,6 @@ class EventController extends Controller
 
     public function destroy($id)
     {
-
         $event = Event::find($id)->delete();
 
         return redirect()->route('home')
@@ -162,10 +158,9 @@ class EventController extends Controller
             $username = $user->name;
             $correo = new ContactMailable ($username, $event);
             Mail::to($user->email)->send($correo);
-
         }
-            
-            return redirect()->route('home');
+
+        return redirect()->route('home');
     }
 
     public function cancelInscription($id)

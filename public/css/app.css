@@ -10326,7 +10326,6 @@ h1.textHeader {
   .subirFoto {
     display: flex !important;
     justify-content: space-between;
-    margin-right: 30px;
   }
 }
 .card-img-top.imgShow {
