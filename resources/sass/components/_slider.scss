@@ -5,7 +5,14 @@
 
 .slide-img{
     width: 100vw;
-    height: 56vw;
+    height: 50vw;
+}
+
+@supports(object-fit: cover){
+    .slide-img{
+    object-fit: cover;
+    object-position: center center;
+    }
 }
 
 .carousel-caption{
