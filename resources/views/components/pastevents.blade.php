@@ -2,6 +2,7 @@
 
 @foreach ($events as $event)
     @if ($event->date_time < now())
+    <div class="line"></div>
         <article class="eventContainer">
             <div class="eventInfo">
                 <div class="dateAndUsers">
@@ -33,6 +34,5 @@
 
             </div>
         </article>
-        <div class="line"></div>
     @endif 
 @endforeach
