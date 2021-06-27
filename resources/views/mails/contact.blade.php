@@ -13,9 +13,8 @@
 <p>Congratulations, you have been subscribed to !</p>
 
 
-<p>Congratulations {$user->user}, you have been subscribed to {$event->events}! 
-Remember, this is gona be celebrated on the next {$event->date_time}</p> 
+<p>Congratulations, you have been subscribed to {{ $username }}! 
+Remember, this is gona be celebrated on the next  </p> 
 
-</div>
 </body>
 </html>

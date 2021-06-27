@@ -172,15 +172,14 @@ class EventController extends Controller
         $event = Event::find($id);
         $inscribed = Event::checkInscription($user, $event);
         $usercount = Event::checkEventVacancy($event);
-        
+        $userName = Auth::user();
+
         if ($usercount < $event->users_max && !$inscribed) {
             $user->event()->attach($event);
-        }
 
-            $date = $event->date_time;
-            $userName = $user->user;
-            $eventSubscribed = $event->events;
-            $correo = new ContactMailable ($date, $userName, $eventSubscribed);
+        }
+            $username = $userName->name;
+            $correo = new ContactMailable ($username);
             Mail::to($user->email)->send($correo);
             return redirect()->route('home');
     }

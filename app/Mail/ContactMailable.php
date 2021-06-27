@@ -23,11 +23,11 @@ class ContactMailable extends Mailable
      * @return void
      */
 
-    public function __construct($date, $userName, $eventSubscribed)
+    public function __construct($username)
     {
-       $this-> date = $date;
-       $this-> username = $userName;
-       $this-> eventsubscriber = $eventSubscribed;
+     /*   $this->date = $event->date_time; */
+       $this->username = $username;
+       /* $this->title = $event->title; */
     }
 
     /**
