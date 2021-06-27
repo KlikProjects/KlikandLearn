@@ -107,8 +107,8 @@ https://klikandlearn.herokuapp.com/
 Mockup de cómo pensábamos que deberían ser las pantallas y sus funcionalidades:
 
 <p align="center"> 
-<img src="./public/img/Readme.MD/screenshootFigma/figma1.PNG?raw=true" width=25%>
-<img src="./public/img/Readme.MD/screenshootFigma/figma2.PNG?raw=true" width=25%>
+<img src="./public/img/Readme.MD/screenshootFigma/figma1.PNG?raw=true" width=30%>
+<img src="./public/img/Readme.MD/screenshootFigma/figma2.PNG?raw=true" width=30%>
 <img src="./public/img/Readme.MD/screenshootFigma/figma3.PNG?raw=true" width=25%>
 </p>
 
@@ -137,14 +137,13 @@ Mockup de cómo pensábamos que deberían ser las pantallas y sus funcionalidade
   <li>Trello</li>
   <li>Figma</li>
   <li>Metodologías Ágiles</li>
-  <li>Balsamiq</li>
   <li>Planning Poker</li>
   <li>GoogleDocs</li>
   <li>GoogleFonts</li>
   <li>Zoom</li>
   <li>Bootstrap</li>
-  <li>PDO</li>
   <li>Heroku</li>
+  <li>Laravel</li>
   <li>SQL</li>
   <li>PHPMyAdmin</li>
 </ul>
