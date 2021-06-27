@@ -87,7 +87,7 @@ Para ejecutar los tests hay que descomentar 2 lineas en el "phpunit.xml"
         
 - vendor/bin/phpunit 
 - OK (8 tests, 13 assertions)
-<img src="./public/img/Readme.MD/test/test.jpg?raw=true" width=30%>
+<img src="./public/img/Readme.MD/test/test.jpg?raw=true" width=60%>
 
 ***
 ***
