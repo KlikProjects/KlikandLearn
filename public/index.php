@@ -1,11 +1,9 @@
 <?php
 
-echo 'hola';
-
-/* use Illuminate\Contracts\Http\Kernel;
+use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 
-define('LARAVEL_START', microtime(true)); */
+/* define('LARAVEL_START', microtime(true)); */
 
 /*
 |--------------------------------------------------------------------------
@@ -18,9 +16,9 @@ define('LARAVEL_START', microtime(true)); */
 |
 */
 
-/* if (file_exists(__DIR__.'/../storage/framework/maintenance.php')) {
+if (file_exists(__DIR__.'/../storage/framework/maintenance.php')) {
     require __DIR__.'/../storage/framework/maintenance.php';
-} */
+}
 
 /*
 |--------------------------------------------------------------------------
@@ -32,9 +30,9 @@ define('LARAVEL_START', microtime(true)); */
 | into the script here so we don't need to manually load our classes.
 |
 */
-/* 
+
 require __DIR__.'/../vendor/autoload.php';
- */
+
 /*
 |--------------------------------------------------------------------------
 | Run The Application
@@ -46,7 +44,7 @@ require __DIR__.'/../vendor/autoload.php';
 |
 */
 
-/* $app = require_once __DIR__.'/../bootstrap/app.php';
+$app = require_once __DIR__.'/../bootstrap/app.php';
 
 $kernel = $app->make(Kernel::class);
 
@@ -55,9 +53,9 @@ $response = tap($kernel->handle(
 ))->send();
 
 $kernel->terminate($request, $response);
- */
 
-/* //Get Heroku ClearDB connection information
+
+//Get Heroku ClearDB connection information
 $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 $cleardb_server = $cleardb_url["host"];
 $cleardb_username = $cleardb_url["user"];
@@ -70,5 +68,5 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
 
 echo 'Hola';
 
-?> */
+?>
 
