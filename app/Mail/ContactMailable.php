@@ -11,7 +11,7 @@ use App\Models\User;
 
 
 
-class ContactMailable extends Mailable
+class ContactMailable extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
