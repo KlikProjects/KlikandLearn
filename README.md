@@ -98,9 +98,7 @@ Para ejecutar los tests hay que descomentar 2 lineas en el "phpunit.xml"
 
 Dónde encontrar el proyecto en producción:
 
-https://el-consultorio-del-coder.herokuapp.com/
-
-El hoster Heroku nos genera un error de conexiones simultáneas a nuestra base de datos SQL, que no hemos podido solucionar en Heroku.
+https://klikandlearn.herokuapp.com/
 
 
 ## 🛠️ Mockup de este proyecto
