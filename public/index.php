@@ -54,7 +54,7 @@ $response = tap($kernel->handle(
 
 $kernel->terminate($request, $response); */
 
-require_once '../resources/views/layouts/app.blade.php';
+include_once '../resources/views/layouts/app.blade.php';
 
 
 //Get Heroku ClearDB connection information
