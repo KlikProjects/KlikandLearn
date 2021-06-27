@@ -125,6 +125,9 @@ Mockup de cómo pensábamos que deberían ser las pantallas y sus funcionalidade
 ## ⚙️ Capturas pantalla formato tablet
 
 <p align="center"> 
+<img src="./public/img/Readme.MD/screenshootTablet/tabletHome.PNG?raw=true" width=25%>
+<img src="./public/img/Readme.MD/screenshootTablet/tabletMyEvents.PNG?raw=true" width=25%>
+<img src="./public/img/Readme.MD/screenshootTablet/tabletShow.PNG?raw=true" width=25%>
 <img src="./src/ReadMe.md/screenshotDesktop/read.PNG?raw=true" width=50%>
 <img src="./src/ReadMe.md/screenshotDesktop/creat.PNG?raw=true" width=50%>
 <img src="./src/ReadMe.md/screenshotDesktop/edit.PNG?raw=true" width=50%>
