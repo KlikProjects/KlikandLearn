@@ -116,13 +116,13 @@ Mockup de cómo pensábamos que deberían ser las pantallas y sus funcionalidade
 ## ⚙️ Capturas pantalla formato móvil 
 
 <p align="center"> 
-<img src="./src/ReadMe.md/screenshotMobil/read.PNG?raw=true" width=25%>
+<img src="./public/img/ReadMe.md/screenshotMobil/mobileHome.PNG?raw=true" width=25%>
 <img src="./src/ReadMe.md/screenshotMobil/creat.PNG?raw=true" width=25%>
 <img src="./src/ReadMe.md/screenshotMobil/edit.PNG?raw=true" width=25%>
 </p>
 
 
-## ⚙️ Capturas pantalla formato desktop
+## ⚙️ Capturas pantalla formato tablet
 
 <p align="center"> 
 <img src="./src/ReadMe.md/screenshotDesktop/read.PNG?raw=true" width=50%>
