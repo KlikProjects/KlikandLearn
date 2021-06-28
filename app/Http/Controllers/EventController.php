@@ -28,11 +28,11 @@ class EventController extends Controller
             ->sortBy('date_time');
 
         $myeventuser = [];    
-            if (Auth::user()){
-                $user=Auth::user();
-                $myeventuser = $user->event;
-            }
-            
+        if (Auth::user()){
+            $user=Auth::user();
+            $myeventuser = $user->event;
+        }
+
         $events = Event::totaluserInscript($events);
         $events = Event::ifSubscript($events,$myeventuser);
         
