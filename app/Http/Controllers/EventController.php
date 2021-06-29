@@ -85,7 +85,6 @@ class EventController extends Controller
      */
     public function show($id, $user_count, $ifSubscripted=null)
     {
-     
         $event = Event::find($id);
         $event->user_count = $user_count;
         $event->ifSubscripted = $ifSubscripted;
@@ -96,7 +95,6 @@ class EventController extends Controller
     public function edit($id)
     {
         $event = Event::find($id);
-       
 
         return view('eventforms.edit', compact('event'));
     }
@@ -173,7 +171,4 @@ class EventController extends Controller
         return redirect()->route('home');
         
     }
-
-
-
 }
