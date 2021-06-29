@@ -5,7 +5,7 @@
 <x-header />
 
 <main class="slider">
-    <div id="carousel-exampleSlidesOnly" class="carousel slide" data-ride="carousel">
+    <div id="carousel-exampleSlidesOnly" class="carousel slide" data-ride="carousel" data-interval='3000'>
         <?php
             echo '<div class="carousel-inner" role="listbox">';
             $index = 1;
