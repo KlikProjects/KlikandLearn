@@ -99,7 +99,7 @@ Para ejecutar los tests hay que descomentar 2 lineas en el "phpunit.xml"
 
 Dónde encontrar el proyecto en producción:
 
-https://klikandlearn.herokuapp.com/
+http://klikandlearn.herokuapp.com/
 
 
 ## 🛠️ Mockup de este proyecto
