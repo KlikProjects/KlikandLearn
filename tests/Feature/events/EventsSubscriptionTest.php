@@ -70,5 +70,5 @@ class EventsSubscriptionTest extends TestCase
         $usercount = Event::checkEventVacancy($event);
 
         $this->assertEquals(0, $usercount);
-    }   
+    }
 }
